@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://davidshepherd.dev
+
+# Sitemaps
+Sitemap: https://davidshepherd.dev/sitemap.xml
