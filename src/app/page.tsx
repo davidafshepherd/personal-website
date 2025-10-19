@@ -7,11 +7,14 @@ export default function HomePage() {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold">{`Hi, I'm David — 4th-year MEng Computer Science`}</h1>
         <p>
-          {`I build ML/RL systems and polished frontends. President of AISoc (2024/25).
-          Recent work includes <strong>multi-agent wildfire suppression (RL)</strong>,
-          <strong> GTZAN music genre classification</strong>, and a
-          <strong> Spotify Engineering internship</strong>.`}
-        </p>
+          {`I build ML/RL systems and polished frontends. President of AISoc (2024/25). Recent work includes `}
+          <strong>multi-agent wildfire suppression (RL)</strong>
+          {`, `}
+          <strong>GTZAN music genre classification</strong>
+          {` and a `}
+          <strong>Spotify Engineering internship</strong>
+          {`.`}
+</p>
         <p className="text-gray-600">
           {`I care about practical impact, strong engineering, and clear communication.
           Below you'll find selected projects and experience.`} 
