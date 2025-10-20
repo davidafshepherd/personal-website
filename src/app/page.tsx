@@ -147,7 +147,7 @@ export default function HomePage() {
                         {role.highlights.map((h, i) => (
                           <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
                             <span className="text-blue-600 flex-shrink-0">•</span>
-                            <span>{h}</span>
+                            <span className="text-justify">{h}</span>
                           </li>
                         ))}
                       </ul>
@@ -210,7 +210,7 @@ export default function HomePage() {
                         {role.highlights.map((h, i) => (
                           <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
                             <span className="text-blue-600 flex-shrink-0">•</span>
-                            <span>{h}</span>
+                            <span className="text-justify">{h}</span>
                           </li>
                         ))}
                 </ul>
@@ -274,10 +274,10 @@ export default function HomePage() {
                       {role.highlights.map((h, i) => (
                         <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
                           <span className="text-blue-600 flex-shrink-0">•</span>
-                          <span>{h}</span>
+                          <span className="text-justify">{h}</span>
               </li>
-                      ))}
-                    </ul>
+            ))}
+          </ul>
                   </div>
                 </li>
               ))}

@@ -17,7 +17,7 @@ export default function ExperiencePage() {
             </ul>
             {role.links?.length ? (
               <div className="mt-3 flex flex-wrap gap-3 text-xs sm:text-sm">
-                {role.links.map((l) => <a key={l.href} className="underline hover:text-blue-600" href={l.href}>{l.label}</a>)}
+                {role.links.map((l) => <a key={l.url} className="underline hover:text-blue-600" href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
               </div>
             ) : null}
           </li>
