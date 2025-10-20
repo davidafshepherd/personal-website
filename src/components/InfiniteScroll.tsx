@@ -31,10 +31,10 @@ export default function InfiniteScroll() {
   ];
 
   return (
-    <div className="overflow-hidden">
-      <div className="flex animate-scroll whitespace-nowrap">
+    <div className="overflow-hidden flex items-center">
+      <div className="flex items-center animate-scroll whitespace-nowrap">
         {[...items, ...items].map((item, i) => (
-          <span key={i} className="inline-block text-sm sm:text-base md:text-lg opacity-80 whitespace-nowrap">
+          <span key={i} className="inline-flex items-center text-sm sm:text-base md:text-lg opacity-80 whitespace-nowrap">
             {item}
             <span className="mx-1 sm:mx-2">·</span>
           </span>

@@ -8,19 +8,19 @@ export default function HomePage() {
   return (
     <>
       {/* Home Section */}
-      <section className="min-h-screen flex items-center py-20 -mt-14">
+      <section className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center py-8 sm:py-20">
         <div className="flex flex-col items-start gap-6 sm:gap-8 w-full">
           <div className="space-y-4 sm:space-y-6 text-left w-full">
-            <div className="space-y-2">
+            <div className="space-y-1">
               <p className="text-base sm:text-lg md:text-xl text-gray-600">Hi! My name is</p>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">David Afonso Shepherd</h1>
             </div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-relaxed">
               Full-Stack Software Engineer · Machine Learning Engineer
             </h2>
-            <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-col gap-3">
-              <span className="font-medium">Proficient in</span>
-              <div className="w-full overflow-hidden">
+            <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+              <span className="font-medium whitespace-nowrap">Proficient in</span>
+              <div className="w-full sm:max-w-md md:max-w-lg overflow-hidden">
                 <InfiniteScroll />
               </div>
             </div>
