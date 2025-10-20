@@ -2,19 +2,50 @@ import Image from "next/image";
 import projects from "@/data/projects";
 import experience from "@/data/experience";
 import ProjectCard from "@/components/ProjectCard";
+import InfiniteScroll from "@/components/InfiniteScroll";
 
 export default function HomePage() {
   return (
     <>
-      {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center">
-        <div className="flex gap-8 items-center">
-          <div className="space-y-6">
+      {/* Home Section */}
+      <section className="h-screen flex items-center -mt-14">
+        <div className="space-y-6">
+          <div className="space-y-1">
             <p className="text-xl text-gray-600">Hi! My name is</p>
             <h1 className="text-4xl font-bold">David Afonso Shepherd</h1>
-            <h2 className="text-2xl font-semibold text-blue-600">Full-Stack Software Engineer · Machine Learning Engineer</h2>
           </div>
-          <Image src="/avatar.jpg" alt="David Afonso Shepherd" width={200} height={200} className="rounded-2xl" />
+          <h2 className="text-2xl font-semibold text-blue-600">Full-Stack Software Engineer · Machine Learning Engineer</h2>
+          <div className="text-lg text-gray-700 flex items-center">
+            <span className="mr-4">Proficient in</span>
+            <div className="w-120">
+              <InfiniteScroll />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16">
+        <div className="space-y-8">
+          <h1 className="text-2xl font-bold">About Me</h1>
+          <div className="grid gap-8 md:grid-cols-[200px,1fr] items-start">
+            <Image src="/avatar.jpg" alt="David Afonso Shepherd" width={200} height={200} className="rounded-2xl" />
+            <div className="space-y-4">
+              <p>
+                {`I build ML/RL systems and polished frontends. President of AISoc (2024/25). Recent work includes `}
+                <strong>multi-agent wildfire suppression (RL)</strong>
+                {`, `}
+                <strong>GTZAN music genre classification</strong>
+                {` and a `}
+                <strong>Spotify Engineering internship</strong>
+                {`.`}
+              </p>
+              <p className="text-gray-600">
+                {`I care about practical impact, strong engineering, and clear communication.
+                Below you'll find selected projects and experience.`} 
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

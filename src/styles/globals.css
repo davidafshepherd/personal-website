@@ -2,3 +2,18 @@
 
 :root { --radius: 1.25rem; }
 * { box-sizing: border-box; }
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
