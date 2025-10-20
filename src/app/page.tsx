@@ -9,7 +9,8 @@ export default function HomePage() {
     <>
       {/* Home Section */}
       <section className="h-screen flex items-center -mt-14">
-        <div className="space-y-6">
+        <div className="flex items-center gap-12 w-full">
+          <div className="space-y-6">
           <div className="space-y-1">
             <p className="text-xl text-gray-600">Hi! My name is</p>
             <h1 className="text-4xl font-bold">David Afonso Shepherd</h1>
@@ -20,6 +21,15 @@ export default function HomePage() {
             <div className="w-120">
               <InfiniteScroll />
             </div>
+          </div>
+          </div>
+          
+          {/* Logo Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            <Image src="/uniLogo.png" alt="Logo 1" width={80} height={80} className="rounded-lg" />
+            <Image src="/socLogo.png" alt="Logo 2" width={80} height={80} className="rounded-lg" />
+            <Image src="/jpmc.png" alt="Logo 3" width={80} height={80} className="rounded-lg" />
+            <Image src="/spotify.png" alt="Logo 4" width={80} height={80} className="rounded-lg" />
           </div>
         </div>
       </section>
