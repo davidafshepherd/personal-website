@@ -43,13 +43,13 @@ export default function HomePage() {
             <div className="flex-1">
               <div className="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-gray-50 space-y-4 text-sm sm:text-base text-justify">
                 <p>
-                  Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I'm a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
+                  Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I&apos;m a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
                 </p>
                 <p>
-                  I've previously interned with <span className="font-semibold">JPMorgan Chase & Co</span> and <span className="font-semibold">Spotify</span>, and served as <span className="font-semibold">President</span> of the <span className="font-semibold">Artificial Intelligence society</span> at the University of Southampton. I was also part of <span className="font-semibold">FLARE-X</span> - a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh - competing in the <span className="font-semibold">$11 million XPRIZE Wildfire Competition</span>.
+                  I&apos;ve previously interned with <span className="font-semibold">JPMorgan Chase & Co</span> and <span className="font-semibold">Spotify</span>, and served as <span className="font-semibold">President</span> of the <span className="font-semibold">Artificial Intelligence society</span> at the University of Southampton. I was also part of <span className="font-semibold">FLARE-X</span> - a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh - competing in the <span className="font-semibold">$11 million XPRIZE Wildfire Competition</span>.
                 </p>
                 <p>
-                  Currently, I'm working with a team of engineers to develop <span className="font-semibold">SmartCart v3</span> - an augmented meal cart designed to help prevent malnutrition in hospital patients by monitoring their food intake - for the <span className="font-semibold">University Hospital Southampton NHS FT</span>.
+                  Currently, I&apos;m working with a team of engineers to develop <span className="font-semibold">SmartCart v3</span> - an augmented meal cart designed to help prevent malnutrition in hospital patients by monitoring their food intake - for the <span className="font-semibold">University Hospital Southampton NHS FT</span>.
                 </p>
               </div>
             </div>
