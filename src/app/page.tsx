@@ -10,15 +10,15 @@ export default function HomePage() {
       {/* Home Section */}
       <section className="h-screen flex items-center -mt-20">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 w-full">
-          <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
+          <div className="space-y-4 lg:space-y-6 text-left">
           <div className="space-y-1">
             <p className="text-lg sm:text-xl text-gray-600">Hi! My name is</p>
             <h1 className="text-3xl sm:text-4xl font-bold">David Afonso Shepherd</h1>
           </div>
           <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Full-Stack Software Engineer · Machine Learning Engineer</h2>
-          <div className="text-base sm:text-lg text-gray-700 flex flex-col sm:flex-row items-center gap-2 sm:gap-0">
+          <div className="text-base sm:text-lg text-gray-700 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-0">
             <span className="mr-2 sm:mr-4">Proficient in</span>
-            <div className="w-80 sm:w-120">
+            <div className="w-full sm:w-120">
               <InfiniteScroll />
             </div>
           </div>
