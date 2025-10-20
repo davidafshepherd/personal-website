@@ -83,12 +83,10 @@ const experience = [
     length: "October 2024 – June 2025",
     category: "volunteering",
     logo: "/uniLogo.png",
-    summary: "Led workshops, hackathons, and industry partnerships.",
     highlights: [
       "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the key academic staff within the department;",
       "Collected and analysed data on modules in order to identify areas for enhancement, ensuring continuous improvement of the degree.",
     ],
-    skills: ["Communication", "Problem Solving", "Advocacy", "Leadership"],
     links: [
       { label: "Students' Union", url: "https://www.susu.org" }
     ],
@@ -104,7 +102,6 @@ const experience = [
       "Assisted with academic tasks, including homework & exam study, while fostering motivation, improving attendance and encouraging an open mindset;",
       "Supported the development of essential skills, such as organisation & confidence, contributing to his overall well-being and mental health."
     ],
-    skills: ["Mentoring", "Teaching", "Communication", "Empathy"],
     links: [
       { label: "Beaumont School", url: "https://www.beaumontschool.com" }
     ],

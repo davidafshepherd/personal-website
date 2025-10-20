@@ -38,10 +38,10 @@ export default function HomePage() {
           </div>
 
           {/* Content with text and image */}
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center">
+          <div className="flex flex-row gap-4 sm:gap-6 md:gap-8 items-start">
             {/* Left side - Text box */}
             <div className="flex-1">
-              <div className="border border-gray-200 rounded-2xl p-6 sm:p-8 bg-gray-50 space-y-4 text-sm sm:text-base text-justify">
+              <div className="border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 bg-gray-50 space-y-4 text-sm sm:text-base text-justify">
                 <p>
                   Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I&apos;m a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
                 </p>
@@ -61,25 +61,25 @@ export default function HomePage() {
                 alt="David Afonso Shepherd" 
                 width={240} 
                 height={240} 
-                className="rounded-2xl w-full max-w-[240px] sm:w-[240px] h-auto mx-auto sm:mx-0" 
+                className="rounded-2xl w-24 sm:w-32 md:w-40 lg:w-[240px] h-auto" 
               />
             </div>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <div className="flex gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="flex gap-2 sm:gap-4">
               {/* LinkedIn */}
               <a 
                 href="https://www.linkedin.com/in/david-afonso-shepherd-986b10295/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 bg-white hover:bg-gray-50 hover:border-blue-600 transition-all group"
+                className="flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 hover:border-blue-600 transition-all group"
               >
-                <svg className="w-5 h-5 text-[#0077B5]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#0077B5]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
-                <span className="text-sm font-medium group-hover:text-blue-600 transition-colors">LinkedIn</span>
+                <span className="text-xs sm:text-sm font-medium group-hover:text-blue-600 transition-colors">LinkedIn</span>
               </a>
 
               {/* GitHub */}
@@ -87,12 +87,12 @@ export default function HomePage() {
                 href="https://github.com/davidafshepherd" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 bg-white hover:bg-gray-50 hover:border-gray-900 transition-all group"
+                className="flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 hover:border-gray-900 transition-all group"
               >
-                <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                   <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"/>
                 </svg>
-                <span className="text-sm font-medium group-hover:text-gray-900 transition-colors">GitHub</span>
+                <span className="text-xs sm:text-sm font-medium group-hover:text-gray-900 transition-colors">GitHub</span>
               </a>
             </div>
             <div className="h-0.5 bg-gradient-to-l from-blue-600 to-transparent flex-1"></div>
@@ -119,29 +119,32 @@ export default function HomePage() {
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-6">
                     {/* Left: Content */}
                     <div className="flex-1">
-                      <div className="mb-3">
-                        <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                        <div className="flex items-center gap-3">
-                          <Image 
-                            src={role.logo} 
-                            alt={`${role.org} logo`} 
-                            width={40} 
-                            height={40}
-                            className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
-                          />
-                          {role.links && role.links.length > 0 ? (
-                            <a 
-                              href={role.links[0].url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
-                            >
-                              {role.org}
-                            </a>
-                          ) : (
-                            <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
-                          )}
+                      <div className="flex items-start justify-between gap-3 mb-3 sm:block">
+                        <div className="flex-1 sm:flex-none">
+                          <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
+                          <div className="flex items-center gap-3">
+                            <Image 
+                              src={role.logo} 
+                              alt={`${role.org} logo`} 
+                              width={40} 
+                              height={40}
+                              className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                            />
+                            {role.links && role.links.length > 0 ? (
+                              <a 
+                                href={role.links[0].url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                              >
+                                {role.org}
+                              </a>
+                            ) : (
+                              <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                            )}
+                          </div>
                         </div>
+                        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 sm:hidden">{role.length}</span>
                       </div>
                       <ul className="space-y-2">
                         {role.highlights.map((h, i) => (
@@ -156,7 +159,7 @@ export default function HomePage() {
                     {/* Right: Date Badge and Personal Image */}
                     {role.image && (
                       <div className="flex-shrink-0 flex flex-col gap-3">
-                        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
+                        <span className="hidden sm:block text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
                         <Image 
                           src={role.image} 
                           alt={`${role.title} at ${role.org}`} 
@@ -182,30 +185,33 @@ export default function HomePage() {
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-6">
                     {/* Left: Content */}
                     <div className="flex-1">
-                      <div className="mb-3">
-                        <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                        <div className="flex items-center gap-3">
-                          <Image 
-                            src={role.logo} 
-                            alt={`${role.org} logo`} 
-                            width={40} 
-                            height={40}
-                            className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
-                          />
-                          {role.links && role.links.length > 0 ? (
-                            <a 
-                              href={role.links[0].url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
-                            >
-                              {role.org}
-                            </a>
-                          ) : (
-                            <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
-                          )}
+                      <div className="flex items-start justify-between gap-3 mb-3 sm:block">
+                        <div className="flex-1 sm:flex-none">
+                          <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
+                          <div className="flex items-center gap-3">
+                            <Image 
+                              src={role.logo} 
+                              alt={`${role.org} logo`} 
+                              width={40} 
+                              height={40}
+                              className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                            />
+                            {role.links && role.links.length > 0 ? (
+                              <a 
+                                href={role.links[0].url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                              >
+                                {role.org}
+                              </a>
+                            ) : (
+                              <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                            )}
+                          </div>
                         </div>
-                </div>
+                        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 sm:hidden">{role.length}</span>
+                      </div>
                       <ul className="space-y-2">
                         {role.highlights.map((h, i) => (
                           <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
@@ -213,13 +219,13 @@ export default function HomePage() {
                             <span className="text-justify">{h}</span>
                           </li>
                         ))}
-                </ul>
+                      </ul>
                     </div>
                     
                     {/* Right: Date Badge and Personal Image */}
                     {role.image && (
                       <div className="flex-shrink-0 flex flex-col gap-3">
-                        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
+                        <span className="hidden sm:block text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
                         <Image 
                           src={role.image} 
                           alt={`${role.title} at ${role.org}`} 
