@@ -11,19 +11,19 @@ export default function HomePage() {
       <section className="h-[calc(100vh-3.5rem)] flex items-center justify-center -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20">
         <div className="flex flex-col items-start gap-4 sm:gap-6 md:gap-8 w-full">
           <div className="space-y-4 sm:space-y-6 text-left w-full">
-            <div className="space-y-1">
+          <div className="space-y-1">
               <p className="text-base sm:text-lg md:text-xl text-gray-600">Hi! My name is</p>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">David Afonso Shepherd</h1>
-            </div>
+          </div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-relaxed">
               Full-Stack Software Engineer · Machine Learning Engineer
             </h2>
             <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
               <span className="font-medium whitespace-nowrap">Proficient in</span>
               <div className="w-full sm:max-w-md md:max-w-lg overflow-hidden">
-                <InfiniteScroll />
-              </div>
+              <InfiniteScroll />
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -101,28 +101,191 @@ export default function HomePage() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-20">
-        <div className="space-y-6 sm:space-y-8">
-          <h1 className="text-2xl sm:text-3xl font-bold">Experience</h1>
-          <ul className="space-y-4 sm:space-y-6">
-            {experience.map((role) => (
-              <li key={role.title} className="p-4 sm:p-5 rounded-2xl border">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
-                  <h2 className="font-semibold text-sm sm:text-base">{role.title} · {role.org}</h2>
-                  <span className="text-xs text-gray-500 whitespace-nowrap">{role.length}</span>
-                </div>
-                <p className="mt-2 text-sm sm:text-base text-gray-700">{role.summary}</p>
-                <ul className="mt-3 list-disc pl-5 text-xs sm:text-sm space-y-1">
-                  {role.highlights.map((h, i) => <li key={i}>{h}</li>)}
-                </ul>
-                {role.links?.length ? (
-                  <div className="mt-3 flex flex-wrap gap-3 text-xs sm:text-sm">
-                    {role.links.map((l) => <a key={l.href} className="underline hover:text-blue-600" href={l.href}>{l.label}</a>)}
+      <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center">
+        <div className="w-full space-y-8 sm:space-y-10">
+          {/* Title */}
+          <div className="flex items-center gap-4">
+            <h1 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">2. Experience</h1>
+            <div className="h-0.5 bg-gradient-to-r from-blue-600 to-transparent flex-1"></div>
+          </div>
+
+          {/* Internships Subsection */}
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Internships</h2>
+            <ul className="space-y-4 sm:space-y-6">
+              {experience.filter(role => role.category === 'internship').map((role) => (
+                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-6">
+                    {/* Left: Content */}
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
+                        <div className="flex items-center gap-3">
+                          <Image 
+                            src={role.logo} 
+                            alt={`${role.org} logo`} 
+                            width={40} 
+                            height={40}
+                            className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                          />
+                          {role.links && role.links.length > 0 ? (
+                            <a 
+                              href={role.links[0].url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                            >
+                              {role.org}
+                            </a>
+                          ) : (
+                            <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                          )}
+                        </div>
+                      </div>
+                      <ul className="space-y-2">
+                        {role.highlights.map((h, i) => (
+                          <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
+                            <span className="text-blue-600 flex-shrink-0">•</span>
+                            <span>{h}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* Right: Date Badge and Personal Image */}
+                    {role.image && (
+                      <div className="flex-shrink-0 flex flex-col gap-3">
+                        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
+                        <Image 
+                          src={role.image} 
+                          alt={`${role.title} at ${role.org}`} 
+                          width={320} 
+                          height={240}
+                          className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
+                        />
+                      </div>
+                    )}
                   </div>
-                ) : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Extra-curriculars Subsection */}
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Extra-Curriculars</h2>
+            <ul className="space-y-4 sm:space-y-6">
+              {experience.filter(role => role.category === 'extracurricular').map((role) => (
+                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-6">
+                    {/* Left: Content */}
+                    <div className="flex-1">
+                      <div className="mb-3">
+                        <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
+                        <div className="flex items-center gap-3">
+                          <Image 
+                            src={role.logo} 
+                            alt={`${role.org} logo`} 
+                            width={40} 
+                            height={40}
+                            className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                          />
+                          {role.links && role.links.length > 0 ? (
+                            <a 
+                              href={role.links[0].url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                            >
+                              {role.org}
+                            </a>
+                          ) : (
+                            <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                          )}
+                        </div>
+                </div>
+                      <ul className="space-y-2">
+                        {role.highlights.map((h, i) => (
+                          <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
+                            <span className="text-blue-600 flex-shrink-0">•</span>
+                            <span>{h}</span>
+                          </li>
+                        ))}
+                </ul>
+                    </div>
+                    
+                    {/* Right: Date Badge and Personal Image */}
+                    {role.image && (
+                      <div className="flex-shrink-0 flex flex-col gap-3">
+                        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
+                        <Image 
+                          src={role.image} 
+                          alt={`${role.title} at ${role.org}`} 
+                          width={320} 
+                          height={240}
+                          className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Volunteering Subsection */}
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Volunteering</h2>
+            <ul className="space-y-4 sm:space-y-6">
+              {experience.filter(role => role.category === 'volunteering').map((role) => (
+                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
+                  <div className="p-5 sm:p-6">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3">
+                      <div>
+                        <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
+                        <div className="flex items-center gap-3">
+                          <Image 
+                            src={role.logo} 
+                            alt={`${role.org} logo`} 
+                            width={40} 
+                            height={40}
+                            className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                          />
+                          {role.links && role.links.length > 0 ? (
+                            <a 
+                              href={role.links[0].url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                            >
+                              {role.org}
+                            </a>
+                          ) : (
+                            <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                          )}
+                        </div>
+                      </div>
+                      <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full">{role.length}</span>
+                    </div>
+                    <ul className="space-y-2">
+                      {role.highlights.map((h, i) => (
+                        <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
+                          <span className="text-blue-600 flex-shrink-0">•</span>
+                          <span>{h}</span>
               </li>
-            ))}
-          </ul>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            {experience.filter(role => role.category === 'volunteering').length === 0 && (
+              <p className="text-gray-500 text-sm italic">No volunteering experience yet.</p>
+            )}
+          </div>
         </div>
       </section>
 

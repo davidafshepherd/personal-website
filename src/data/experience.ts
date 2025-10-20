@@ -3,57 +3,110 @@ const experience = [
     title: "Engineering Intern",
     org: "Spotify",
     length: "June 2025 - August 2025",
-    summary: "Worked on Learning Mountain Bet: new courses vertical, cross-functional with engineers and researchers.",
+    category: "internship",
+    logo: "/spotify.png",
+    image: "/experience-spotify.jpg",
     highlights: [
-      "Shipped features end-to-end across FE + BE",
-      "Collaborated with staff/principal engineers; wrote design docs",
-      "Improved observability and added tests"
+      "Part of the Learning Mountain Bet, a cross-functional team working on developing a new vertical (courses) for Spotify;",
+      "The LMB consists entirely of senior, staff & principal level and is one of Spotify's most fast-paced & dynamic teams;",
+      "Worked on a brand new feature aimed at enhancing the learning experience on Spotify, due to launch later this year;",
+      "Collaborated across several domains (web, backend and AI).",
     ],
-    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/…" }],
+    links: [
+      { label: "Spotify", url: "https://courses.spotify.com/home" }
+    ],
   },
   {
     title: "Spring Intern",
     org: "JPMorgan Chase & Co.",
     length: "April 2024 - April 2024",
-    summary: "Worked on Learning Mountain Bet: new courses vertical, cross-functional with engineers and researchers.",
+    category: "internship",
+    logo: "/jpmc.png",
+    image: "/experience-jpmc.jpg",
     highlights: [
-      "Shipped features end-to-end across FE + BE",
-      "Collaborated with staff/principal engineers; wrote design docs",
-      "Improved observability and added tests"
+      "Worked with a team of 3 interns to promote and increase community involvement in fundraising for Dorset's Disability Charity 'Diverse Abilities';",
+      "Developed 'Hero's Leaderboard', a web app that promotes community engagement in fundraising through scoreboards & rewards.",
     ],
-    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/…" }],
+    links: [
+      { label: "JPMorgan Chase", url: "https://www.jpmorganchase.com" }
+    ],
   },
   {
     title: "President",
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2024 – May 2025",
-    summary: "Led workshops, hackathons, and industry partnerships.",
+    category: "extracurricular",
+    logo: "/socLogo.png",
+    image: "/experience-aisoc-president.jpg",
     highlights: [
-      "Organised AISoc × IET Hackathon",
-      "Ran weekly ML workshops (NNs, RL, NLP)",
-      "Managed sponsorships and finances"
+      "Led a committee of 8 and coordinated the society's 4 divisions (Education, Projects, Partnerships & Marketing);",
+      "Organised over 20 ML workshops, talks led by industry experts & other events for the society's 500+ members;",
+      "Led fundraising from academic & corporate sponsors, such as IET, Cirium, Siemens & Encode;",
+      "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons."
+    ],
+    links: [
+      { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
     ],
   },
   {
     title: "Head of Education",
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2024 – September 2024",
-    summary: "Led workshops, hackathons, and industry partnerships.",
+    category: "extracurricular",
+    logo: "/socLogo.png",
+    image: "/experience-aisoc-education.jpg",
     highlights: [
-      "Organised AISoc × IET Hackathon",
-      "Ran weekly ML workshops (NNs, RL, NLP)",
-      "Managed sponsorships and finances"
+      "Led the society's Education Division. This division is responsible for organising the society's bi-weekly ML workshops;",
+      "Developed a beginner-friendly ML curriculum, by simplifying complex models into interactive & hands-on workshops;",
+      "Covered Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Reinforcement Learning, Natural Language Processing, Generative Adversarial Networks, Diffusion Models and Tree-Based Models.",
+    ],
+    links: [
+      { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
     ],
   },
   {
     title: "Secretary",
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2023 – May 2024",
+    category: "extracurricular",
+    logo: "/socLogo.png",
+    image: "/experience-aisoc-secretary.jpg",
+    highlights: [
+    ],
+    links: [
+      { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
+    ],
+  },
+  {
+    title: "Course Representative",
+    org: "University of Southampton Students' Union",
+    length: "October 2024 – June 2025",
+    category: "volunteering",
+    logo: "/uniLogo.png",
     summary: "Led workshops, hackathons, and industry partnerships.",
     highlights: [
-      "Organised AISoc × IET Hackathon",
-      "Ran weekly ML workshops (NNs, RL, NLP)",
-      "Managed sponsorships and finances"
+      "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the key academic staff within the department;",
+      "Collected and analysed data on modules in order to identify areas for enhancement, ensuring continuous improvement of the degree.",
+    ],
+    skills: ["Communication", "Problem Solving", "Advocacy", "Leadership"],
+    links: [
+      { label: "Students' Union", url: "https://www.susu.org" }
+    ],
+  },
+  {
+    title: "Student Mentor",
+    org: "Beaumont School",
+    length: "September 2021 – May 2022",
+    category: "volunteering",
+    logo: "/beaumont-logo.png",
+    highlights: [
+      "Participated in a mentoring program, providing one-on-one support to a Year 10 student;",
+      "Assisted with academic tasks, including homework & exam study, while fostering motivation, improving attendance and encouraging an open mindset;",
+      "Supported the development of essential skills, such as organisation & confidence, contributing to his overall well-being and mental health."
+    ],
+    skills: ["Mentoring", "Teaching", "Communication", "Empathy"],
+    links: [
+      { label: "Beaumont School", url: "https://www.beaumontschool.com" }
     ],
   }
 ];
