@@ -1,7 +1,47 @@
 @import "tailwindcss";
 
-:root { --radius: 1.25rem; }
-* { box-sizing: border-box; }
+:root { 
+  --radius: 1.25rem; 
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+/* Improve touch targets for mobile */
+a, button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reset for inline links that don't need large touch targets */
+p a, li a {
+  min-height: auto;
+  min-width: auto;
+  display: inline;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Better line height for mobile readability */
+@media (max-width: 640px) {
+  body {
+    line-height: 1.6;
+  }
+}
 
 .animate-scroll {
   animation: scroll 30s linear infinite;

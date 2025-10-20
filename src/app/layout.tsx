@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "David Afonso Shepherd — Portfolio",
   description: "MEng Computer Science | RL, ML, Systems | Projects & Experience",
   metadataBase: new URL("https://your-domain.vercel.app"),
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   openGraph: {
     title: "David Afonso Shepherd — MEng Computer Science",
     description: "Portfolio of David Afonso Shepherd: showcasing AI, ML, and RL projects.",
