@@ -8,8 +8,8 @@ export default function HomePage() {
   return (
     <>
       {/* Home Section */}
-      <section className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center py-8 sm:py-20">
-        <div className="flex flex-col items-start gap-6 sm:gap-8 w-full">
+      <section className="h-[calc(100vh-3.5rem)] flex items-center justify-center -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20">
+        <div className="flex flex-col items-start gap-4 sm:gap-6 md:gap-8 w-full">
           <div className="space-y-4 sm:space-y-6 text-left w-full">
             <div className="space-y-1">
               <p className="text-base sm:text-lg md:text-xl text-gray-600">Hi! My name is</p>
