@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
@@ -11,7 +10,6 @@ const links = [
 ];
 
 export default function NavBar() {
-  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
