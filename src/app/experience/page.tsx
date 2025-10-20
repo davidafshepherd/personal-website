@@ -9,7 +9,7 @@ export default function ExperiencePage() {
           <li key={role.title} className="p-5 rounded-2xl border">
             <div className="flex items-center justify-between">
               <h2 className="font-semibold">{role.title} · {role.org}</h2>
-              <span className="text-xs text-gray-500">{role.dates}</span>
+              <span className="text-xs text-gray-500">{role.length}</span>
             </div>
             <p className="mt-2 text-sm text-gray-700">{role.summary}</p>
             <ul className="mt-3 list-disc pl-5 text-sm">
