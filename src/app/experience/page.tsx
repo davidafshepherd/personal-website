@@ -11,7 +11,6 @@ export default function ExperiencePage() {
               <h2 className="font-semibold text-sm sm:text-base">{role.title} · {role.org}</h2>
               <span className="text-xs text-gray-500 whitespace-nowrap">{role.length}</span>
             </div>
-            <p className="mt-2 text-sm sm:text-base text-gray-700">{role.summary}</p>
             <ul className="mt-3 list-disc pl-5 text-xs sm:text-sm space-y-1">
               {role.highlights.map((h, i) => <li key={i}>{h}</li>)}
             </ul>
