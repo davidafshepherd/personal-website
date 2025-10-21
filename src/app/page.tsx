@@ -39,10 +39,10 @@ export default function HomePage() {
           </div>
 
           {/* Content with text and image */}
-          <div className="flex flex-row gap-4 sm:gap-6 md:gap-8 items-start">
+          <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-stretch">
             {/* Left side - Text box */}
             <div className="flex-1">
-              <div className="border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 bg-gray-50 space-y-4 text-sm sm:text-base text-justify">
+              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-justify">
                 <p>
                   Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I&apos;m a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
                 </p>
@@ -56,7 +56,7 @@ export default function HomePage() {
             </div>
 
             {/* Right side - Image */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center justify-center w-full md:w-auto self-center md:self-auto mt-4 md:mt-0">
               <Image 
                 src="/avatar.jpg" 
                 alt="David Afonso Shepherd" 
@@ -68,7 +68,7 @@ export default function HomePage() {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
             <div className="flex gap-2 sm:gap-4">
               {/* LinkedIn */}
               <a 
