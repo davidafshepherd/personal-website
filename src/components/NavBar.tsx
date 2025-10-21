@@ -145,7 +145,13 @@ export default function NavBar() {
 
       {/* Mobile Menu Panel */}
       {isMobile && isMenuOpen && (
-        <div className="fixed inset-0 z-[60]" onClick={() => setIsMenuOpen(false)}>
+        <div className="fixed inset-0 z-[60]">
+          {/* dedicated overlay to capture taps */}
+          <div
+            className="absolute inset-0 bg-black/0"
+            onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
+          />
           <div
             className="absolute inset-x-0 top-14 z-[70] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg"
             onClick={(e) => e.stopPropagation()}
