@@ -68,8 +68,8 @@ export default function HomePage() {
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-            <div className="flex gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="flex gap-2 sm:gap-4 flex-wrap">
               {/* LinkedIn */}
               <a 
                 href="https://www.linkedin.com/in/david-afonso-shepherd-986b10295/" 
@@ -107,7 +107,7 @@ export default function HomePage() {
                 <span className="text-xs sm:text-sm font-medium group-hover:text-blue-600 transition-colors">Email</span>
               </a>
             </div>
-            <div className="h-0.5 bg-gradient-to-l from-blue-600 to-transparent flex-1"></div>
+            <div className="h-0.5 bg-gradient-to-l from-blue-600 to-transparent flex-1 min-w-[32px]"></div>
           </div>
         </div>
       </section>
