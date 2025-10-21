@@ -3,6 +3,7 @@ import projects from "@/data/projects";
 import experience from "@/data/experience";
 import ProjectCard from "@/components/ProjectCard";
 import InfiniteScroll from "@/components/InfiniteScroll";
+import ExperienceCard from "@/components/ExperienceCard";
 
 export default function HomePage() {
   return (
@@ -114,248 +115,27 @@ export default function HomePage() {
             <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Internships</h2>
             <ul className="space-y-4 sm:space-y-6">
               {experience.filter(role => role.category === 'internship').map((role) => (
-                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
-                  <div className="p-5 sm:p-6">
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                      {/* Left: Content */}
-                      <div className="flex-1 flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-start justify-between gap-3 mb-3 sm:block">
-                            <div className="flex-1 sm:flex-none">
-                              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3 min-w-0">
-                                <Image 
-                                  src={role.logo} 
-                                  alt={`${role.org} logo`} 
-                                  width={40} 
-                                  height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
-                                />
-                                {role.links && role.links.length > 0 ? (
-                                  <a 
-                                    href={role.links[0].url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
-                                  >
-                                    {role.org}
-                                  </a>
-                                ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
-                                )}
-                              </div>
-                            </div>
-                            <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 sm:hidden">{role.length}</span>
-                          </div>
-                          <ul className="space-y-2">
-                            {role.highlights.map((h, i) => (
-                              <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
-                                <span className="text-blue-600 flex-shrink-0">•</span>
-                                <span className="text-justify">{h}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                        {/* Skills at bottom of left column */}
-                        {role.skills && role.skills.length > 0 && (
-                          <div className="mt-4 flex flex-wrap justify-center gap-2">
-                            {role.skills.map((skill, i) => (
-                              <span 
-                                key={i}
-                                className="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded-full border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-colors cursor-default"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Right: Date Badge and Personal Image */}
-                      {role.image && (
-                        <div className="flex-shrink-0 flex flex-col gap-3">
-                          <span className="hidden sm:block text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
-                          <Image 
-                            src={role.image} 
-                            alt={`${role.title} at ${role.org}`} 
-                            width={320} 
-                            height={240}
-                            className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
-                          />
-                        </div>
-                      )}
+                <ExperienceCard key={role.title + role.org} role={role} />
+                        ))}
+                      </ul>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+                    
           {/* University Ventures Subsection */}
           <div className="space-y-4 sm:space-y-6">
             <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">University Ventures</h2>
             <ul className="space-y-4 sm:space-y-6">
               {experience.filter(role => role.category === 'university_ventures').map((role) => (
-                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
-                  <div className="p-5 sm:p-6">
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                      {/* Left: Content */}
-                      <div className="flex-1 flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-start justify-between gap-3 mb-3">
-                            <div className="flex-1">
-                              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3 min-w-0">
-                                <Image 
-                                  src={role.logo} 
-                                  alt={`${role.org} logo`} 
-                                  width={40} 
-                                  height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
-                                />
-                                {role.links && role.links.length > 0 ? (
-                                  <a 
-                                    href={role.links[0].url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
-                                  >
-                                    {role.org}
-                                  </a>
-                                ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
-                                )}
-                              </div>
-                            </div>
-                            <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0">{role.length}</span>
-                          </div>
-                          <ul className="space-y-2">
-                            {role.highlights.map((h, i) => (
-                              <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
-                                <span className="text-blue-600 flex-shrink-0">•</span>
-                                <span className="text-justify">{h}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                        {/* Skills at bottom of left column */}
-                        {role.skills && role.skills.length > 0 && (
-                          <div className="mt-4 flex flex-wrap justify-center gap-2">
-                            {role.skills.map((skill, i) => (
-                              <span 
-                                key={i}
-                                className="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded-full border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-colors cursor-default"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Right: Date Badge and Personal Image */}
-                      {role.image && (
-                        <div className="flex-shrink-0 flex flex-col gap-3">
-                          <Image 
-                            src={role.image} 
-                            alt={`${role.title} at ${role.org}`} 
-                            width={320} 
-                            height={240}
-                            className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </li>
+                <ExperienceCard key={role.title + role.org} role={role} />
               ))}
             </ul>
           </div>
 
           {/* Extra-curriculars Subsection */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Extra-Curriculars</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Extracurricular Activities</h2>
             <ul className="space-y-4 sm:space-y-6">
               {experience.filter(role => role.category === 'extracurricular').map((role) => (
-                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
-                  <div className="p-5 sm:p-6">
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                      {/* Left: Content */}
-                      <div className="flex-1 flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-start justify-between gap-3 mb-3 sm:block">
-                            <div className="flex-1 sm:flex-none">
-                              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3 min-w-0">
-                                <Image 
-                                  src={role.logo} 
-                                  alt={`${role.org} logo`} 
-                                  width={40} 
-                                  height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
-                                />
-                                {role.links && role.links.length > 0 ? (
-                                  <a 
-                                    href={role.links[0].url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
-                                  >
-                                    {role.org}
-                                  </a>
-                                ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
-                                )}
-                              </div>
-                            </div>
-                            <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 sm:hidden">{role.length}</span>
-                          </div>
-                          <ul className="space-y-2">
-                            {role.highlights.map((h, i) => (
-                              <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
-                                <span className="text-blue-600 flex-shrink-0">•</span>
-                                <span className="text-justify">{h}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                        {/* Skills at bottom of left column */}
-                        {role.skills && role.skills.length > 0 && (
-                          <div className="mt-4 flex flex-wrap justify-center gap-2">
-                            {role.skills.map((skill, i) => (
-                              <span 
-                                key={i}
-                                className="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded-full border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-colors cursor-default"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Right: Date Badge and Personal Image */}
-                      {role.image && (
-                        <div className="flex-shrink-0 flex flex-col gap-3">
-                          <span className="hidden sm:block text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
-                          <Image 
-                            src={role.image} 
-                            alt={`${role.title} at ${role.org}`} 
-                            width={320} 
-                            height={240}
-                            className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </li>
+                <ExperienceCard key={role.title + role.org} role={role} />
               ))}
             </ul>
           </div>
@@ -365,80 +145,7 @@ export default function HomePage() {
             <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">Volunteering</h2>
             <ul className="space-y-4 sm:space-y-6">
               {experience.filter(role => role.category === 'volunteering').map((role) => (
-                <li key={role.title + role.org} className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
-                  <div className="p-5 sm:p-6">
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                      {/* Left: Content */}
-                      <div className="flex-1 flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-start justify-between gap-3 mb-3">
-                            <div className="flex-1">
-                              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3 min-w-0">
-                                <Image 
-                                  src={role.logo} 
-                                  alt={`${role.org} logo`} 
-                                  width={40} 
-                                  height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
-                                />
-                                {role.links && role.links.length > 0 ? (
-                                  <a 
-                                    href={role.links[0].url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
-                                  >
-                                    {role.org}
-                                  </a>
-                                ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
-                                )}
-                              </div>
-                            </div>
-                            <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0">{role.length}</span>
-                          </div>
-                          <ul className="space-y-2">
-                            {role.highlights.map((h, i) => (
-                              <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
-                                <span className="text-blue-600 flex-shrink-0">•</span>
-                                <span className="text-justify">{h}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                        {/* Skills at bottom of left column */}
-                        {role.skills && role.skills.length > 0 && (
-                          <div className="mt-4 flex flex-wrap justify-center gap-2">
-                            {role.skills.map((skill, i) => (
-                              <span 
-                                key={i}
-                                className="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded-full border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-colors cursor-default"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Right: Date Badge and Personal Image */}
-                      {role.image && (
-                        <div className="flex-shrink-0 flex flex-col gap-3">
-                          <Image 
-                            src={role.image} 
-                            alt={`${role.title} at ${role.org}`} 
-                            width={320} 
-                            height={240}
-                            className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </li>
+                <ExperienceCard key={role.title + role.org} role={role} />
               ))}
             </ul>
             {experience.filter(role => role.category === 'volunteering').length === 0 && (

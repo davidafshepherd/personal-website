@@ -41,7 +41,7 @@ const experience = [
     logo: "/nhs-logo.png",
     highlights: [
       "I work with a team of 4 engineers to develop and test SmartCart V3, an 'augmented meal cart' for in-hospital use;",
-      "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake."
+      "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
     ],
     skills: ["Software Engineering", "Machine Learning", "Supervised Learning", "Instance Segmentation"],
     links: [
@@ -57,7 +57,7 @@ const experience = [
     highlights: [
       "Part of FLARE-X, 1 of the 15 autonomous semi-finalist teams, in the $11M international XPRIZE Wildfire competition;",
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh;",
-      "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire."
+      "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire.",
     ],
     skills: ["Machine Learning", "Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "Python"],
     links: [
@@ -75,7 +75,7 @@ const experience = [
       "Led a committee of 8 and coordinated the society's 4 divisions (Education, Projects, Partnerships & Marketing);",
       "Organised over 20 ML workshops, talks led by industry experts & other events for the society's 500+ members;",
       "Led fundraising from academic & corporate sponsors, such as IET, Siemens & Cirium;",
-      "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons."
+      "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons.",
     ],
     links: [
       { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
@@ -107,7 +107,7 @@ const experience = [
     highlights: [
       "Managed the society's communications, ensuring effective coordination between the committee, external partners and sponsors;",
       "Supported the organisation of the society's workshops, talks and other events, assisting with the logistics & event planning;",
-      "Oversaw meeting agendas, minutes & documentation across the society's 4 divisions."
+      "Oversaw meeting agendas, minutes & documentation across the society's 4 divisions.",
     ],
     links: [
       { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
@@ -136,7 +136,7 @@ const experience = [
     highlights: [
       "Participated in a mentoring program, providing one-on-one support to a Year 10 student;",
       "Assisted with academic tasks, including homework & exam study, while improving their attendance and encouraging an open mindset;",
-      "Supported the development of essential skills, such as motivation & confidence, contributing to their well-being and mental health."
+      "Supported the development of essential skills, such as motivation & confidence, contributing to their well-being and mental health.",
     ],
     links: [
       { label: "Beaumont School", url: "https://www.beaumontschool.com" }
