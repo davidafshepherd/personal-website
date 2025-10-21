@@ -14,13 +14,13 @@ export default function HomePage() {
         <div className="flex flex-col items-start gap-4 sm:gap-6 md:gap-8 w-full">
           <div className="space-y-4 sm:space-y-6 text-left w-full">
           <div className="space-y-1">
-              <p className="text-base sm:text-lg md:text-xl text-gray-600">Hi! My name is</p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300">Hi! My name is</p>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">David Afonso Shepherd</h1>
           </div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-relaxed">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-tight dark:text-green-500">
               Full-Stack Software Engineer · Machine Learning Engineer
             </h2>
-            <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-row items-center gap-3 sm:gap-4">
+            <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-row items-center gap-3 sm:gap-4 dark:text-gray-300">
               <span className="font-medium whitespace-nowrap">Proficient in</span>
               <div className="flex-1 min-w-0 overflow-hidden sm:flex-none sm:max-w-md md:max-w-lg max-[380px]:scale-90">
               <InfiniteScroll />
@@ -36,14 +36,14 @@ export default function HomePage() {
           {/* Title */}
           <div className="flex items-center gap-4">
             <h1 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">1. About Me</h1>
-            <div className="h-0.5 bg-gradient-to-r from-blue-600 to-transparent flex-1"></div>
+            <div className="h-0.5 bg-gradient-to-r from-[var(--accent)] to-transparent flex-1"></div>
           </div>
 
           {/* Content with text and image */}
-          <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-stretch">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-stretch">
             {/* Left side - Text box */}
             <div className="flex-1">
-              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-justify">
+              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-justify dark:border-[#282828] dark:bg-[#181818] dark:text-gray-300">
                 <p>
                   Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I&apos;m a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
                 </p>
@@ -77,14 +77,32 @@ export default function HomePage() {
                   href={href}
                   target={href.startsWith('http') ? "_blank" : undefined}
                   rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className={`flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 transition-all group ${label === 'GitHub' ? 'hover:border-gray-900' : 'hover:border-blue-600'}`}
+                  className={`flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 transition-colors group dark:border-[#282828] dark:bg-[#181818] dark:hover:bg-[#202020] ${
+                    label === 'GitHub'
+                      ? 'hover:border-gray-900 dark:hover:border-[#EAEAEA]'
+                      : label === 'LinkedIn'
+                        ? 'hover:border-[#0077B5] dark:hover:border-[#0077B5]'
+                        : 'hover:border-blue-600 dark:hover:border-[#1DB954]'
+                  }`}
                 >
-                  <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${label === 'GitHub' ? 'text-gray-900' : label === 'LinkedIn' ? 'text-[#0077B5]' : 'text-blue-600'}`} />
-                  <span className={`text-xs sm:text-sm font-medium transition-colors ${label === 'GitHub' ? 'group-hover:text-gray-900' : 'group-hover:text-blue-600'}`}>{label}</span>
+                  <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${
+                    label === 'GitHub'
+                      ? 'text-gray-900 dark:text-[#EAEAEA] group-hover:text-gray-900 dark:group-hover:text-[#EAEAEA]'
+                      : label === 'LinkedIn'
+                        ? 'text-[#0077B5] dark:text-[#0077B5] group-hover:text-[#0077B5] dark:group-hover:text-[#0077B5]'
+                        : 'text-blue-600 dark:text-[var(--accent)] group-hover:text-blue-600 dark:group-hover:text-[var(--accent)]'
+                  }`} />
+                  <span className={`text-xs sm:text-sm font-medium transition-colors ${
+                    label === 'GitHub'
+                      ? 'group-hover:text-gray-900 dark:group-hover:text-[#EAEAEA]'
+                      : label === 'LinkedIn'
+                        ? 'group-hover:text-[#0077B5] dark:group-hover:text-[#0077B5]'
+                        : 'group-hover:text-blue-600 dark:group-hover:text-[#1DB954]'
+                  }`}>{label}</span>
                 </a>
               ))}
             </div>
-            <div className="h-0.5 bg-gradient-to-l from-blue-600 to-transparent flex-1 min-w-[32px]"></div>
+            <div className="h-0.5 bg-gradient-to-l from-[var(--accent)] to-transparent flex-1 min-w-[32px]"></div>
           </div>
         </div>
       </section>
@@ -95,7 +113,7 @@ export default function HomePage() {
           {/* Title */}
           <div className="flex items-center gap-4">
             <h1 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">2. Experience</h1>
-            <div className="h-0.5 bg-gradient-to-r from-blue-600 to-transparent flex-1"></div>
+            <div className="h-0.5 bg-gradient-to-r from-[var(--accent)] to-transparent flex-1"></div>
           </div>
 
           {[
@@ -107,14 +125,14 @@ export default function HomePage() {
             const roles = experience.filter(role => role.category === key);
             return (
               <div key={key} className="space-y-4 sm:space-y-6">
-                <h2 className="text-xl sm:text-2xl font-semibold text-blue-600">{title}</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold text-[var(--accent)]">{title}</h2>
             <ul className="space-y-4 sm:space-y-6">
                   {roles.map(role => (
                 <ExperienceCard key={role.title + role.org} role={role} />
                         ))}
                       </ul>
                 {key === 'volunteering' && roles.length === 0 && (
-              <p className="text-gray-500 text-sm italic">No volunteering experience yet.</p>
+              <p className="text-gray-500 text-sm italic dark:text-gray-400">No volunteering experience yet.</p>
             )}
           </div>
             );
@@ -128,7 +146,7 @@ export default function HomePage() {
           {/* Title */}
           <div className="flex items-center gap-4">
             <h1 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">3. Projects</h1>
-            <div className="h-0.5 bg-gradient-to-r from-blue-600 to-transparent flex-1"></div>
+            <div className="h-0.5 bg-gradient-to-r from-[var(--accent)] to-transparent flex-1"></div>
           </div>
 
           <div className="grid gap-4 sm:gap-6 md:grid-cols-2">

@@ -13,6 +13,7 @@ const links = [
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const toggleRef = useRef<HTMLButtonElement | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
@@ -25,6 +26,23 @@ export default function NavBar() {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  // Initialize from current DOM state and keep in sync with external changes
+  useEffect(() => {
+    const root = document.documentElement;
+    const sync = () => setIsDark(root.classList.contains('dark'));
+    sync();
+    const mo = new MutationObserver(sync);
+    mo.observe(root, { attributes: true, attributeFilter: ['class'] });
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === 'theme') sync();
+    };
+    window.addEventListener('storage', onStorage);
+    return () => {
+      mo.disconnect();
+      window.removeEventListener('storage', onStorage);
+    };
   }, []);
   
   // Close menu when clicking outside menu or toggle
@@ -75,18 +93,28 @@ export default function NavBar() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const toggleTheme = () => {
+    const next = !isDark;
+    try { localStorage.setItem('theme', next ? 'dark' : 'light'); } catch {}
+    const root = document.documentElement;
+    const body = document.body;
+    root.classList.toggle('dark', next);
+    body.classList.toggle('dark', next);
+    setIsDark(next);
+  };
+
   return (
-    <header ref={headerRef} className={`sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300 relative ${
+    <header ref={headerRef} className={`sticky top-0 z-[120] backdrop-blur-md border-b transition-all duration-300 relative ${
       isScrolled 
-        ? 'bg-white/90 border-gray-200 shadow-lg shadow-gray-200/50' 
-        : 'bg-white/80 border-gray-200/50'
+        ? 'bg-white/90 border-gray-200 shadow-lg shadow-gray-200/50 dark:bg-[#121212]/90 dark:border-[#282828] dark:shadow-black/30' 
+        : 'bg-white/80 border-gray-200/50 dark:bg-[#121212]/80 dark:border-[#282828]/60'
     }`}>
-      <nav className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-[1fr_auto] md:grid-cols-3 items-center">
+      <nav className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center">
         {/* Left: Name */}
         <a 
           href="#" 
           onClick={scrollToTop}
-          className="font-semibold text-sm sm:text-base hover:text-blue-600 transition-colors cursor-pointer z-10 justify-self-start whitespace-nowrap min-w-0"
+          className="font-semibold text-sm sm:text-base hover:text-[var(--accent)] transition-colors cursor-pointer z-10 justify-self-start whitespace-nowrap min-w-0"
         >
           David Afonso Shepherd
         </a>
@@ -99,7 +127,9 @@ export default function NavBar() {
               href={href}
               target={href.startsWith('http') ? "_blank" : undefined}
               rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-              className={`p-2 rounded-lg transition-all duration-200 ${label === 'GitHub' ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'}`}
+              className={`p-2 rounded-lg transition-colors duration-200 ${label === 'GitHub' 
+                ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]' 
+                : 'text-gray-600 hover:text-[var(--accent)] hover:bg-[var(--accent-50)] dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]'}`}
               aria-label={label}
             >
               <Icon />
@@ -107,45 +137,73 @@ export default function NavBar() {
           ))}
         </div>
         
-        {/* Right: Navigation Links (desktop) */}
-        <ul className="hidden sm:flex items-center gap-2 z-10 justify-self-end">
-          {links.map(l => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                onClick={(e) => handleSmoothScroll(e, l.href)}
-                className="px-3 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 cursor-pointer"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* Right: Links + Theme toggle + Mobile menu */}
+        <div className="flex items-center gap-2 justify-self-end">
+          <ul className="hidden sm:flex items-center gap-2 z-10">
+            {links.map(l => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={(e) => handleSmoothScroll(e, l.href)}
+                  className="px-3 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 cursor-pointer dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Mobile Menu Button (hidden on ≥sm) */}
-        <button
-            className="sm:!hidden md:!hidden lg:!hidden xl:!hidden 2xl:!hidden col-start-2 md:col-start-3 p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 justify-self-end"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle dark mode"
+            title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            className="p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a] cursor-pointer"
+          >
+          {isDark ? (
+              // Sun icon with equidistant, equal-length rays
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <line x1="12" y1="2" x2="12" y2="4" />
+                <line x1="12" y1="20" x2="12" y2="22" />
+                <line x1="2" y1="12" x2="4" y2="12" />
+                <line x1="20" y1="12" x2="22" y2="12" />
+                <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+              </svg>
+            ) : (
+              // Moon icon
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+              </svg>
+            )}
+          </button>
+
+          <button
+            className="sm:!hidden p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-green-500 dark:hover:bg-green-950/50"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
-          ref={toggleRef}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
+            ref={toggleRef}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            {isMenuOpen ? (
-              <path d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {isMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu Panel */}
@@ -158,13 +216,38 @@ export default function NavBar() {
             aria-hidden="true"
           />
           <div
-            className="absolute inset-x-0 top-14 z-[70] bg-white border-t border-gray-200 shadow-lg pointer-events-auto"
+            className="absolute inset-x-0 top-14 z-[70] bg-white border-t border-gray-200 shadow-lg pointer-events-auto dark:bg-[#181818] dark:border-[#282828]"
             ref={menuRef}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
+            <div className="flex justify-end">
+              <button
+                onClick={toggleTheme}
+                aria-label="Toggle dark mode"
+                className="p-2 rounded-lg transition-colors text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a] cursor-pointer"
+              >
+                {isDark ? (
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="4" />
+                    <line x1="12" y1="2" x2="12" y2="4" />
+                    <line x1="12" y1="20" x2="12" y2="22" />
+                    <line x1="2" y1="12" x2="4" y2="12" />
+                    <line x1="20" y1="12" x2="22" y2="12" />
+                    <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                    <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                    <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                    <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                  </svg>
+                )}
+              </button>
+            </div>
             <div className="space-y-2">
-              <p className="text-[10px] uppercase tracking-wider text-gray-400">Connect</p>
+              <p className="text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-400">Connect</p>
               <div className="grid grid-cols-3 gap-2 place-items-center">
                 {SOCIAL_LINKS.map(({ href, label, Icon }) => (
                   <a
@@ -172,7 +255,9 @@ export default function NavBar() {
                     href={href}
                     target={href.startsWith('http') ? "_blank" : undefined}
                     rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className={`p-2 rounded-lg transition-all duration-200 ${label === 'GitHub' ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'}`}
+                    className={`p-2 rounded-lg transition-colors duration-200 ${label === 'GitHub' 
+                      ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-[#202020]' 
+                      : 'text-gray-700 hover:text-[var(--accent)] hover:bg-[var(--accent-50)] dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]'}`}
                     aria-label={label}
                   >
                     <Icon />
@@ -182,8 +267,8 @@ export default function NavBar() {
             </div>
 
             <div className="space-y-2">
-              <p className="text-[10px] uppercase tracking-wider text-gray-400">Navigate</p>
-              <ul className="flex flex-col divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-100">
+              <p className="text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-400">Navigate</p>
+              <ul className="flex flex-col divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-100 dark:divide-[#282828] dark:border-[#282828]">
             {links.map(l => (
                   <li key={l.href} className="relative">
                 <a
@@ -192,7 +277,7 @@ export default function NavBar() {
                       className="absolute inset-0"
                       aria-label={l.label}
                     />
-                    <span className="block w-full px-6 py-2.5 text-sm font-medium leading-5 text-gray-700 hover:text-blue-600 hover:bg-blue-50">
+                    <span className="block w-full px-6 py-2.5 text-sm font-medium leading-5 text-gray-700 hover:text-[var(--accent)] hover:bg-[var(--accent-50)] transition-colors duration-200 dark:text-gray-300">
                   {l.label}
                     </span>
               </li>

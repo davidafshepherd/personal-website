@@ -7,16 +7,16 @@ type ExperienceCardProps = {
 
 export default function ExperienceCard({ role }: ExperienceCardProps) {
   return (
-    <li className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 overflow-hidden">
-      <div className="absolute top-0 left-0 w-1 h-full bg-blue-600"></div>
-      <div className="p-5 sm:p-6">
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+    <li className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818]">
+      <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)]"></div>
+      <div className="p-4 sm:p-5 md:p-6">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6">
           {/* Left: Content */}
           <div className="flex-1 flex flex-col justify-between min-w-0">
             <div>
               <div className="mb-3 grid grid-cols-[1fr_auto] items-start gap-x-3 gap-y-2">
-                <h3 className="font-bold text-base sm:text-lg text-gray-900 min-w-0">{role.title}</h3>
-                <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full">{role.length}</span>
+                <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">{role.title}</h3>
+                <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap px-3 py-1 rounded-full border bg-[var(--length-chip-bg)] border-[var(--length-chip-border)] dark:text-gray-400">{role.length}</span>
                 <div className="col-span-2 flex items-center gap-3">
                   <Image
                     src={role.logo}
@@ -31,21 +31,21 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
                         href={role.links[0].url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm sm:text-base text-blue-600 font-medium hover:underline break-words"
+                        className="text-sm sm:text-base text-[var(--accent)] font-medium hover:underline break-words"
                       >
                         {role.org}
                       </a>
                     ) : (
-                      <p className="text-sm sm:text-base text-blue-600 font-medium break-words">{role.org}</p>
+                      <p className="text-sm sm:text-base text-[var(--accent)] font-medium break-words">{role.org}</p>
                     )}
                   </div>
                 </div>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-2 leading-[1.6]">
                 {role.highlights.map((h, i) => (
-                  <li key={i} className="flex gap-2 text-xs sm:text-sm text-gray-600">
-                    <span className="text-blue-600 flex-shrink-0">•</span>
-                    <span className="text-justify">{h}</span>
+                  <li key={i} className="flex gap-2 items-start text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                    <span className="text-[var(--accent)] flex-shrink-0">•</span>
+                    <span className="text-justify leading-[1.6]">{h}</span>
                   </li>
                 ))}
               </ul>
@@ -57,7 +57,7 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
                 {role.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded-full border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-colors cursor-default"
+                    className="px-3 py-1 text-xs rounded-full border transition-colors cursor-default bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 hover:border-blue-300 dark:bg-[#1db9541a] dark:text-[#1DB954] dark:border-[#1db95433] dark:hover:bg-[#1db9544d] dark:hover:border-[#1db95480]"
                   >
                     {skill}
                   </span>
@@ -68,13 +68,13 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
 
           {/* Right: Personal Image */}
           {role.image && (
-            <div className="flex-shrink-0 flex items-center">
+            <div className="flex-shrink-0 flex items-center justify-center sm:justify-start">
               <Image
                 src={role.image}
                 alt={`${role.title} at ${role.org}`}
                 width={320}
                 height={240}
-                className="w-full sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
+                className="w-full max-w-[480px] sm:w-56 md:w-64 lg:w-72 aspect-[4/3] object-cover rounded-xl"
               />
             </div>
           )}

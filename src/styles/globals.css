@@ -1,7 +1,29 @@
+@config "../../tailwind.config.ts";
 @import "tailwindcss";
 
 :root { 
   --radius: 1.25rem; 
+  --accent: #2563eb; /* blue-600 */
+  --accent-50: #eff6ff; /* blue-50 */
+  --accent-400: #60a5fa; /* blue-400 */
+  --accent-500: #3b82f6; /* blue-500 */
+  --accent-600: #2563eb; /* blue-600 */
+  --muted: #6b7280; /* gray-500/600 range */
+  /* Experience length pill */
+  --length-chip-bg: #f3f4f6; /* gray-100 */
+  --length-chip-border: #e5e7eb; /* gray-200 */
+}
+
+.dark:root {
+  --accent: #1DB954; /* Spotify green */
+  --accent-50: #1db9541a; /* translucent */
+  --accent-400: #1ED760;
+  --accent-500: #1DB954;
+  --accent-600: #1DB954;
+  --muted: #9CA3AF; /* gray-400 */
+  /* Experience length pill in dark */
+  --length-chip-bg: #232323; /* a bit lighter than card #181818 */
+  --length-chip-border: #2f2f2f; 
 }
 
 * { 
@@ -29,6 +51,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-gutter: stable both-edges;
 }
 
 /* Prevent horizontal scroll on mobile */

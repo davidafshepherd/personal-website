@@ -34,8 +34,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { try { const ls = localStorage.getItem('theme'); const useDark = ls ? ls === 'dark' : false; const root = document.documentElement; const body = document.body; root.classList.toggle('dark', useDark); body.classList.toggle('dark', useDark); } catch(_) {} })();`,
+          }}
+        />
+      </head>
+      <body className={`${inter.className} bg-white text-gray-900 antialiased dark:bg-[#121212] dark:text-[#EAEAEA]`}>
         <ScrollProgress />
         <NavBar />
         <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">{children}</main>
