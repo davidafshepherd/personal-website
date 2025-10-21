@@ -26,7 +26,7 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
                     className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
                   />
                   <div className="min-w-0 flex-1">
-                    {role.links && role.links.length > 0 ? (
+                    {role.links?.[0] ? (
                       <a
                         href={role.links[0].url}
                         target="_blank"
@@ -52,7 +52,7 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
             </div>
 
             {/* Skills at bottom of left column */}
-            {role.skills && role.skills.length > 0 && (
+            {!!role.skills?.length && (
               <div className="mt-4 flex flex-wrap justify-center gap-2">
                 {role.skills.map((skill, i) => (
                   <span

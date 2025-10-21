@@ -7,7 +7,7 @@ export default function Footer() {
           <span className="hidden sm:inline mx-2">·</span>
           <span>Built with Next.js & Tailwind</span>
           <span className="hidden sm:inline mx-2">·</span>
-          <a className="underline hover:text-blue-600" href="https://github.com/your-github">GitHub</a>
+          <a className="underline hover:text-blue-600" href="https://github.com/davidafshepherd" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </footer>

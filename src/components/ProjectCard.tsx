@@ -13,7 +13,18 @@ export default function ProjectCard({ project }: { project: Project }) {
       <p className="text-xs sm:text-sm text-gray-700 mt-1 leading-relaxed">{project.tagline}</p>
       <div className="mt-3 text-xs text-gray-500 leading-relaxed">{project.stack.join(" · ")}</div>
       <div className="mt-auto pt-4 flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm">
-        {project.links.map((l) => <a key={l.href} className="underline hover:text-blue-600" href={l.href}>{l.label}</a>)}
+        {project.links.map((l) => (
+          <a
+            key={l.href}
+            className="underline hover:text-blue-600"
+            href={l.href}
+            target={l.href.startsWith("http") ? "_blank" : undefined}
+            rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            aria-label={l.label}
+          >
+            {l.label}
+          </a>
+        ))}
       </div>
     </article>
   );

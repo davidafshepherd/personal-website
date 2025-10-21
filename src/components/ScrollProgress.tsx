@@ -7,12 +7,14 @@ export default function ScrollProgress() {
   useEffect(() => {
     const updateScrollProgress = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
+      const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
       setScrollProgress(progress);
     };
 
     window.addEventListener("scroll", updateScrollProgress);
+    // initialize on mount
+    updateScrollProgress();
     return () => window.removeEventListener("scroll", updateScrollProgress);
   }, []);
 

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "David Afonso Shepherd — Portfolio",
   description: "MEng Computer Science | RL, ML, Systems | Projects & Experience",
-  metadataBase: new URL("https://your-domain.vercel.app"),
+  metadataBase: new URL("https://davidshepherd.dev"),
   openGraph: {
     title: "David Afonso Shepherd — MEng Computer Science",
     description: "Portfolio of David Afonso Shepherd: showcasing AI, ML, and RL projects.",
@@ -39,25 +40,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NavBar />
         <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">{children}</main>
         <Footer />
+        <Script
+          id="ld-json"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "David Afonso Shepherd",
+              url: "https://davidshepherd.dev",
+              jobTitle: "MEng Computer Science Student",
+              worksFor: {
+                "@type": "CollegeOrUniversity",
+                name: "University of Southampton",
+              },
+              sameAs: [
+                "https://github.com/davidafshepherd",
+                "https://www.linkedin.com/in/david-afonso-shepherd-986b10295/",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
 }
 
-<script type="application/ld+json" suppressHydrationWarning>
-{JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "David Afonso Shepherd",
-  url: "https://davidshepherd.dev",
-  jobTitle: "MEng Computer Science Student",
-  worksFor: {
-    "@type": "CollegeOrUniversity",
-    name: "University of Southampton"
-  },
-  sameAs: [
-    "https://github.com/davidafonsoshepherd",
-    "https://www.linkedin.com/in/davidafonsoshepherd/"
-  ]
-})}
-</script>
