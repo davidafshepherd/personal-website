@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
   { href: "#about", label: "About" },
@@ -11,6 +11,8 @@ export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +23,34 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
+  // Close menu when clicking outside menu or toggle on mobile
+  useEffect(() => {
+    if (!isMenuOpen || !isMobile) return;
+
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as Node | null;
+      if (!target) return;
+      const clickedToggle = toggleRef.current?.contains(target);
+      const clickedMenu = menuRef.current?.contains(target);
+      if (!clickedToggle && !clickedMenu) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+
+    document.addEventListener("click", handleOutside, { capture: true });
+    document.addEventListener("touchstart", handleOutside, { capture: true });
+    document.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("click", handleOutside, { capture: true } as any);
+      document.removeEventListener("touchstart", handleOutside, { capture: true } as any);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [isMenuOpen, isMobile]);
+
   useEffect(() => {
     const updateIsMobile = () => setIsMobile(window.innerWidth < 640);
     updateIsMobile();
@@ -123,6 +153,7 @@ export default function NavBar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
+          ref={toggleRef}
         >
           <svg
             className="w-6 h-6"
@@ -146,15 +177,9 @@ export default function NavBar() {
       {/* Mobile Menu Panel */}
       {isMobile && isMenuOpen && (
         <div className="fixed inset-0 z-[60]">
-          {/* dedicated overlay to capture taps */}
-          <div
-            className="absolute inset-x-0 top-14 bottom-0 bg-black/0"
-            onClick={() => setIsMenuOpen(false)}
-            aria-hidden="true"
-          />
           <div
             className="absolute inset-x-0 top-14 z-[70] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg"
-            onClick={(e) => e.stopPropagation()}
+            ref={menuRef}
           >
             <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
             <div className="space-y-2">
