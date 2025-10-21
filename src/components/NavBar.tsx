@@ -51,12 +51,12 @@ export default function NavBar() {
         ? 'bg-white/90 border-gray-200 shadow-lg shadow-gray-200/50' 
         : 'bg-white/80 border-gray-200/50'
     }`}>
-      <nav className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-3 items-center">
+      <nav className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-14 grid grid-cols-[1fr_auto] md:grid-cols-3 items-center">
         {/* Left: Name */}
         <a 
           href="#" 
           onClick={scrollToTop}
-          className="font-semibold text-sm sm:text-base hover:text-blue-600 transition-colors cursor-pointer z-10 justify-self-start"
+          className="font-semibold text-sm sm:text-base hover:text-blue-600 transition-colors cursor-pointer z-10 justify-self-start whitespace-nowrap min-w-0"
         >
           David Afonso Shepherd
         </a>
@@ -119,7 +119,7 @@ export default function NavBar() {
         {/* Mobile Menu Button */}
         {isMobile && (
         <button
-            className="col-start-3 p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 justify-self-end"
+            className="col-start-2 md:col-start-3 p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 justify-self-end"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
@@ -192,7 +192,7 @@ export default function NavBar() {
                 <a
                   href={l.href}
                       onClick={(e) => { handleSmoothScroll(e, l.href); setIsMenuOpen(false); }}
-                      className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                      className="block px-4 py-4 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                 >
                   {l.label}
                 </a>
