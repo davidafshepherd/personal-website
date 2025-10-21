@@ -145,7 +145,7 @@ export default function NavBar() {
 
       {/* Mobile Menu Panel */}
       {isMobile && isMenuOpen && (
-        <div className="absolute inset-x-0 top-14 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
+        <div className="absolute inset-x-0 top-14 z-50 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
           <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
             <div className="space-y-2">
               <p className="text-[10px] uppercase tracking-wider text-gray-400">Connect</p>
@@ -192,7 +192,7 @@ export default function NavBar() {
                 <a
                   href={l.href}
                       onClick={(e) => { handleSmoothScroll(e, l.href); setIsMenuOpen(false); }}
-                      className="block w-full px-6 py-5 min-h-[56px] text-sm font-medium leading-6 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                      className="block w-full px-6 py-6 min-h-[64px] text-sm font-medium leading-6 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                 >
                   {l.label}
                 </a>
