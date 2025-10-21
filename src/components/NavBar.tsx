@@ -188,14 +188,16 @@ export default function NavBar() {
               <p className="text-[10px] uppercase tracking-wider text-gray-400">Navigate</p>
               <ul className="flex flex-col divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-100">
             {links.map(l => (
-              <li key={l.href}>
+                  <li key={l.href} className="relative">
                 <a
                   href={l.href}
                       onClick={(e) => { handleSmoothScroll(e, l.href); setIsMenuOpen(false); }}
-                      className="block w-full px-6 py-6 min-h-[64px] text-sm font-medium leading-6 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-                >
+                      className="absolute inset-0"
+                      aria-label={l.label}
+                    />
+                    <span className="block w-full px-6 py-6 text-sm font-medium leading-6 text-gray-700 hover:text-blue-600 hover:bg-blue-50">
                   {l.label}
-                </a>
+                    </span>
               </li>
             ))}
           </ul>
