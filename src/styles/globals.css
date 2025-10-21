@@ -54,11 +54,6 @@ html {
   scrollbar-gutter: stable both-edges;
 }
 
-/* During theme switch, disable transitions to avoid staggered color changes */
-.theme-switching *, .theme-switching {
-  transition: none !important;
-}
-
 /* Prevent horizontal scroll on mobile */
 body {
   overflow-x: hidden;
