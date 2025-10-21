@@ -13,6 +13,7 @@ export default function NavBar() {
   const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const toggleRef = useRef<HTMLButtonElement | null>(null);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,8 @@ export default function NavBar() {
     const handleOutside = (e: MouseEvent | TouchEvent) => {
       const target = e.target as Node | null;
       if (!target) return;
+      // Ignore clicks within the navbar/header area so empty navbar taps don't close
+      if (headerRef.current?.contains(target)) return;
       const clickedToggle = toggleRef.current?.contains(target);
       const clickedMenu = menuRef.current?.contains(target);
       if (!clickedToggle && !clickedMenu) {
@@ -78,7 +81,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className={`sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300 relative ${
+    <header ref={headerRef} className={`sticky top-0 z-50 backdrop-blur-md border-b transition-all duration-300 relative ${
       isScrolled 
         ? 'bg-white/90 border-gray-200 shadow-lg shadow-gray-200/50' 
         : 'bg-white/80 border-gray-200/50'
