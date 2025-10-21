@@ -24,7 +24,7 @@ const experience: ExperienceRole[] = [
       "Worked on a brand new feature aimed at enhancing the learning experience on Spotify;",
       "Collaborated across several domains (web, backend and AI).",
     ],
-    skills: ["CI/CD", "Docker", "Next.js", "APIs", "Prompt Eng", "LLM Evals", "Code Reviews"],
+    skills: ["CI/CD", "Git", "Docker", "Next.js", "APIs", "Prompt Engineering", "Code Reviews"],
     links: [
       { label: "Spotify", url: "https://courses.spotify.com/home" }
     ],
@@ -55,7 +55,7 @@ const experience: ExperienceRole[] = [
       "I work with a team of 4 engineers to develop and test SmartCart V3, an 'augmented meal cart' for in-hospital use;",
       "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
     ],
-    skills: ["Software Engineering", "Machine Learning", "Supervised Learning", "Instance Segmentation"],
+    skills: ["Supervised Learning", "Transfer Learning", "CNNs", "Instance Segmentation", "Object Detection", "Image Classification"],
     links: [
       { label: "UHS NHS Trust", url: "https://www.uhs.nhs.uk/" }
     ],
@@ -71,7 +71,7 @@ const experience: ExperienceRole[] = [
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh;",
       "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire.",
     ],
-    skills: ["Machine Learning", "Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "Python"],
+    skills: ["Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "DQN", "PPO", "A2C", "Python"],
     links: [
       { label: "XPRIZE", url: "https://www.xprize.org/prizes/wildfire" }
     ],
