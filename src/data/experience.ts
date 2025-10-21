@@ -9,9 +9,10 @@ const experience = [
     highlights: [
       "Part of the Learning Mountain Bet, a cross-functional team working on developing a new vertical (courses) for Spotify;",
       "The LMB consists entirely of senior, staff & principal level and is one of Spotify's most fast-paced & dynamic teams;",
-      "Worked on a brand new feature aimed at enhancing the learning experience on Spotify, due to launch later this year;",
+      "Worked on a brand new feature aimed at enhancing the learning experience on Spotify;",
       "Collaborated across several domains (web, backend and AI).",
     ],
+    skills: ["CI/CD", "Docker", "Next.js", "APIs", "Prompt Eng", "LLM Evals", "Code Reviews"],
     links: [
       { label: "Spotify", url: "https://courses.spotify.com/home" }
     ],
@@ -27,6 +28,7 @@ const experience = [
       "Worked with a team of 3 interns to promote and increase community involvement in fundraising for Dorset's Disability Charity 'Diverse Abilities';",
       "Developed 'Hero's Leaderboard', a web app that promotes community engagement in fundraising through scoreboards & rewards.",
     ],
+    skills: ["Agile Methodologies", "Git", "HTML", "CSS", "Python", "Flask"],
     links: [
       { label: "JPMorgan Chase", url: "https://www.jpmorganchase.com" }
     ],
@@ -41,7 +43,7 @@ const experience = [
     highlights: [
       "Led a committee of 8 and coordinated the society's 4 divisions (Education, Projects, Partnerships & Marketing);",
       "Organised over 20 ML workshops, talks led by industry experts & other events for the society's 500+ members;",
-      "Led fundraising from academic & corporate sponsors, such as IET, Cirium, Siemens & Encode;",
+      "Led fundraising from academic & corporate sponsors, such as IET, Cirium & Siemens;",
       "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons."
     ],
     links: [
