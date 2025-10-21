@@ -19,9 +19,9 @@ export default function HomePage() {
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-relaxed">
               Full-Stack Software Engineer · Machine Learning Engineer
             </h2>
-            <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+            <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-row items-center gap-3 sm:gap-4">
               <span className="font-medium whitespace-nowrap">Proficient in</span>
-              <div className="w-full sm:max-w-md md:max-w-lg overflow-hidden">
+              <div className="flex-1 min-w-0 overflow-hidden sm:flex-none sm:max-w-md md:max-w-lg max-[380px]:scale-90">
               <InfiniteScroll />
             </div>
           </div>
