@@ -145,8 +145,15 @@ export default function NavBar() {
 
       {/* Mobile Menu Panel */}
       {isMobile && isMenuOpen && (
-        <div className="absolute inset-x-0 top-14 z-50 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
-          <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
+        <div className="fixed inset-0 z-40">
+          {/* Click-away overlay */}
+          <div
+            className="absolute inset-0 bg-black/0"
+            onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-x-0 top-14 z-50 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
+            <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
             <div className="space-y-2">
               <p className="text-[10px] uppercase tracking-wider text-gray-400">Connect</p>
               <div className="grid grid-cols-3 gap-2 place-items-center">
@@ -201,6 +208,7 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
+        </div>
             </div>
           </div>
         </div>
