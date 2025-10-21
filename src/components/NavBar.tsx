@@ -47,11 +47,9 @@ export default function NavBar() {
     const listenerOptions: AddEventListenerOptions = { capture: true };
 
     document.addEventListener("click", handleOutside, listenerOptions);
-    document.addEventListener("touchstart", handleOutside, listenerOptions);
     document.addEventListener("keydown", handleEsc);
     return () => {
       document.removeEventListener("click", handleOutside, listenerOptions);
-      document.removeEventListener("touchstart", handleOutside, listenerOptions);
       document.removeEventListener("keydown", handleEsc);
     };
   }, [isMenuOpen, isMobile]);
