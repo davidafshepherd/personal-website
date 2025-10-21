@@ -181,10 +181,17 @@ export default function NavBar() {
 
       {/* Mobile Menu Panel */}
       {isMobile && isMenuOpen && (
-        <div className="fixed inset-0 z-[60]">
+        <div className="fixed inset-0 z-[60] pointer-events-none">
+          {/* overlay below navbar only */}
           <div
-            className="absolute inset-x-0 top-14 z-[70] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg"
+            className="absolute inset-x-0 top-14 bottom-0 bg-black/0 pointer-events-auto"
+            onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-x-0 top-14 z-[70] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg pointer-events-auto"
             ref={menuRef}
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
             <div className="space-y-2">
