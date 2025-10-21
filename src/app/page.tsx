@@ -30,7 +30,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-0">
+      <section id="about" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-6 sm:scroll-mt-0">
         <div className="w-full space-y-6 sm:space-y-8">
           {/* Title */}
           <div className="flex items-center gap-4">
@@ -113,7 +113,7 @@ export default function HomePage() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-0">
+      <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-6 sm:scroll-mt-0">
         <div className="w-full space-y-8 sm:space-y-10">
           {/* Title */}
           <div className="flex items-center gap-4">
@@ -167,7 +167,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-0">
+      <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-6 sm:scroll-mt-0">
         <div className="w-full space-y-6 sm:space-y-8">
           {/* Title */}
           <div className="flex items-center gap-4">
