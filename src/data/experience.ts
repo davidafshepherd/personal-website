@@ -4,7 +4,7 @@ const experience = [
     org: "Spotify",
     length: "June 2025 - August 2025",
     category: "internship",
-    logo: "/spotify.png",
+    logo: "/spotify-logo.png",
     image: "/experience-spotify.jpg",
     highlights: [
       "Part of the Learning Mountain Bet, a cross-functional team working on developing a new vertical (courses) for Spotify;",
@@ -31,6 +31,37 @@ const experience = [
     skills: ["Agile Methodologies", "Git", "HTML", "CSS", "Python", "Flask"],
     links: [
       { label: "JPMorgan Chase", url: "https://www.jpmorganchase.com" }
+    ],
+  },
+  {
+    title: "Machine Learning Engineer",
+    org: "University Hospital Southampton NHS Foundation Trust",
+    length: "October 2025 - Present",
+    category: "university_ventures",
+    logo: "/nhs-logo.png",
+    highlights: [
+      "I work with a team of 4 engineers to develop and test SmartCart V3, an 'augmented meal cart' for in-hospital use;",
+      "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake."
+    ],
+    skills: ["Software Engineering", "Machine Learning", "Supervised Learning", "Instance Segmentation"],
+    links: [
+      { label: "UHS NHS Trust", url: "https://www.uhs.nhs.uk/" }
+    ],
+  },
+  {
+    title: "Machine Learning Researcher",
+    org: "XPRIZE Foundation",
+    length: "October 2024 - April 2025",
+    category: "university_ventures",
+    logo: "/xprize-logo.png",
+    highlights: [
+      "Part of FLARE-X, 1 of the 15 autonomous semi-finalist teams, in the $11M international XPRIZE Wildfire competition;",
+      "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh;",
+      "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire."
+    ],
+    skills: ["Machine Learning", "Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "Python"],
+    links: [
+      { label: "XPRIZE", url: "https://www.xprize.org/prizes/wildfire" }
     ],
   },
   {
