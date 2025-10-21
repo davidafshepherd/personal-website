@@ -22,7 +22,7 @@ const experience = [
     org: "JPMorgan Chase & Co.",
     length: "April 2024 - April 2024",
     category: "internship",
-    logo: "/jpmc.png",
+    logo: "/jpmc-logo.png",
     image: "/experience-jpmc.jpg",
     highlights: [
       "Worked with a team of 3 interns to promote and increase community involvement in fundraising for Dorset's Disability Charity 'Diverse Abilities';",
@@ -38,12 +38,12 @@ const experience = [
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2024 – May 2025",
     category: "extracurricular",
-    logo: "/socLogo.png",
+    logo: "/aisoc-logo.png",
     image: "/experience-aisoc-president.jpg",
     highlights: [
       "Led a committee of 8 and coordinated the society's 4 divisions (Education, Projects, Partnerships & Marketing);",
       "Organised over 20 ML workshops, talks led by industry experts & other events for the society's 500+ members;",
-      "Led fundraising from academic & corporate sponsors, such as IET, Cirium & Siemens;",
+      "Led fundraising from academic & corporate sponsors, such as IET, Siemens & Cirium;",
       "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons."
     ],
     links: [
@@ -55,7 +55,7 @@ const experience = [
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2024 – September 2024",
     category: "extracurricular",
-    logo: "/socLogo.png",
+    logo: "/aisoc-logo.png",
     image: "/experience-aisoc-education.jpg",
     highlights: [
       "Led the society's Education Division. This division is responsible for organising the society's bi-weekly ML workshops;",
@@ -71,9 +71,12 @@ const experience = [
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2023 – May 2024",
     category: "extracurricular",
-    logo: "/socLogo.png",
+    logo: "/aisoc-logo.png",
     image: "/experience-aisoc-secretary.jpg",
     highlights: [
+      "Managed the society's communications, ensuring effective coordination between the committee, external partners and sponsors;",
+      "Supported the organisation of the society's workshops, talks and other events, assisting with the logistics & event planning;",
+      "Oversaw meeting agendas, minutes & documentation across the society's 4 divisions."
     ],
     links: [
       { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
@@ -84,10 +87,10 @@ const experience = [
     org: "University of Southampton Students' Union",
     length: "October 2024 – June 2025",
     category: "volunteering",
-    logo: "/uniLogo.png",
+    logo: "/susu-Logo.png",
     highlights: [
       "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the key academic staff within the department;",
-      "Collected and analysed data on modules in order to identify areas for enhancement, ensuring continuous improvement of the degree.",
+      "Collected and analysed data on the 2024-25 modules in order to identify areas for enhancement, ensuring continuous improvement of the degree.",
     ],
     links: [
       { label: "Students' Union", url: "https://www.susu.org" }
@@ -102,7 +105,7 @@ const experience = [
     highlights: [
       "Participated in a mentoring program, providing one-on-one support to a Year 10 student;",
       "Assisted with academic tasks, including homework & exam study, while fostering motivation, improving attendance and encouraging an open mindset;",
-      "Supported the development of essential skills, such as organisation & confidence, contributing to his overall well-being and mental health."
+      "Supported the development of essential skills, such as organisation & confidence, contributing to the student's overall well-being and mental health."
     ],
     links: [
       { label: "Beaumont School", url: "https://www.beaumontschool.com" }
