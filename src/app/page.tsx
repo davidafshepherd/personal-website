@@ -124,25 +124,25 @@ export default function HomePage() {
                           <div className="flex items-start justify-between gap-3 mb-3 sm:block">
                             <div className="flex-1 sm:flex-none">
                               <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-3 min-w-0">
                                 <Image 
                                   src={role.logo} 
                                   alt={`${role.org} logo`} 
                                   width={40} 
                                   height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
                                 />
                                 {role.links && role.links.length > 0 ? (
                                   <a 
                                     href={role.links[0].url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
                                   >
                                     {role.org}
                                   </a>
                                 ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
                                 )}
                               </div>
                             </div>
@@ -208,25 +208,25 @@ export default function HomePage() {
                           <div className="flex items-start justify-between gap-3 mb-3">
                             <div className="flex-1">
                               <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-3 min-w-0">
                                 <Image 
                                   src={role.logo} 
                                   alt={`${role.org} logo`} 
                                   width={40} 
                                   height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
                                 />
                                 {role.links && role.links.length > 0 ? (
                                   <a 
                                     href={role.links[0].url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
                                   >
                                     {role.org}
                                   </a>
                                 ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
                                 )}
                               </div>
                             </div>
@@ -288,32 +288,32 @@ export default function HomePage() {
                       {/* Left: Content */}
                       <div className="flex-1 flex flex-col justify-between">
                         <div>
-                          <div className="flex items-start justify-between gap-3 mb-3">
-                            <div className="flex-1">
+                          <div className="flex items-start justify-between gap-3 mb-3 sm:block">
+                            <div className="flex-1 sm:flex-none">
                               <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-3 min-w-0">
                                 <Image 
                                   src={role.logo} 
                                   alt={`${role.org} logo`} 
                                   width={40} 
                                   height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
                                 />
                                 {role.links && role.links.length > 0 ? (
                                   <a 
                                     href={role.links[0].url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
                                   >
                                     {role.org}
                                   </a>
                                 ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
                                 )}
                               </div>
                             </div>
-                            <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0">{role.length}</span>
+                            <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full flex-shrink-0 sm:hidden">{role.length}</span>
                           </div>
                           <ul className="space-y-2">
                             {role.highlights.map((h, i) => (
@@ -343,6 +343,7 @@ export default function HomePage() {
                       {/* Right: Date Badge and Personal Image */}
                       {role.image && (
                         <div className="flex-shrink-0 flex flex-col gap-3">
+                          <span className="hidden sm:block text-xs sm:text-sm text-gray-500 whitespace-nowrap bg-gray-100 px-3 py-1 rounded-full self-end">{role.length}</span>
                           <Image 
                             src={role.image} 
                             alt={`${role.title} at ${role.org}`} 
@@ -374,25 +375,25 @@ export default function HomePage() {
                           <div className="flex items-start justify-between gap-3 mb-3">
                             <div className="flex-1">
                               <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">{role.title}</h3>
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-3 min-w-0">
                                 <Image 
                                   src={role.logo} 
                                   alt={`${role.org} logo`} 
                                   width={40} 
                                   height={40}
-                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg"
+                                  className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
                                 />
                                 {role.links && role.links.length > 0 ? (
                                   <a 
                                     href={role.links[0].url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline"
+                                    className="text-sm sm:text-base text-blue-600 font-medium hover:underline flex-1 min-w-0"
                                   >
                                     {role.org}
                                   </a>
                                 ) : (
-                                  <p className="text-sm sm:text-base text-blue-600 font-medium">{role.org}</p>
+                                  <p className="text-sm sm:text-base text-blue-600 font-medium flex-1 min-w-0">{role.org}</p>
                                 )}
                               </div>
                             </div>
