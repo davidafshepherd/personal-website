@@ -118,10 +118,10 @@ const experience = [
     org: "University of Southampton Students' Union",
     length: "October 2024 – June 2025",
     category: "volunteering",
-    logo: "/susu-Logo.png",
+    logo: "/susu-logo.png",
     highlights: [
-      "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the key academic staff within the department;",
-      "Collected and analysed data on the 2024-25 modules in order to identify areas for enhancement, ensuring continuous improvement of the degree.",
+      "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the department;",
+      "Collected and analysed data on the 2024-25 modules in order to make improvements to the degree.",
     ],
     links: [
       { label: "Students' Union", url: "https://www.susu.org" }
@@ -135,8 +135,8 @@ const experience = [
     logo: "/beaumont-logo.png",
     highlights: [
       "Participated in a mentoring program, providing one-on-one support to a Year 10 student;",
-      "Assisted with academic tasks, including homework & exam study, while fostering motivation, improving attendance and encouraging an open mindset;",
-      "Supported the development of essential skills, such as organisation & confidence, contributing to the student's overall well-being and mental health."
+      "Assisted with academic tasks, including homework & exam study, while improving their attendance and encouraging an open mindset;",
+      "Supported the development of essential skills, such as motivation & confidence, contributing to their well-being and mental health."
     ],
     links: [
       { label: "Beaumont School", url: "https://www.beaumontschool.com" }
