@@ -13,7 +13,7 @@ const links = [
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const toggleRef = useRef<HTMLButtonElement | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
@@ -28,7 +28,7 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
-  // Initialize from current DOM state and keep in sync with external changes
+  // Initialize from DOM after mount and keep in sync with external changes
   useEffect(() => {
     const root = document.documentElement;
     const sync = () => setIsDark(root.classList.contains('dark'));
@@ -94,12 +94,19 @@ export default function NavBar() {
   };
 
   const toggleTheme = () => {
-    const next = !isDark;
+    const next = !document.documentElement.classList.contains('dark');
     try { localStorage.setItem('theme', next ? 'dark' : 'light'); } catch {}
     const root = document.documentElement;
     const body = document.body;
     root.classList.toggle('dark', next);
     body.classList.toggle('dark', next);
+    // Temporarily disable transitions so all colors swap at once
+    root.classList.add('theme-switching');
+    body.classList.add('theme-switching');
+    window.setTimeout(() => {
+      root.classList.remove('theme-switching');
+      body.classList.remove('theme-switching');
+    }, 150);
     setIsDark(next);
   };
 
@@ -156,32 +163,29 @@ export default function NavBar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            title="Toggle theme"
             className="p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a] cursor-pointer"
           >
-          {isDark ? (
-              // Sun icon with equidistant, equal-length rays
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="4" />
-                <line x1="12" y1="2" x2="12" y2="4" />
-                <line x1="12" y1="20" x2="12" y2="22" />
-                <line x1="2" y1="12" x2="4" y2="12" />
-                <line x1="20" y1="12" x2="22" y2="12" />
-                <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
-                <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
-                <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
-                <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
-              </svg>
-            ) : (
-              // Moon icon
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-              </svg>
-            )}
+            {/* Moon (light mode) */}
+            <svg className="w-5 h-5 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+            {/* Sun (dark mode) */}
+            <svg className="w-5 h-5 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="4" />
+              <line x1="12" y1="2" x2="12" y2="4" />
+              <line x1="12" y1="20" x2="12" y2="22" />
+              <line x1="2" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="22" y2="12" />
+              <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+              <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+              <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+              <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+            </svg>
           </button>
 
           <button
-            className="sm:!hidden p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-green-500 dark:hover:bg-green-950/50"
+            className="sm:!hidden p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-green-500 dark:hover:bg-green-950/50 cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
@@ -221,31 +225,6 @@ export default function NavBar() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto max-w-5xl px-4 py-3 space-y-4">
-            <div className="flex justify-end">
-              <button
-                onClick={toggleTheme}
-                aria-label="Toggle dark mode"
-                className="p-2 rounded-lg transition-colors text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a] cursor-pointer"
-              >
-                {isDark ? (
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="4" />
-                    <line x1="12" y1="2" x2="12" y2="4" />
-                    <line x1="12" y1="20" x2="12" y2="22" />
-                    <line x1="2" y1="12" x2="4" y2="12" />
-                    <line x1="20" y1="12" x2="22" y2="12" />
-                    <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
-                    <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
-                    <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
-                    <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                  </svg>
-                )}
-              </button>
-            </div>
             <div className="space-y-2">
               <p className="text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-400">Connect</p>
               <div className="grid grid-cols-3 gap-2 place-items-center">
@@ -256,8 +235,8 @@ export default function NavBar() {
                     target={href.startsWith('http') ? "_blank" : undefined}
                     rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
                     className={`p-2 rounded-lg transition-colors duration-200 ${label === 'GitHub' 
-                      ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-[#202020]' 
-                      : 'text-gray-700 hover:text-[var(--accent)] hover:bg-[var(--accent-50)] dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]'}`}
+                      ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]' 
+                      : 'text-gray-600 hover:text-[var(--accent)] hover:bg-[var(--accent-50)] dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]'}`}
                     aria-label={label}
                   >
                     <Icon />
@@ -277,7 +256,7 @@ export default function NavBar() {
                       className="absolute inset-0"
                       aria-label={l.label}
                     />
-                    <span className="block w-full px-6 py-2.5 text-sm font-medium leading-5 text-gray-700 hover:text-[var(--accent)] hover:bg-[var(--accent-50)] transition-colors duration-200 dark:text-gray-300">
+                    <span className="block w-full px-6 py-2.5 text-sm font-medium leading-5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]">
                   {l.label}
                     </span>
               </li>

@@ -77,28 +77,10 @@ export default function HomePage() {
                   href={href}
                   target={href.startsWith('http') ? "_blank" : undefined}
                   rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className={`flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 transition-colors group dark:border-[#282828] dark:bg-[#181818] dark:hover:bg-[#202020] ${
-                    label === 'GitHub'
-                      ? 'hover:border-gray-900 dark:hover:border-[#EAEAEA]'
-                      : label === 'LinkedIn'
-                        ? 'hover:border-[#0077B5] dark:hover:border-[#0077B5]'
-                        : 'hover:border-blue-600 dark:hover:border-[#1DB954]'
-                  }`}
+                  className={`flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 transition-colors group dark:border-[#282828] dark:bg-[#181818] dark:hover:bg-[#202020] hover:border-blue-600 dark:hover:border-[#1DB954]`}
                 >
-                  <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                    label === 'GitHub'
-                      ? 'text-gray-900 dark:text-[#EAEAEA] group-hover:text-gray-900 dark:group-hover:text-[#EAEAEA]'
-                      : label === 'LinkedIn'
-                        ? 'text-[#0077B5] dark:text-[#0077B5] group-hover:text-[#0077B5] dark:group-hover:text-[#0077B5]'
-                        : 'text-blue-600 dark:text-[var(--accent)] group-hover:text-blue-600 dark:group-hover:text-[var(--accent)]'
-                  }`} />
-                  <span className={`text-xs sm:text-sm font-medium transition-colors ${
-                    label === 'GitHub'
-                      ? 'group-hover:text-gray-900 dark:group-hover:text-[#EAEAEA]'
-                      : label === 'LinkedIn'
-                        ? 'group-hover:text-[#0077B5] dark:group-hover:text-[#0077B5]'
-                        : 'group-hover:text-blue-600 dark:group-hover:text-[#1DB954]'
-                  }`}>{label}</span>
+                  <Icon className={`w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-[var(--accent)] group-hover:text-blue-600 dark:group-hover:text-[#1DB954]`} />
+                  <span className={`text-xs sm:text-sm font-medium transition-colors group-hover:text-blue-600 dark:group-hover:text-[#1DB954]`}>{label}</span>
                 </a>
               ))}
             </div>
