@@ -1,16 +1,5 @@
 import Image from "next/image";
-
-export type ExperienceRole = {
-  title: string;
-  org: string;
-  length: string;
-  category: string;
-  logo: string;
-  image?: string;
-  highlights: string[];
-  skills?: string[];
-  links?: { label: string; url: string }[];
-};
+import type { ExperienceRole } from "@/data/experience";
 
 type ExperienceCardProps = {
   role: ExperienceRole;

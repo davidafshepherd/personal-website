@@ -156,9 +156,14 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20">
-        <div className="space-y-6 sm:space-y-8">
-          <h1 className="text-2xl sm:text-3xl font-bold">Selected Projects</h1>
+      <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center">
+        <div className="w-full space-y-6 sm:space-y-8">
+          {/* Title */}
+          <div className="flex items-center gap-4">
+            <h1 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">3. Projects</h1>
+            <div className="h-0.5 bg-gradient-to-r from-blue-600 to-transparent flex-1"></div>
+          </div>
+
           <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
             {projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
           </div>

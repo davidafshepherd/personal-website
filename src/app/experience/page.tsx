@@ -7,7 +7,7 @@ export default function ExperiencePage() {
       <h1 className="text-2xl sm:text-3xl font-bold">Experience</h1>
       <ul className="space-y-4 sm:space-y-6">
         {experience.map((role) => (
-          <ExperienceCard key={role.title + role.org} role={role as any} />
+          <ExperienceCard key={role.title + role.org} role={role} />
         ))}
       </ul>
     </section>
