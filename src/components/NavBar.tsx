@@ -41,12 +41,14 @@ export default function NavBar() {
       if (e.key === "Escape") setIsMenuOpen(false);
     };
 
-    document.addEventListener("click", handleOutside, { capture: true });
-    document.addEventListener("touchstart", handleOutside, { capture: true });
+    const listenerOptions: AddEventListenerOptions = { capture: true };
+
+    document.addEventListener("click", handleOutside, listenerOptions);
+    document.addEventListener("touchstart", handleOutside, listenerOptions);
     document.addEventListener("keydown", handleEsc);
     return () => {
-      document.removeEventListener("click", handleOutside, { capture: true } as any);
-      document.removeEventListener("touchstart", handleOutside, { capture: true } as any);
+      document.removeEventListener("click", handleOutside, listenerOptions);
+      document.removeEventListener("touchstart", handleOutside, listenerOptions);
       document.removeEventListener("keydown", handleEsc);
     };
   }, [isMenuOpen, isMobile]);
