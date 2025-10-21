@@ -192,7 +192,7 @@ export default function NavBar() {
                 <a
                   href={l.href}
                       onClick={(e) => { handleSmoothScroll(e, l.href); setIsMenuOpen(false); }}
-                      className="block px-6 py-4 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                      className="block w-full px-6 py-5 min-h-[56px] text-base font-medium leading-relaxed text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                 >
                   {l.label}
                 </a>
