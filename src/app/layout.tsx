@@ -15,12 +15,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "David Afonso Shepherd — Portfolio",
-  description: "MEng Computer Science | RL, ML, Systems | Projects & Experience",
+  title: "David Afonso Shepherd",
+  description: "David Afonso Shepherd's portfolio",
   metadataBase: new URL("https://davidshepherd.dev"),
   openGraph: {
-    title: "David Afonso Shepherd — MEng Computer Science",
-    description: "Portfolio of David Afonso Shepherd: showcasing AI, ML, and RL projects.",
+    title: "David Afonso Shepherd",
+    description: "David Afonso Shepherd's portfolio",
     url: "https://davidshepherd.dev",
     siteName: "David Afonso Shepherd Portfolio",
     images: [
