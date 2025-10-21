@@ -195,7 +195,7 @@ export default function NavBar() {
                       className="absolute inset-0"
                       aria-label={l.label}
                     />
-                    <span className="block w-full px-6 py-4 text-sm font-medium leading-6 text-gray-700 hover:text-blue-600 hover:bg-blue-50">
+                    <span className="block w-full px-6 py-3 text-sm font-medium leading-5 text-gray-700 hover:text-blue-600 hover:bg-blue-50">
                   {l.label}
                     </span>
               </li>
