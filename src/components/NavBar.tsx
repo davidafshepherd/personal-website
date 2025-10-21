@@ -148,7 +148,7 @@ export default function NavBar() {
         <div className="fixed inset-0 z-[60]">
           {/* dedicated overlay to capture taps */}
           <div
-            className="absolute inset-0 bg-black/0"
+            className="absolute inset-x-0 top-14 bottom-0 bg-black/0"
             onClick={() => setIsMenuOpen(false)}
             aria-hidden="true"
           />
