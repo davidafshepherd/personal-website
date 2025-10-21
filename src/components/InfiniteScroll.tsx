@@ -3,6 +3,7 @@
 export default function InfiniteScroll() {
   const items = [
     "Python",
+    "SQL",
     "Java",
     "C#",
     "Haskell",
@@ -13,22 +14,21 @@ export default function InfiniteScroll() {
     "TypeScript",
     "React",
     "Next.js",
+    "Git",
+    "Docker",
+    "AWS",
+    "Linux",
+    "UML",
+    "LaTeX",
+    "NumPy",
+    "Pandas",
     "Scikit-Learn",
     "PyTorch",
     "TensorFlow",
     "Keras",
-    "Pandas",
-    "NumPy",
     "Matplotlib",
-    "Docker",
-    "AWS",
-    "Linux",
-    "Git",
-    "SQL",
-    "UML",
     "Data Visualisation",
     "Prompt Engineering",
-    "LaTeX",
   ];
 
   return (

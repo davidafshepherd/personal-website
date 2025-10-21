@@ -51,12 +51,18 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scrollbar-gutter: stable both-edges;
+  /* Reserve gutter only on the scrollbar side to avoid a left gap */
+  scrollbar-gutter: stable;
 }
 
 /* Prevent horizontal scroll on mobile */
 body {
   overflow-x: hidden;
+}
+
+/* Disable transitions briefly during theme toggle so all colors switch at once */
+.theme-switching, .theme-switching * {
+  transition: none !important;
 }
 
 /* Better line height for mobile readability */

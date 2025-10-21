@@ -98,15 +98,18 @@ export default function NavBar() {
     try { localStorage.setItem('theme', next ? 'dark' : 'light'); } catch {}
     const root = document.documentElement;
     const body = document.body;
-    root.classList.toggle('dark', next);
-    body.classList.toggle('dark', next);
-    // Temporarily disable transitions so all colors swap at once
+    // Add the guard class BEFORE toggling to avoid any color transition
     root.classList.add('theme-switching');
     body.classList.add('theme-switching');
-    window.setTimeout(() => {
-      root.classList.remove('theme-switching');
-      body.classList.remove('theme-switching');
-    }, 150);
+    root.classList.toggle('dark', next);
+    body.classList.toggle('dark', next);
+    // Remove after next paint (double RAF to be safe across browsers)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        root.classList.remove('theme-switching');
+        body.classList.remove('theme-switching');
+      });
+    });
     setIsDark(next);
   };
 
