@@ -119,7 +119,7 @@ export default function NavBar() {
         {/* Mobile Menu Button */}
         {isMobile && (
         <button
-            className="p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 justify-self-end"
+            className="col-start-3 p-2 rounded-lg transition-colors z-10 text-gray-700 hover:text-blue-600 hover:bg-blue-50 justify-self-end"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
