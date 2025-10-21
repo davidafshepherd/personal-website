@@ -188,7 +188,7 @@ export default function NavBar() {
             aria-hidden="true"
           />
           <div
-            className="absolute inset-x-0 top-14 z-[70] bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg pointer-events-auto"
+            className="absolute inset-x-0 top-14 z-[70] bg-white border-t border-gray-200 shadow-lg pointer-events-auto"
             ref={menuRef}
             onClick={(e) => e.stopPropagation()}
           >
