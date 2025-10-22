@@ -20,11 +20,20 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="flex flex-col gap-4 sm:gap-5">
           {/* Content */}
           <div className="flex-1 flex flex-col min-w-0">
-            <div className="mb-6 flex justify-end">
+            <div className="mb-3 flex justify-end">
               <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap px-3 py-1 rounded-full border bg-[var(--length-chip-bg)] border-[var(--length-chip-border)] dark:text-gray-400">{project.length}</span>
             </div>
-            <div className="mb-2">
-              <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">{project.name}</h3>
+            <div className="-mb-1">
+              <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">
+                <a 
+                  href={project.links[0]?.href || "#"} 
+                  target={project.links[0]?.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={project.links[0]?.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="hover:text-[var(--accent)] transition-colors"
+                >
+                  {project.name}
+                </a>
+              </h3>
             </div>
             
             {/* Description */}
@@ -49,13 +58,20 @@ export default function ProjectCard({ project }: { project: Project }) {
 
           {/* Project Image - Below content */}
           <div className="flex justify-center">
-            <Image
-              src={project.image}
-              alt={`${project.name} project`}
-              width={320}
-              height={240}
-              className="w-full aspect-[4/3] object-cover rounded-xl"
-            />
+            <a 
+              href={project.links[0]?.href || "#"} 
+              target={project.links[0]?.href?.startsWith("http") ? "_blank" : undefined}
+              rel={project.links[0]?.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="block w-full"
+            >
+              <Image
+                src={project.image}
+                alt={`${project.name} project`}
+                width={320}
+                height={240}
+                className="w-full aspect-[4/3] object-cover rounded-xl hover:brightness-50 hover:scale-102 transition-all duration-300"
+              />
+            </a>
           </div>
         </div>
       </div>
