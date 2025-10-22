@@ -13,10 +13,7 @@ const projects = [
     ],
     image: "/experience-jpmc.jpg",
     stack: ["Python", "Gymnasium", "PyTorch", "PettingZoo"],
-    links: [
-      { label: "Paper/Report", href: "https://…" },
-      { label: "Code", href: "https://github.com/…" },
-    ],
+    link: "https://github.com/…",
   },
   {
     slug: "gtzan-genre",
@@ -32,7 +29,7 @@ const projects = [
     ],
     image: "/project-music.jpg",
     stack: ["PyTorch", "torchaudio", "NumPy"],
-    links: [{ label: "Code", href: "https://github.com/…" }],
+    link: "https://github.com/…",
   },
   {
     slug: "smartcart-v3",
@@ -48,10 +45,7 @@ const projects = [
     ],
     image: "/project-smartcart.jpg",
     stack: ["Python", "OpenCV", "Flask", "React"],
-    links: [
-      { label: "Demo", href: "https://…" },
-      { label: "Documentation", href: "https://…" },
-    ],
+    link: "https://smartcart-demo.com",
   },
   {
     slug: "banking-system",
@@ -67,10 +61,7 @@ const projects = [
     ],
     image: "/project-banking.jpg",
     stack: ["Java", "Spring Boot", "MySQL", "JUnit"],
-    links: [
-      { label: "Code", href: "https://github.com/…" },
-      { label: "API Docs", href: "https://…" },
-    ],
+    link: "https://github.com/…",
   },
   {
     slug: "vr-escape-room",
@@ -86,10 +77,7 @@ const projects = [
     ],
     image: "/project-vr.jpg",
     stack: ["Unity", "C#", "VR Toolkit", "Photon"],
-    links: [
-      { label: "Demo", href: "https://…" },
-      { label: "Steam", href: "https://…" },
-    ],
+    link: "https://steam.com/…",
   },
 ];
 export default projects;

@@ -9,7 +9,7 @@ type Project = {
   highlights: string[];
   image: string;
   stack: string[];
-  links: { label: string; href: string }[];
+  link: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -26,9 +26,9 @@ export default function ProjectCard({ project }: { project: Project }) {
             <div className="-mb-1">
               <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">
                 <a 
-                  href={project.links[0]?.href || "#"} 
-                  target={project.links[0]?.href?.startsWith("http") ? "_blank" : undefined}
-                  rel={project.links[0]?.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  href={project.link || "#"} 
+                  target={project.link?.startsWith("http") ? "_blank" : undefined}
+                  rel={project.link?.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="hover:text-[var(--accent)] transition-colors"
                 >
                   {project.name}
@@ -59,9 +59,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           {/* Project Image - Below content */}
           <div className="flex justify-center">
             <a 
-              href={project.links[0]?.href || "#"} 
-              target={project.links[0]?.href?.startsWith("http") ? "_blank" : undefined}
-              rel={project.links[0]?.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+              href={project.link || "#"} 
+              target={project.link?.startsWith("http") ? "_blank" : undefined}
+              rel={project.link?.startsWith("http") ? "noopener noreferrer" : undefined}
               className="block w-full"
             >
               <Image
