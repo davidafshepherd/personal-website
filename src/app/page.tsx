@@ -138,6 +138,9 @@ export default function HomePage() {
             { key: 'unity-csharp', title: 'Unity/C#' },
           ].map(({ key, title }, i) => {
             const categoryProjects = projects.filter(project => project.category === key);
+            
+            if (categoryProjects.length === 0) return null;
+            
             return (
               <div key={key} className="space-y-4 sm:space-y-6">
                 <h2 className="text-xl sm:text-2xl font-semibold text-[var(--accent)]">{`3.${i + 1} ${title}`}</h2>
@@ -146,9 +149,6 @@ export default function HomePage() {
                     <ProjectCard key={project.slug} project={project} />
                   ))}
                 </div>
-                {categoryProjects.length === 0 && (
-                  <p className="text-gray-500 text-sm italic dark:text-gray-400">No projects in this category yet.</p>
-                )}
               </div>
             );
           })}

@@ -6,12 +6,15 @@ type Project = {
   category: string;
   length: string;
   description: string;
-  image?: string;
+  image: string;
   stack: string[];
   link: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const hasValidLink = project.link && project.link !== "#" && project.link !== "https://github.com/…";
+  const hasValidImage = project.image && project.image !== "";
+
   return (
     <article className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818] dark:hover:border-[#1DB954]">
       <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)]"></div>
@@ -24,14 +27,18 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
             <div className="-mb-1">
               <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">
-                <a 
-                  href={project.link || "#"} 
-                  target={project.link?.startsWith("http") ? "_blank" : undefined}
-                  rel={project.link?.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="hover:text-[var(--accent)] transition-colors"
-                >
-                  {project.name}
-                </a>
+                {hasValidLink ? (
+                  <a 
+                    href={project.link} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[var(--accent)] transition-colors"
+                  >
+                    {project.name}
+                  </a>
+                ) : (
+                  <span>{project.name}</span>
+                )}
               </h3>
             </div>
             
@@ -43,41 +50,49 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
 
-          {/* Project Image - Centered between description and skills */}
-          <div className="flex justify-center items-center flex-1 mb-4">
-            <a 
-              href={project.link || "#"} 
-              target={project.link?.startsWith("http") ? "_blank" : undefined}
-              rel={project.link?.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="block w-full"
-            >
-              <Image
-                src={
-                  project.image || 
-                  (project.link?.includes('github.com') 
-                    ? `https://opengraph.githubassets.com/1/${project.link.replace('https://github.com/', '')}`
-                    : '/og.png'
-                  )
-                }
-                alt={`${project.name} project`}
-                width={320}
-                height={180}
-                className="w-3/4 aspect-[16/9] object-cover rounded-xl hover:brightness-50 hover:scale-102 transition-all duration-300"
-              />
-            </a>
-          </div>
+          {/* Project Image - Only show if valid image exists */}
+          {hasValidImage && (
+            <div className="flex justify-center items-center flex-1 mb-4">
+              {hasValidLink ? (
+                <a 
+                  href={project.link} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} project`}
+                    width={320}
+                    height={180}
+                    className="w-3/4 aspect-[16/9] object-cover rounded-xl hover:brightness-50 hover:scale-102 transition-all duration-300"
+                  />
+                </a>
+              ) : (
+                <Image
+                  src={project.image}
+                  alt={`${project.name} project`}
+                  width={320}
+                  height={180}
+                  className="w-3/4 aspect-[16/9] object-cover rounded-xl"
+                />
+              )}
+            </div>
+          )}
 
-          {/* Skill Cards - At bottom */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {project.stack.map((skill, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 text-xs rounded-full border transition-colors cursor-default bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 hover:border-blue-300 dark:bg-[#1db9541a] dark:text-[#1DB954] dark:border-[#1db95433] dark:hover:bg-[#1db9544d] dark:hover:border-[#1db95480]"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+          {/* Skill Cards - Only show if skills exist */}
+          {project.stack.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2">
+              {project.stack.map((skill, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-xs rounded-full border transition-colors cursor-default bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 hover:border-blue-300 dark:bg-[#1db9541a] dark:text-[#1DB954] dark:border-[#1db95433] dark:hover:bg-[#1db9544d] dark:hover:border-[#1db95480]"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </article>
