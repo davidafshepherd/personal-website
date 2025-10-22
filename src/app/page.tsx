@@ -100,7 +100,7 @@ export default function HomePage() {
 
           {[
             { key: 'internship', title: 'Internships' },
-            { key: 'university_ventures', title: 'University Ventures' },
+            { key: 'university_ventures', title: 'University Initiatives' },
             { key: 'extracurricular', title: 'Extracurricular Activities' },
             { key: 'volunteering', title: 'Volunteering' },
           ].map(({ key, title }, i) => {
