@@ -27,6 +27,7 @@ export default function InfiniteScroll() {
     "TensorFlow",
     "Keras",
     "Matplotlib",
+    "Seaborn",
     "Data Visualisation",
     "Prompt Engineering",
   ];

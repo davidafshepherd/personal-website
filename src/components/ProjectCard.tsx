@@ -6,7 +6,7 @@ type Project = {
   category: string;
   length: string;
   description: string;
-  image: string;
+  image?: string;
   stack: string[];
   link: string;
 };
@@ -52,7 +52,13 @@ export default function ProjectCard({ project }: { project: Project }) {
               className="block w-full"
             >
               <Image
-                src={project.image}
+                src={
+                  project.image || 
+                  (project.link?.includes('github.com') 
+                    ? `https://opengraph.githubassets.com/1/${project.link.replace('https://github.com/', '')}`
+                    : '/og.png'
+                  )
+                }
                 alt={`${project.name} project`}
                 width={320}
                 height={180}
