@@ -51,7 +51,6 @@ const experience: ExperienceRole[] = [
       "I work with a team of 4 engineers to develop and test SmartCart V3, an 'augmented meal cart' for in-hospital use;",
       "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
     ],
-    skills: ["Supervised Learning", "Transfer Learning", "CNNs", "Instance Segmentation", "Object Detection", "Image Classification"],
     link: "https://www.uhs.nhs.uk/",
   },
   {
@@ -65,7 +64,6 @@ const experience: ExperienceRole[] = [
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh;",
       "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire.",
     ],
-    skills: ["Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "DQN", "PPO", "A2C", "Python"],
     link: "https://www.xprize.org/prizes/wildfire",
   },
   {
