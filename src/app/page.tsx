@@ -124,16 +124,34 @@ export default function HomePage() {
 
       {/* Projects Section */}
       <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 flex items-center scroll-mt-6 sm:scroll-mt-0">
-        <div className="w-full space-y-6 sm:space-y-8">
+        <div className="w-full space-y-8 sm:space-y-10">
           {/* Title */}
           <div className="flex items-center gap-4">
             <h1 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">3. Projects</h1>
             <div className="h-0.5 bg-gradient-to-r from-[var(--accent)] to-transparent flex-1"></div>
           </div>
 
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-            {projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
-          </div>
+          {[
+            { key: 'recent', title: 'Recent Projects' },
+            { key: 'python-ml', title: 'Python/ML' },
+            { key: 'java', title: 'Java' },
+            { key: 'unity-csharp', title: 'Unity/C#' },
+          ].map(({ key, title }, i) => {
+            const categoryProjects = projects.filter(project => project.category === key);
+            return (
+              <div key={key} className="space-y-4 sm:space-y-6">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[var(--accent)]">{`3.${i + 1} ${title}`}</h2>
+                <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+                  {categoryProjects.map(project => (
+                    <ProjectCard key={project.slug} project={project} />
+                  ))}
+                </div>
+                {categoryProjects.length === 0 && (
+                  <p className="text-gray-500 text-sm italic dark:text-gray-400">No projects in this category yet.</p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
     </>
