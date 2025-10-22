@@ -154,6 +154,15 @@ export default function HomePage() {
           })}
         </div>
       </section>
+
+      {/* Congratulations Message */}
+      <section className="py-4">
+        <div className="text-center">
+          <p className="text-base text-gray-600 dark:text-gray-300">
+            Congratulations! You've made it to the end :)
+          </p>
+        </div>
+      </section>
     </>
   );
 }
