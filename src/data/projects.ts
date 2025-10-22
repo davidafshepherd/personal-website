@@ -1,6 +1,6 @@
 const projects = [
   {
-    slug: "gtzan-genre1",
+    slug: "gtzan-genre-0",
     name: "GTZAN Music Genre Classification",
     category: "python-ml",
     length: "2 months",
@@ -10,7 +10,7 @@ const projects = [
     link: "https://github.com/…",
   },
   {
-    slug: "gtzan-genre",
+    slug: "gtzan-genre-1",
     name: "GTZAN Music Genre Classification",
     category: "python-ml",
     length: "2 months",
