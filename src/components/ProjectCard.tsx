@@ -13,7 +13,7 @@ type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818]">
+    <article className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818] dark:hover:border-[#1DB954]">
       <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)]"></div>
       <div className="p-4 sm:p-5 md:p-6">
         <div className="flex flex-col gap-4 sm:gap-5">
