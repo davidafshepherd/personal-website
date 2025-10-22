@@ -45,7 +45,7 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
                 {role.highlights.map((h, i) => (
                   <li key={i} className="flex gap-2 items-start text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                     <span className="text-[var(--accent)] flex-shrink-0">•</span>
-                    <span className="text-justify leading-[1.6]">{h}</span>
+                    <span className="text-left leading-[1.6]">{h}</span>
                   </li>
                 ))}
               </ul>

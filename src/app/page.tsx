@@ -43,7 +43,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-stretch">
             {/* Left side - Text box */}
             <div className="flex-1">
-              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-justify dark:border-[#282828] dark:bg-[#181818] dark:text-gray-300">
+              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-left dark:border-[#282828] dark:bg-[#181818] dark:text-gray-300">
                 <p>
                   Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I&apos;m a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
                 </p>
@@ -103,11 +103,11 @@ export default function HomePage() {
             { key: 'university_ventures', title: 'University Ventures' },
             { key: 'extracurricular', title: 'Extracurricular Activities' },
             { key: 'volunteering', title: 'Volunteering' },
-          ].map(({ key, title }) => {
+          ].map(({ key, title }, i) => {
             const roles = experience.filter(role => role.category === key);
             return (
               <div key={key} className="space-y-4 sm:space-y-6">
-                <h2 className="text-xl sm:text-2xl font-semibold text-[var(--accent)]">{title}</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold text-[var(--accent)]">{`2.${i + 1} ${title}`}</h2>
             <ul className="space-y-4 sm:space-y-6">
                   {roles.map(role => (
                 <ExperienceCard key={role.title + role.org} role={role} />
