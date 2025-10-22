@@ -3,10 +3,9 @@ import Image from "next/image";
 type Project = {
   slug: string;
   name: string;
-  tagline: string;
   category: string;
   length: string;
-  highlights: string[];
+  description: string;
   image: string;
   stack: string[];
   link: string;
@@ -39,7 +38,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             {/* Description */}
             <div className="mb-4">
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-[1.6] text-left">
-                {project.highlights.join(' ')}
+                {project.description}
               </p>
             </div>
 
@@ -68,8 +67,8 @@ export default function ProjectCard({ project }: { project: Project }) {
                 src={project.image}
                 alt={`${project.name} project`}
                 width={320}
-                height={240}
-                className="w-full aspect-[4/3] object-cover rounded-xl hover:brightness-50 hover:scale-102 transition-all duration-300"
+                height={180}
+                className="w-3/4 aspect-[16/9] object-cover rounded-xl hover:brightness-50 hover:scale-102 transition-all duration-300"
               />
             </a>
           </div>

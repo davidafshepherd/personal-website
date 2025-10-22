@@ -7,7 +7,7 @@ export type ExperienceRole = {
   image?: string;
   highlights: string[];
   skills?: string[];
-  links?: { label: string; url: string }[];
+  link?: string;
 };
 
 const experience: ExperienceRole[] = [
@@ -25,9 +25,7 @@ const experience: ExperienceRole[] = [
       "Collaborated across several domains (web, backend and AI).",
     ],
     skills: ["CI/CD", "Git", "Docker", "Next.js", "APIs", "Prompt Engineering", "Code Reviews"],
-    links: [
-      { label: "Spotify", url: "https://courses.spotify.com/home" }
-    ],
+    link: "https://courses.spotify.com/home",
   },
   {
     title: "Spring Intern",
@@ -41,9 +39,7 @@ const experience: ExperienceRole[] = [
       "Developed 'Hero's Leaderboard', a web app that promotes community engagement in fundraising through scoreboards & rewards.",
     ],
     skills: ["Agile Methodologies", "Git", "HTML", "CSS", "Python", "Flask"],
-    links: [
-      { label: "JPMorgan Chase", url: "https://www.jpmorganchase.com" }
-    ],
+    link: "https://www.jpmorganchase.com",
   },
   {
     title: "Machine Learning Engineer",
@@ -56,9 +52,7 @@ const experience: ExperienceRole[] = [
       "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
     ],
     skills: ["Supervised Learning", "Transfer Learning", "CNNs", "Instance Segmentation", "Object Detection", "Image Classification"],
-    links: [
-      { label: "UHS NHS Trust", url: "https://www.uhs.nhs.uk/" }
-    ],
+    link: "https://www.uhs.nhs.uk/",
   },
   {
     title: "Machine Learning Researcher",
@@ -72,9 +66,7 @@ const experience: ExperienceRole[] = [
       "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire.",
     ],
     skills: ["Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "DQN", "PPO", "A2C", "Python"],
-    links: [
-      { label: "XPRIZE", url: "https://www.xprize.org/prizes/wildfire" }
-    ],
+    link: "https://www.xprize.org/prizes/wildfire",
   },
   {
     title: "President",
@@ -89,9 +81,7 @@ const experience: ExperienceRole[] = [
       "Led fundraising from academic & corporate sponsors, such as IET, Siemens & Cirium;",
       "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons.",
     ],
-    links: [
-      { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
-    ],
+    link: "https://www.susu.org/groups/artificial-intelligence-society",
   },
   {
     title: "Head of Education",
@@ -105,9 +95,7 @@ const experience: ExperienceRole[] = [
       "Developed a beginner-friendly ML curriculum, by simplifying complex models into interactive & hands-on workshops;",
       "Covered Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Reinforcement Learning, Natural Language Processing, Generative Adversarial Networks, Diffusion Models and Tree-Based Models.",
     ],
-    links: [
-      { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
-    ],
+    link: "https://www.susu.org/groups/artificial-intelligence-society",
   },
   {
     title: "Secretary",
@@ -121,9 +109,7 @@ const experience: ExperienceRole[] = [
       "Supported the organisation of the society's workshops, talks and other events, assisting with the logistics & event planning;",
       "Oversaw meeting agendas, minutes & documentation across the society's 4 divisions.",
     ],
-    links: [
-      { label: "AISoc Website", url: "https://www.susu.org/groups/artificial-intelligence-society" }
-    ],
+    link: "https://www.susu.org/groups/artificial-intelligence-society",
   },
   {
     title: "Course Representative",
@@ -135,9 +121,7 @@ const experience: ExperienceRole[] = [
       "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the department;",
       "Collected and analysed data on the 2024-25 modules in order to make improvements to the degree.",
     ],
-    links: [
-      { label: "Students' Union", url: "https://www.susu.org" }
-    ],
+    link: "https://www.susu.org",
   },
   {
     title: "Student Mentor",
@@ -150,9 +134,7 @@ const experience: ExperienceRole[] = [
       "Assisted with academic tasks, including homework & exam study, while improving their attendance and encouraging an open mindset;",
       "Supported the development of essential skills, such as motivation & confidence, contributing to their well-being and mental health.",
     ],
-    links: [
-      { label: "Beaumont School", url: "https://www.beaumontschool.com" }
-    ],
+    link: "https://www.beaumontschool.com",
   }
 ];
 export default experience;

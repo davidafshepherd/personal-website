@@ -26,9 +26,9 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
                     className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-lg flex-shrink-0"
                   />
                   <div className="min-w-0 flex-1">
-                    {role.links?.[0] ? (
+                    {role.link ? (
                       <a
-                        href={role.links[0].url}
+                        href={role.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm sm:text-base text-[var(--accent)] font-medium hover:underline break-words"
