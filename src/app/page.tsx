@@ -144,7 +144,7 @@ export default function HomePage() {
             return (
               <div key={key} className="space-y-4 sm:space-y-6">
                 <h2 className="text-xl sm:text-2xl font-semibold text-[var(--accent)]">{`3.${i + 1} ${title}`}</h2>
-                <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+                <div className="grid gap-4 sm:gap-6 md:grid-cols-2 items-stretch">
                   {categoryProjects.map(project => (
                     <ProjectCard key={project.slug} project={project} />
                   ))}

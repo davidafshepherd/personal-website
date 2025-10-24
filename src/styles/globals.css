@@ -46,6 +46,13 @@ p a, li a {
   display: inline;
 }
 
+/* Reset touch-target styles for links inside headings to avoid extra spacing */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  min-height: auto;
+  min-width: auto;
+  display: inline;
+}
+
 /* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;

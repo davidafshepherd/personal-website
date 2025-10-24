@@ -6,30 +6,47 @@ type Project = {
   category: string;
   length: string;
   description: string;
-  image: string;
+  image?: string;
   stack: string[];
   link: string;
 };
 
+function getGithubOpenGraphImage(link?: string): string | undefined {
+  if (!link) return undefined;
+  try {
+    const url = new URL(link);
+    const host = url.hostname.toLowerCase();
+    if (!(host === "github.com" || host.endsWith(".github.com"))) return undefined;
+    const [owner, repo] = url.pathname.replace(/^\/+/, "").split("/");
+    if (!owner || !repo) return undefined;
+    return `https://opengraph.githubassets.com/1/${owner}/${repo}`;
+  } catch {
+    return undefined;
+  }
+}
+
 export default function ProjectCard({ project }: { project: Project }) {
-  const hasValidLink = project.link && project.link !== "#" && project.link !== "https://github.com/…";
-  const hasValidImage = project.image && project.image !== "";
+  const isHttpLink = !!project.link && /^https?:\/\//.test(project.link);
+  const providedImage = project.image && project.image.trim() !== "" ? project.image : undefined;
+  const githubOgImage = providedImage ? undefined : getGithubOpenGraphImage(project.link);
+  const imageSrc = providedImage ?? githubOgImage;
+  const hasImage = Boolean(imageSrc);
 
   return (
-    <article className="group relative rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818] dark:hover:border-[#1DB954]">
+    <article className="group relative h-full rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818] dark:hover:border-[#1DB954]">
       <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)]"></div>
-      <div className="p-4 sm:p-5 md:p-6">
+      <div className="p-4 sm:p-5 md:p-6 h-full">
         <div className="flex flex-col h-full">
           {/* Content */}
-          <div className="flex-1 flex flex-col min-w-0">
-            <div className="mb-3 flex justify-end">
+          <div className="flex flex-col min-w-0 space-y-2 sm:space-y-3">
+            <div className="flex justify-end">
               <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap px-3 py-1 rounded-full border bg-[var(--length-chip-bg)] border-[var(--length-chip-border)] dark:text-gray-400">{project.length}</span>
             </div>
-            <div className="-mb-1">
+            <div>
               <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">
-                {hasValidLink ? (
+                {isHttpLink ? (
                   <a 
-                    href={project.link} 
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[var(--accent)] transition-colors"
@@ -43,25 +60,25 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
             
             {/* Description */}
-            <div className="mb-4">
+            <div>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-[1.6] text-left">
                 {project.description}
               </p>
             </div>
           </div>
 
-          {/* Project Image - Only show if valid image exists */}
-          {hasValidImage && (
-            <div className="flex justify-center items-center flex-1 mb-4">
-              {hasValidLink ? (
+          {/* Center region for image (always present to push skills to bottom) */}
+          <div className="flex-1 flex items-center justify-center mt-3 sm:mt-4 mb-3 sm:mb-4 min-h-[160px] sm:min-h-[180px]">
+            {hasImage && (
+              isHttpLink ? (
                 <a 
-                  href={project.link} 
+                  href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full"
                 >
                   <Image
-                    src={project.image}
+                    src={imageSrc as string}
                     alt={`${project.name} project`}
                     width={320}
                     height={180}
@@ -70,19 +87,19 @@ export default function ProjectCard({ project }: { project: Project }) {
                 </a>
               ) : (
                 <Image
-                  src={project.image}
+                  src={imageSrc as string}
                   alt={`${project.name} project`}
                   width={320}
                   height={180}
                   className="w-3/4 aspect-[16/9] object-cover rounded-xl"
                 />
-              )}
-            </div>
-          )}
+              )
+            )}
+          </div>
 
           {/* Skill Cards - Only show if skills exist */}
           {project.stack.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className={`flex flex-wrap justify-center gap-2 ${hasImage ? '' : 'mt-3 sm:mt-4'}`}>
               {project.stack.map((skill, i) => (
                 <span
                   key={i}
