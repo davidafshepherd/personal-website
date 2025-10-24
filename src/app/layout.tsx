@@ -17,11 +17,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "David Afonso Shepherd",
   description: "David Afonso Shepherd's portfolio",
-  metadataBase: new URL("https://davidshepherd.dev"),
+  metadataBase: new URL("https://davidafshepherd.dev"),
   openGraph: {
     title: "David Afonso Shepherd",
     description: "David Afonso Shepherd's portfolio",
-    url: "https://davidshepherd.dev",
+    url: "https://davidafshepherd.dev",
     siteName: "David Afonso Shepherd Portfolio",
     images: [
       { url: "/og.png", width: 1200, height: 630, alt: "Portfolio preview" },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     type: "website",
   },
-  alternates: { canonical: "https://davidshepherd.dev" }
+  alternates: { canonical: "https://davidafshepherd.dev" }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Person",
               name: "David Afonso Shepherd",
-              url: "https://davidshepherd.dev",
+              url: "https://davidafshepherd.dev",
               jobTitle: "MEng Computer Science Student",
               worksFor: {
                 "@type": "CollegeOrUniversity",
