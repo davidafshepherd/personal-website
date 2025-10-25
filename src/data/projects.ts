@@ -25,6 +25,7 @@ const projects = [
     category: "recent",
     length: "October 2024 - April 2025",
     description: "Developed multi-agent reinforcement learning system using PettingZoo framework. Implemented coordinated drone deployment strategies for wildfire suppression. Achieved 40% improvement in fire containment efficiency. Created custom simulation environment with realistic fire spread dynamics.",
+    image: "/fire-extinguisher-allocation.jpg",
     stack: ["Python", "Gymnasium", "PyTorch", "PettingZoo"],
     link: "https://github.com/fire-extinguisher-allocation",
   },
