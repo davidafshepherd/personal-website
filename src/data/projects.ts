@@ -11,7 +11,7 @@ const projects = [
   },
   {
     slug: "smartcart-v3",
-    name: "SmartCart v3 - Hospital Nutrition Monitor",
+    name: "SmartCart v3 - Nutrition Intake Monitoring System",
     category: "recent",
     length: "October 2025 - Present",
     description: "Led development of smart meal cart system for University Hospital Southampton. Implemented computer vision for food intake monitoring and analysis. Designed user-friendly interface for healthcare staff and patients. Integrated with hospital systems for patient data synchronization.",
