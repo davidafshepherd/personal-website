@@ -1,12 +1,12 @@
 const projects = [
   {
     slug: "new-project",
-    name: "SmartCart v3 - Hospital Nutrition Monitor",
+    name: "New Project",
     category: "recent",
     length: "October 2025 - Present",
-    description: "Led development of smart meal cart system for University Hospital Southampton. Implemented computer vision for food intake monitoring and analysis. Designed user-friendly interface for healthcare staff and patients. Integrated with hospital systems for patient data synchronization.",
-    image: "/experience-spotify.jpg",
-    stack: ["Python", "OpenCV", "Flask", "React"],
+    description: "",
+    image: "/new-project.png",
+    stack: ["React"],
     link: "https://smartcart-demo.com",
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     category: "recent",
     length: "October 2024 - April 2025",
     description: "Developed multi-agent reinforcement learning system using PettingZoo framework. Implemented coordinated drone deployment strategies for wildfire suppression. Achieved 40% improvement in fire containment efficiency. Created custom simulation environment with realistic fire spread dynamics.",
-    image: "/fire-extinguisher-allocation.jpg",
+    image: "/fire-extinguisher-allocation.png",
     stack: ["Python", "Gymnasium", "PyTorch", "PettingZoo"],
     link: "https://github.com/fire-extinguisher-allocation",
   },
