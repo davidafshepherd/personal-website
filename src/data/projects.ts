@@ -15,7 +15,7 @@ const projects = [
     category: "recent",
     length: "October 2025 - Present",
     description: "Led development of smart meal cart system for University Hospital Southampton. Implemented computer vision for food intake monitoring and analysis. Designed user-friendly interface for healthcare staff and patients. Integrated with hospital systems for patient data synchronization.",
-    image: "/experience-spotify.jpg",
+    image: "/smartcart-v3.png",
     stack: ["Python", "OpenCV", "Flask", "React"],
     link: "https://smartcart-demo.com",
   },
