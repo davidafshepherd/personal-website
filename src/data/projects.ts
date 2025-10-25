@@ -43,7 +43,7 @@ const projects = [
     category: "python-ml",
     length: "February 2025 - April 2025",
     description: "A collection of deep learning models trained to classify music genres using Mel Spectrograms. The best-performing model (a CNN with batch normalization) achieved an accuracy of 73% on the 10-class genre classification task. This project explored the impact of regularization techniques on model performance.",
-    stack: ["python", "NumPy", "PyTorch", "torchvision", "ANNs", "CNNs", "Early Stopping", "Batch Normalization", "Dropout", "Matplotlib", "Seaborn"],
+    stack: ["python", "NumPy", "PyTorch", "torchvision", "ANNs", "CNNs", "Early Stopping", "Batch Normalization", "Dropout", "Matplotlib", "Seaborn", "Comet ML"],
     link: "https://github.com/davidafshepherd/gtzan-music-genre-classification",
   },
   {
