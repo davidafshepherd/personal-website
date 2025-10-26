@@ -5,7 +5,6 @@ const projects = [
     category: "recent",
     length: "October 2025 - Present",
     description: "",
-    image: "/globe-graph.png",
     stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "PostgreSQL", "Docker"],
     link: "https://github.com/davidafshepherd/globe-graph",
   },
