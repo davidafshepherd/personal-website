@@ -64,10 +64,10 @@ export default function ProjectCard({ project }: { project: Project }) {
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-[1.6] text-left">
                 {project.description.split(/(##.*?##|\*\*.*?\*\*)/).map((part, i) => {
                   if (part.startsWith('##') && part.endsWith('##')) {
-                    return <span key={i} className="text-black dark:text-black font-bold">{part.slice(2, -2)}</span>;
+                    return <span key={i} className="text-black dark:text-white font-bold">{part.slice(2, -2)}</span>;
                   }
                   if (part.startsWith('**') && part.endsWith('**')) {
-                    return <span key={i} className="text-black dark:text-black font-bold">{part.slice(2, -2)}</span>;
+                    return <span key={i} className="text-black dark:text-white font-bold">{part.slice(2, -2)}</span>;
                   }
                   return part;
                 })}
