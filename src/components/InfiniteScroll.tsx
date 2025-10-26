@@ -16,7 +16,6 @@ export default function InfiniteScroll() {
     "Next.js",
     "Git",
     "Docker",
-    "AWS",
     "Linux",
     "UML",
     "LaTeX",

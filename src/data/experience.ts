@@ -42,14 +42,14 @@ const experience: ExperienceRole[] = [
     link: "https://www.jpmorganchase.com",
   },
   {
-    title: "Machine Learning Engineer",
+    title: "Software Engineer",
     org: "University Hospital Southampton NHS Foundation Trust",
     length: "October 2025 - Present",
     category: "university_ventures",
     logo: "/nhs-logo.png",
     highlights: [
-      "I work with a team of 4 engineers to develop and test SmartCart V3, an 'augmented meal cart' for in-hospital use;",
-      "SmartCart V3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
+      "I work with a team of 4 engineers to develop and test SmartCart v3, an augmented meal cart for in-hospital use;",
+      "SmartCart v3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
     ],
     link: "https://www.uhs.nhs.uk/",
   },

@@ -1,21 +1,12 @@
 const projects = [
   {
-    slug: "globe-graph",
-    name: "GlobeGraph",
-    category: "recent",
-    length: "October 2025 - Present",
-    description: "",
-    stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "PostgreSQL", "Docker"],
-    link: "https://github.com/davidafshepherd/globe-graph",
-  },
-  {
     slug: "smartcart-v3",
     name: "SmartCart v3",
     category: "recent",
     length: "October 2025 - Present",
-    description: "",
+    description: "An augmented meal cart for in-hospital use that helps prevent malnutrition in hospital patients by monitoring their food intake. SmartCart v3 captures before and after images/weights of hospital meals, segments and classifies foods, estimates portions using depth and scale data, and computes calories, macronutrients and micronutrients using a recipe database. ##Note that the repo is private as the project is still ongoing.##",
     image: "/smartcart-v3.png",
-    stack: ["Python","Transfer Learning", "Instance Segmentation", "Object Detection", "Image Classification"],
+    stack: ["Python","Transfer Learning", "Instance Segmentation", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
     link: "https://github.com/davidafshepherd/smartcart-v3",
   },
   {
@@ -23,7 +14,7 @@ const projects = [
     name: "Fire Extinguisher Allocation",
     category: "recent",
     length: "October 2024 - April 2025",
-    description: "",
+    description: "A collection of RL policies developed for autonomous wildfire suppression using a fixed-wing drone. The agent learns to navigate a dynamic wildfire environment and optimally deploy fire extinguisher balls. This project explored the impact of different fire spread rates, observation spaces, reward functions and algorithms on agent performance. ##Note that the repo is private as the competition is still ongoing.##",
     image: "/fire-extinguisher-allocation.png",
     stack: ["Python", "Reinforcement Learning", "Gymnasium", "Stable-Baselines3", "DQN", "PPO", "A2C"],
     link: "https://github.com/davidafshepherd/fire-extinguisher-allocation",
