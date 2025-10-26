@@ -133,9 +133,9 @@ export default function HomePage() {
 
           {[
             { key: 'recent', title: 'Recent Projects' },
-            { key: 'python-ml', title: 'Python / Machine Learning' },
-            { key: 'java', title: 'Java' },
             { key: 'unity-csharp', title: 'Unity / C#' },
+            { key: 'java', title: 'Java' },
+            { key: 'python-ml', title: 'Python / Machine Learning' },
           ].map(({ key, title }, i) => {
             const categoryProjects = projects.filter(project => project.category === key);
             
