@@ -24,7 +24,7 @@ const experience: ExperienceRole[] = [
       "Worked on a brand new feature aimed at enhancing the learning experience on Spotify;",
       "Collaborated across several domains (web, backend and AI).",
     ],
-    skills: ["CI/CD", "Git", "Docker", "Next.js", "APIs", "Prompt Engineering", "Code Reviews"],
+    skills: ["CI/CD", "Git", "Docker", "Next.js", "REST APIs", "Prompt Engineering", "LLM Evals"],
     link: "https://courses.spotify.com/home",
   },
   {
