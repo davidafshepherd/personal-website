@@ -14,9 +14,14 @@ export default function InfiniteScroll() {
     "TypeScript",
     "React",
     "Next.js",
+    "Flask",
+    "RESTful APIs",
     "Git",
     "Docker",
     "Linux",
+    "AWS",
+    "GCP",
+    "Azure",
     "UML",
     "LaTeX",
     "NumPy",
@@ -29,6 +34,7 @@ export default function InfiniteScroll() {
     "Seaborn",
     "Data Visualisation",
     "Prompt Engineering",
+    "LLM Evaluation",
   ];
 
   return (
