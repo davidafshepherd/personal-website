@@ -20,11 +20,11 @@ const experience: ExperienceRole[] = [
     image: "/experience-spotify.jpg",
     highlights: [
       "Part of the Learning Mountain Bet, a cross-functional team working on developing a new vertical (courses) for Spotify;",
-      "The LMB consists entirely of senior, staff & principal level and is one of Spotify's most fast-paced & dynamic teams;",
+      "The LMB consists entirely of senior, staff and principal level and is one of Spotify's most fast-paced and dynamic teams;",
       "Worked on a brand new feature aimed at enhancing the learning experience on Spotify;",
       "Collaborated across several domains (web, backend and AI).",
     ],
-    skills: ["CI/CD", "Git", "Docker", "Next.js", "REST APIs", "Prompt Engineering", "LLM Evals"],
+    skills: ["CI/CD", "Git", "Docker", "Next.js", "GCP", "REST APIs", "Prompt Engineering"],
     link: "https://courses.spotify.com/home",
   },
   {
@@ -35,10 +35,10 @@ const experience: ExperienceRole[] = [
     logo: "/jpmc-logo.png",
     image: "/experience-jpmc.jpg",
     highlights: [
-      "Worked with a team of 3 interns to promote and increase community involvement in fundraising for Dorset's Disability Charity 'Diverse Abilities';",
-      "Developed 'Hero's Leaderboard', a web app that promotes community engagement in fundraising through scoreboards & rewards.",
+      "Worked with a team of 3 interns to promote and increase community involvement in fundraising for Dorset's disability charity 'Diverse Abilities';",
+      "Developed 'Hero's Leaderboard', a web app that promotes charity fundraising through scoreboards and rewards.",
     ],
-    skills: ["Agile Methodologies", "Git", "HTML", "CSS", "Python", "Flask"],
+    skills: ["Agile Methodologies", "Git", "Flask", "Python", "HTML5", "CSS"],
     link: "https://www.jpmorganchase.com",
   },
   {
@@ -62,7 +62,7 @@ const experience: ExperienceRole[] = [
     highlights: [
       "Part of FLARE-X, 1 of the 15 autonomous semi-finalist teams, in the $11M international XPRIZE Wildfire competition;",
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh;",
-      "Using Reinforcement Learning, I trained a fixed-wing drone to allocate balls of fire extinguisher for optimal suppression of wildfire.",
+      "Using Reinforcement Learning, I trained a fixed-wing drone to deploy balls of fire extinguisher for optimal wildfire suppression.",
     ],
     link: "https://www.xprize.org/prizes/wildfire",
   },
@@ -74,10 +74,9 @@ const experience: ExperienceRole[] = [
     logo: "/aisoc-logo.png",
     image: "/experience-aisoc-president.jpg",
     highlights: [
-      "Led a committee of 8 and coordinated the society's 4 divisions (Education, Projects, Partnerships & Marketing);",
-      "Organised over 20 ML workshops, talks led by industry experts & other events for the society's 500+ members;",
-      "Led fundraising from academic & corporate sponsors, such as IET, Siemens & Cirium;",
-      "Supervised over 10 student-led ML projects and organised 2 UK-wide AI Hackathons.",
+      "Led a committee of 8 and coordinated the society's 4 divisions (Education, Projects, Partnerships and Marketing);",
+      "Organised 30+ ML workshops, talks led by industry experts, student-led ML projects, UK-wide AI hackathons and other events for the society's 350+ members;",
+      "Led fundraising and oversaw the subsequent spending of sponsorship funds from academic and corporate sponsors.",
     ],
     link: "https://www.susu.org/groups/artificial-intelligence-society",
   },
@@ -90,8 +89,8 @@ const experience: ExperienceRole[] = [
     image: "/experience-aisoc-education.jpg",
     highlights: [
       "Led the society's Education Division. This division is responsible for organising the society's bi-weekly ML workshops;",
-      "Developed a beginner-friendly ML curriculum, by simplifying complex models into interactive & hands-on workshops;",
-      "Covered Neural Networks, Convolutional Neural Networks, Recurrent Neural Networks, Reinforcement Learning, Natural Language Processing, Generative Adversarial Networks, Diffusion Models and Tree-Based Models.",
+      "Developed a beginner-friendly ML curriculum, by simplifying complex models into interactive and hands-on workshops;",
+      "Covered Neural Networks, CNNs, RNNs, Reinforcement Learning, Natural Language Processing, GANs, Diffusion Models and Tree-Based Models.",
     ],
     link: "https://www.susu.org/groups/artificial-intelligence-society",
   },
@@ -104,8 +103,8 @@ const experience: ExperienceRole[] = [
     image: "/experience-aisoc-secretary.jpg",
     highlights: [
       "Managed the society's communications, ensuring effective coordination between the committee, external partners and sponsors;",
-      "Supported the organisation of the society's workshops, talks and other events, assisting with the logistics & event planning;",
-      "Oversaw meeting agendas, minutes & documentation across the society's 4 divisions.",
+      "Supported the organisation of the society's workshops, talks and other events, assisting with the logistics and event planning;",
+      "Oversaw meeting agendas, minutes and documentation across the society's divisions.",
     ],
     link: "https://www.susu.org/groups/artificial-intelligence-society",
   },
@@ -117,7 +116,7 @@ const experience: ExperienceRole[] = [
     logo: "/susu-logo.png",
     highlights: [
       "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the department;",
-      "Collected and analysed data on the 2024-25 modules in order to make improvements to the degree.",
+      "Collected and analysed data on the 2024-25 modules in order to identify key areas of improvement for the degree.",
     ],
     link: "https://www.susu.org",
   },
