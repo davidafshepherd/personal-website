@@ -60,7 +60,7 @@ const experience: ExperienceRole[] = [
     category: "university_ventures",
     logo: "/xprize-logo.png",
     highlights: [
-      "Part of FLARE-X, 1 of the 15 autonomous semi-finalist teams, in the $11M international XPRIZE Wildfire competition.",
+      "Part of FLARE-X, 1 of the 15 semi-finalist autonomous teams, in the $11M international XPRIZE Wildfire competition.",
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh.",
       "Using Reinforcement Learning, I trained a fixed-wing drone to deploy balls of fire extinguisher for optimal wildfire suppression.",
     ],
