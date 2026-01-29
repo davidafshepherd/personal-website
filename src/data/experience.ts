@@ -56,7 +56,7 @@ const experience: ExperienceRole[] = [
       "Built a web dashboard that generates patient nutrient intake reports using Next.js, FastAPI and SQLite.",
       "Achieved a nutrient estimation MAPE of 29%, currently being trialled for potential nationwide NHS rollout.",
     ],
-    skills: ["Git", "Next.js", "Python", "FastAPI", "SQLite", "OWLv2", "SAHI", "SAM 2"],
+    skills: ["Git", "Next.js", "Python", "FastAPI", "SQLite", "Object Detection", "Object Segmentation"],
     link: "https://www.uhs.nhs.uk/",
   },
   {
