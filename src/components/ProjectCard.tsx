@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             
             {/* Description */}
             <div>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-[1.6] text-left">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-[1.6] text-justify">
                 {project.description.split(/(##.*?##|\*\*.*?\*\*)/).map((part, i) => {
                   if (part.startsWith('##') && part.endsWith('##')) {
                     return <span key={i} className="text-black dark:text-white font-bold">{part.slice(2, -2)}</span>;

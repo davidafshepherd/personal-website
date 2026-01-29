@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} bg-white text-gray-900 antialiased dark:bg-[#121212] dark:text-[#EAEAEA]`}>
         <ScrollProgress />
         <NavBar />
-        <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">{children}</main>
+        <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</main>
         <Footer />
         <Script
           id="ld-json"

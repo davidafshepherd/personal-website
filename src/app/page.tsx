@@ -43,7 +43,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center md:items-stretch">
             {/* Left side - Text box */}
             <div className="flex-1">
-              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-left dark:border-[#282828] dark:bg-[#181818] dark:text-gray-300">
+              <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-justify dark:border-[#282828] dark:bg-[#181818] dark:text-gray-300">
                 <p>
                   Welcome to my website! My name is <span className="font-semibold">David Afonso Shepherd</span> and I&apos;m a <span className="font-semibold">final-year MEng Computer Science</span> student at the <span className="font-semibold">University of Southampton</span>.
                 </p>
@@ -51,7 +51,7 @@ export default function HomePage() {
                   I&apos;ve previously interned with <span className="font-semibold">JPMorgan Chase & Co</span> and <span className="font-semibold">Spotify</span>, and served as <span className="font-semibold">President</span> of the <span className="font-semibold">Artificial Intelligence society</span> at the University of Southampton. I was also part of <span className="font-semibold">FLARE-X</span> - a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh - competing in the <span className="font-semibold">$11 million XPRIZE Wildfire Competition</span>.
                 </p>
                 <p>
-                  Currently, I&apos;m working with a team of engineers to develop <span className="font-semibold">SmartCart v3</span> - an augmented meal cart designed to help prevent malnutrition in hospital patients by monitoring their food intake - for the <span className="font-semibold">University Hospital Southampton NHS FT</span>.
+                  Recently, I worked with a team of engineers to develop <span className="font-semibold">SmartCart v3</span> - an augmented meal cart designed to help prevent malnutrition in hospital patients by monitoring their food intake - for the <span className="font-semibold">University Hospital Southampton NHS FT</span>.
                 </p>
               </div>
             </div>
