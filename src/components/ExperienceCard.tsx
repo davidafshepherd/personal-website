@@ -74,7 +74,7 @@ export default function ExperienceCard({ role }: ExperienceCardProps) {
                 alt={`${role.title} at ${role.org}`}
                 width={320}
                 height={240}
-                className="w-full max-w-[480px] sm:w-52 md:w-60 lg:w-68 aspect-[4/3] object-cover rounded-xl"
+                className="w-full max-w-[480px] sm:w-52 md:w-60 lg:w-64 aspect-[4/3] object-cover rounded-xl"
               />
             </div>
           )}
