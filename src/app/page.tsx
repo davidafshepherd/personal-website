@@ -18,7 +18,7 @@ export default function HomePage() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">David Afonso Shepherd</h1>
           </div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-tight dark:text-green-500">
-              Full-Stack Software Engineer · Machine Learning Engineer
+              Software Engineer · Machine Learning Engineer
             </h2>
             <div className="text-sm sm:text-base md:text-lg text-gray-700 flex flex-row items-center gap-3 sm:gap-4 dark:text-gray-300">
               <span className="font-medium whitespace-nowrap">Proficient in</span>
