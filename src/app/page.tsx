@@ -132,7 +132,7 @@ export default function HomePage() {
           </div>
 
           {[
-            { key: 'full-stack', title: 'Full-Stack Projects' },
+            /* { key: 'full-stack', title: 'Full-Stack Projects' }, */
             { key: 'university', title: 'University Projects' },
             { key: 'web-mobile', title: 'Web / Mobile Development' },
             { key: 'java', title: 'Java' },
