@@ -8,7 +8,7 @@ const projects = [
     image: "/sports-centre-app",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Jest", "Firebase", "Azure"],
     link: "https://github.com/davidafshepherd/sports-centre-app",
-  }
+  },
   {
     slug: "smartcart-v3",
     name: "SmartCart v3",
