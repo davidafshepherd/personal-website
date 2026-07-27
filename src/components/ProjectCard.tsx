@@ -83,24 +83,26 @@ export default function ProjectCard({ project }: { project: Project }) {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full"
+                  className="block relative w-3/4 aspect-[16/9] overflow-hidden rounded-xl group/img"
                 >
                   <Image
                     src={imageSrc as string}
                     alt={`${project.name} project`}
-                    width={320}
-                    height={180}
-                    className="w-3/4 aspect-[16/9] object-cover rounded-xl hover:brightness-50 hover:scale-102 transition-all duration-300"
+                    fill
+                    sizes="(max-width: 640px) 75vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover hover:brightness-50 hover:scale-102 transition-all duration-300"
                   />
                 </a>
               ) : (
-                <Image
-                  src={imageSrc as string}
-                  alt={`${project.name} project`}
-                  width={320}
-                  height={180}
-                  className="w-3/4 aspect-[16/9] object-cover rounded-xl"
-                />
+                <div className="relative w-3/4 aspect-[16/9] overflow-hidden rounded-xl">
+                  <Image
+                    src={imageSrc as string}
+                    alt={`${project.name} project`}
+                    fill
+                    sizes="(max-width: 640px) 75vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
               )
             )}
           </div>
