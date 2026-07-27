@@ -52,7 +52,7 @@ const projects = [
     name: "Recommender System",
     category: "python-ml",
     length: "March 2025 - May 2025",
-    description: "A pair of recommender systems trained to predict user ratings for unseen items from unknown ratings using collaborative filtering. The first system uses adjusted cosine similarity with top-k neighbour selection and significance weighting. The second system uses matrix factorisation with 100 latent factors.",
+    description: "A pair of recommender systems trained to predict user ratings for unseen items using collaborative filtering. The first system uses adjusted cosine similarity with top-k neighbour selection and significance weighting. The second system uses matrix factorisation with 100 latent factors.",
     stack: ["Python", "Collaborative Filtering", "Adjusted Cosine Similarity", "Significance Weighting", "Matrix Factorisation"],
     link: "https://github.com/davidafshepherd/recommender-system",
   },
