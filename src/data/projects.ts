@@ -1,5 +1,14 @@
 const projects = [
   {
+    slug: "news-mesh",
+    name: "NewsMesh",
+    category: "full-stack",
+    length: "June 2026 - Present",
+    description: "A news discovery platform that recommends news articles based on user interests and visualises related stories through an interactive article network.",
+    stack: ["React", "TypeScript", "Spring Boot", "Java", "jOOQ", "Spock", "PostgreSQL", "Redis", "Docker", "AWS"],
+    link: "https://github.com/davidafshepherd/news-mesh",
+  },
+  {
     slug: "personal-trainer-app",
     name: "Personal Trainer App",
     category: "web-mobile",
