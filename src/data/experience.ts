@@ -30,7 +30,7 @@ const experience: ExperienceRole[] = [
   },
   {
     title: "Spring Intern",
-    org: "JPMorgan Chase & Co.",
+    org: "JPMorganChase",
     length: "April 2024 - April 2024",
     category: "internship",
     logo: "/jpmc-logo.png",
