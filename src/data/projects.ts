@@ -4,7 +4,7 @@ const projects = [
     name: "Personal Trainer App",
     category: "web-mobile",
     length: "March 2026 - May 2026",
-    description: "",
+    description: "A mobile personal training platform that enables trainers to create workouts, manage trainees and track progress, while allowing trainees to schedule sessions, complete exercises and monitor fitness goals. Features include role-based accounts, multimedia guidance, workout analytics, notifications and cloud database integration.",
     image: "",
     stack: [],
     link: "https://github.com/davidafshepherd/personal-trainer-app",
