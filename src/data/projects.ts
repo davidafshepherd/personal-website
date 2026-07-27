@@ -13,7 +13,7 @@ const projects = [
     name: "Sports Centre App",
     category: "web-mobile",
     length: "March 2026 - May 2026",
-    description: "A full-stack sports centre booking platform with social authentication and Azure cloud deployment that enables members to reserve facilities, manage bookings, find activity partners and report equipment faults. The system also provides staff and administrators with tools for facility management and booking approval.",
+    description: "A full-stack sports centre booking platform with social authentication and cloud deployment that enables members to reserve facilities, manage bookings, find activity partners and report equipment faults. The system also provides staff and administrators with tools for facility management and booking approval.",
     image: "/sports-centre-app.png",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Jest", "Firebase", "Azure"],
     link: "https://github.com/davidafshepherd/sports-centre-app",
