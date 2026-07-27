@@ -4,7 +4,7 @@ const projects = [
     name: "Personal Trainer App",
     category: "web-mobile",
     length: "March 2026 - May 2026",
-    description: "A mobile personal training platform prototype that enables trainers to create workouts, manage trainees and track progress, while allowing trainees to schedule sessions, complete exercises and monitor fitness goals. Features include role-based accounts, multimedia guidance, workout analytics, notifications and cloud database integration.",
+    description: "A mobile personal training prototype that enables trainers to create workouts, manage trainees and track progress, while allowing trainees to schedule sessions, complete exercises and monitor fitness goals. Features include role-based accounts, multimedia guidance, workout analytics, notifications and cloud database integration.",
     stack: ["Android Studio", "Android SDK", "Jetpack Compose", "Kotlin", "Material Design 3", "Firebase", "JUnit", "MockK"],
     link: "https://github.com/davidafshepherd/personal-trainer-app",
   },
