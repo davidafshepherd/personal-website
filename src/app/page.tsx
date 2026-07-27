@@ -134,8 +134,8 @@ export default function HomePage() {
           {[
             { key: 'full-stack', title: 'Full-Stack Projects' },
             { key: 'university', title: 'University Projects' },
-            { key: 'java', title: 'Java' },
             { key: 'web-mobile', title: 'Web / Mobile Development' },
+            { key: 'java', title: 'Java' },
             { key: 'python-ml', title: 'Python / Machine Learning' },
             { key: 'unity-csharp', title: 'Unity / C#' },
           ].map(({ key, title }, i) => {
