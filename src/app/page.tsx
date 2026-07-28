@@ -45,10 +45,10 @@ export default function HomePage() {
             <div className="flex-1">
               <div className="border border-gray-200 rounded-2xl p-3 sm:p-5 md:p-8 bg-gray-50 space-y-3 sm:space-y-4 text-sm sm:text-base text-left dark:border-[#282828] dark:bg-[#181818] dark:text-gray-300">
                 <p>
-                  Welcome to my website! My name is David Afonso Shepherd and I'm a MEng Computer Science Graduate with First Class Honours from the University of Southampton.
+                  Welcome to my website! My name is David Afonso Shepherd and I&apos;m a MEng Computer Science Graduate with First Class Honours from the University of Southampton.
                 </p>
                 <p>
-                  I've previously interned with JPMorganChase and Spotify, and served as President of the Artificial Intelligence society at the University of Southampton. I was also part of FLARE-X - a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh - competing in the $11 million XPRIZE Wildfire Competition.
+                  I&apos;ve previously interned with JPMorganChase and Spotify, and served as President of the Artificial Intelligence society at the University of Southampton. I was also part of FLARE-X - a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh - competing in the $11 million XPRIZE Wildfire Competition.
                 </p>
                 <p>
                   Recently, I worked with a team of engineers to develop SmartCart v3 - an augmented meal cart designed to help prevent malnutrition in hospital patients by monitoring their food intake - for the University Hospital Southampton NHS FT.
