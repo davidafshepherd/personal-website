@@ -36,7 +36,7 @@ const experience: ExperienceRole[] = [
     logo: "/jpmc-logo.png",
     image: "/experience-jpmc.jpg",
     highlights: [
-      "Worked in a team of 4 interns to promote and increase community involvement in fundraising for Dorset's disability charity 'Diverse Abilities'.",
+      "Worked in a team of 4 interns to increase community involvement for Dorset's disability charity 'Diverse Abilities'.",
       "Developed 'Hero's Leaderboard', a web app that promotes charity fundraising through scoreboards and rewards, using HTML5, CSS and Flask.",
     ],
     skills: ["Agile Methodologies", "Git", "Flask", "Python", "HTML5", "CSS", "Test-Driven Development"],
