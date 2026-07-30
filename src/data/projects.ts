@@ -5,7 +5,7 @@ const projects = [
     category: "recent",
     length: "July 2026 - Present",
     description: "A news discovery platform that recommends news articles based on user interests and visualises related stories through an interactive article network. ##Note that the repo is private as the project is still ongoing.##",
-    stack: ["React", "TypeScript", "Spring Boot", "Java", "jOOQ", "Spock", "PostgreSQL", "Redis", "Docker", "AWS"],
+    stack: ["React", "TypeScript", "Spring Boot", "Java", "Spock", "jOOQ", "PostgreSQL", "Redis", "Docker", "AWS"],
     link: "https://github.com/davidafshepherd/news-mesh",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     category: "web-mobile",
     length: "March 2026 - May 2026",
     description: "A mobile personal training prototype that enables trainers to create workouts, manage trainees and track progress, while allowing trainees to schedule sessions, complete exercises and monitor fitness goals. Features include role-based accounts, multimedia guidance, workout analytics, notifications and cloud database integration.",
-    stack: ["Android Studio", "Android SDK", "Jetpack Compose", "Kotlin", "Material Design 3", "Firebase", "JUnit", "MockK"],
+    stack: ["Android Studio", "Android SDK", "Jetpack Compose", "Kotlin", "Material Design 3", "JUnit", "MockK", "Firebase"],
     link: "https://github.com/davidafshepherd/personal-trainer-app",
   },
   {
