@@ -2,11 +2,20 @@ const projects = [
   {
     slug: "news-mesh",
     name: "NewsMesh",
-    category: "full-stack",
-    length: "June 2026 - Present",
+    category: "recent",
+    length: "July 2026 - Present",
     description: "A news discovery platform that recommends news articles based on user interests and visualises related stories through an interactive article network. ##Note that the repo is private as the project is still ongoing.##",
     stack: ["React", "TypeScript", "Spring Boot", "Java", "jOOQ", "Spock", "PostgreSQL", "Redis", "Docker", "AWS"],
     link: "https://github.com/davidafshepherd/news-mesh",
+  },
+  {
+    slug: "midas-core",
+    name: "Midas Core",
+    category: "recent",
+    length: "July 2026 - July 2026",
+    description: "The Midas system is a high-profile initiative responsible for processing financial transactions at scale. This project focuses on Midas Core, the service responsible for receiving, validating and recording financial transactions.",
+    stack: ["Spring Boot", "Java", "Spring Data JPA", "Apache Kafka", "H2 Database", "Apache Maven"],
+    link: "https://github.com/davidafshepherd/midas-core",
   },
   {
     slug: "personal-trainer-app",
@@ -155,7 +164,7 @@ const projects = [
     length: "February 2024 - May 2024",
     description: "An analytics dashboard designed to evaluate and visualise the performance of advertising campaigns.",
     image: "/ad-auction-dashboard.png",
-    stack: ["Java", "JUnit", "JavaFX", "Maven", "MongoDB"],
+    stack: ["Java", "JUnit", "JavaFX", "Apache Maven", "MongoDB"],
     link: "https://github.com/davidafshepherd/ad-auction-dashboard",
   },
   {
@@ -165,7 +174,7 @@ const projects = [
     length: "March 2023 - April 2023",
     description: "A creative twist on Tetris featuring zero gravity and a multiplayer mode for a fresh strategic experience.",
     image: "/tetrecs.png",
-    stack: ["Java", "JUnit", "JavaFX", "Maven"],
+    stack: ["Java", "JUnit", "JavaFX", "Apache Maven"],
     link: "https://github.com/davidafshepherd/tetrecs",
   },
   {
