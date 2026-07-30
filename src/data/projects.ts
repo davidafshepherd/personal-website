@@ -14,7 +14,7 @@ const projects = [
     category: "recent",
     length: "July 2026 - July 2026",
     description: "The Midas system is a high-profile initiative responsible for processing financial transactions at scale. This project focuses on Midas Core, the service responsible for receiving, validating and recording financial transactions. Completed as part of the JPMC Advanced Software Engineering Forage program.",
-    stack: ["Spring Boot", "Java", "JUnit 5", "Spring Data JPA", "Apache Kafka", "H2 Database", "Apache Maven"],
+    stack: ["Spring Boot", "Java", "JUnit 5", "Apache Kafka", "Spring Data JPA", "H2 Database", "Apache Maven"],
     link: "https://github.com/davidafshepherd/midas-core",
   },
   {
