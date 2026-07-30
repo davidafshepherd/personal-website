@@ -14,7 +14,7 @@ const projects = [
     category: "recent",
     length: "July 2026 - July 2026",
     description: "The Midas system is a high-profile initiative responsible for processing financial transactions at scale. This project focuses on Midas Core, the service responsible for receiving, validating and recording financial transactions. Completed as part of the JPMC Advanced Software Engineering Forage program.",
-    stack: ["Spring Boot", "Java", "Spring Data JPA", "Apache Kafka", "H2 Database", "Apache Maven"],
+    stack: ["Spring Boot", "Java", "JUnit 5", "Spring Data JPA", "Apache Kafka", "H2 Database", "Apache Maven"],
     link: "https://github.com/davidafshepherd/midas-core",
   },
   {
@@ -154,7 +154,7 @@ const projects = [
     category: "java",
     length: "March 2024 - May 2024",
     description: "A distributed storage system that supports concurrent clients and file replication for fault tolerance and scalability.",
-    stack: ["Java", "JUnit", "TCP", "Multithreading"],
+    stack: ["Java", "JUnit 5", "TCP", "Multithreading"],
     link: "https://github.com/davidafshepherd/distributed-file-system",
   },
   {
@@ -164,7 +164,7 @@ const projects = [
     length: "February 2024 - May 2024",
     description: "An analytics dashboard designed to evaluate and visualise the performance of advertising campaigns.",
     image: "/ad-auction-dashboard.png",
-    stack: ["Java", "JUnit", "JavaFX", "Apache Maven", "MongoDB"],
+    stack: ["Java", "JavaFX", "JUnit 5", "MongoDB", "Apache Maven"],
     link: "https://github.com/davidafshepherd/ad-auction-dashboard",
   },
   {
@@ -174,7 +174,7 @@ const projects = [
     length: "March 2023 - April 2023",
     description: "A creative twist on Tetris featuring zero gravity and a multiplayer mode for a fresh strategic experience.",
     image: "/tetrecs.png",
-    stack: ["Java", "JUnit", "JavaFX", "Apache Maven"],
+    stack: ["Java", "JavaFX", "JUnit 5", "Apache Maven"],
     link: "https://github.com/davidafshepherd/tetrecs",
   },
   {
@@ -183,7 +183,7 @@ const projects = [
     category: "java",
     length: "October 2022 - December 2022",
     description: "A simulator that recreates the sound of an orchestra performing a given composition, blending musical modelling and procedural audio generation.",
-    stack: ["Java", "JUnit"],
+    stack: ["Java", "JUnit 5"],
     link: "https://github.com/davidafshepherd/orchestra-simulator",
   },
   {
