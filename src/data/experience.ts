@@ -39,7 +39,7 @@ const experience: ExperienceRole[] = [
       "Worked in a team of 4 interns to increase community involvement for Dorset's disability charity 'Diverse Abilities'.",
       "Developed 'Hero's Leaderboard', a web app that promotes charity fundraising through scoreboards and rewards, using HTML5, CSS and Flask.",
     ],
-    skills: ["Agile Methodologies", "Git", "Flask", "Python", "HTML5", "CSS", "Test-Driven Development"],
+    skills: ["Agile Methodologies", "Git", "HTML5", "CSS", "Flask", "Python", "Test-Driven Development"],
     link: "https://www.jpmorganchase.com",
   },
   {
