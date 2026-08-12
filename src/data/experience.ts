@@ -56,7 +56,7 @@ const experience: ExperienceRole[] = [
       "Built a full-stack web app that generates patient nutrient intake reports using React, FastAPI, Python and SQLite.",
       "Achieved a nutrient estimation MAPE of 29%, currently being trialled for potential nationwide NHS rollout.",
     ],
-    skills: ["Git", "React", "FastAPI", "Python", "SQLite", "Object Detection", "Object Segmentation"],
+    skills: ["Git", "React", "TypeScript", "FastAPI", "Python", "SQLite", "Object Detection", "Object Segmentation"],
     link: "https://www.uhs.nhs.uk/",
   },
   {
