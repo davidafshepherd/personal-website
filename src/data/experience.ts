@@ -51,7 +51,7 @@ const experience: ExperienceRole[] = [
     image: "/experience-nhs.jpeg",
     highlights: [
       "Worked in a team of 5 engineers to develop SmartCart v3, an augmented meal cart for in-hospital use.",
-      "SmartCart v3 aims to help prevent malnutrition in hospital patients by monitoring their food intake.",
+      "SmartCart v3 aims to help prevent malnutrition in hospital patients by monitoring their nutrient intake.",
       "Implemented an ML pipeline for automated food detection and segmentation using SOTA vision models in Python.",
       "Built a full-stack web app that generates patient nutrient intake reports using React, FastAPI, Python and SQLite.",
       "Achieved a nutrient estimation MAPE of 29%, currently being trialled for potential nationwide NHS rollout.",

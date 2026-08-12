@@ -41,9 +41,9 @@ const projects = [
     name: "SmartCart v3",
     category: "university",
     length: "October 2025 - January 2026",
-    description: "An augmented meal cart for in-hospital use that helps prevent malnutrition in hospital patients by monitoring their food intake. The system captures before and after images/weights of hospital meals, detects and segments foods, estimates portions using depth data, and computes consumed calories, macronutrients and micronutrients using a nutrition database.",
+    description: "An augmented meal cart for in-hospital use that helps prevent malnutrition in hospital patients by monitoring their nutrient intake. The system captures before and after images/weights of hospital meals, detects and segments foods, estimates portions using depth data, and computes consumed calories, macronutrients and micronutrients using a nutrition database.",
     image: "/smartcart-v3.png",
-    stack: ["React", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "SQLite", "Object Detection", "Object Segmentation"],
+    stack: ["React", "Redux", "TypeScript", "CSS", "FastAPI", "Python", "SQLite", "Object Detection", "Object Segmentation"],
     link: "https://github.com/davidafshepherd/smartcart-v3",
   },
   {
