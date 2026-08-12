@@ -5,7 +5,7 @@ const projects = [
     category: "recent",
     length: "July 2026 - Present",
     description: "A news discovery platform that recommends news articles based on user interests and visualises related stories through an interactive article network. ##Note that the repo is private as the project is still ongoing.##",
-    stack: ["React", "TypeScript", "Spring Boot", "Java", "Spock", "jOOQ", "PostgreSQL", "Redis", "Docker", "AWS"],
+    stack: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "Java", "Spock", "jOOQ", "PostgreSQL", "Redis", "Docker", "AWS"],
     link: "https://github.com/davidafshepherd/news-mesh",
   },
   {
