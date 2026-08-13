@@ -38,6 +38,7 @@ const experience: ExperienceRole[] = [
     highlights: [
       "Worked in a team of 4 interns to increase community involvement for Dorset's disability charity 'Diverse Abilities'.",
       "Developed 'Hero's Leaderboard', a web app that promotes charity fundraising through scoreboards and rewards, using HTML5, CSS and Flask.",
+      "Attended talks and workshops on banking technology, gaining exposure to agile methodologies and TDD in Java.",
     ],
     skills: ["Git", "HTML5", "CSS", "Flask", "Python", "Agile Methodologies", "Test-Driven Development"],
     link: "https://www.jpmorganchase.com",
@@ -53,7 +54,7 @@ const experience: ExperienceRole[] = [
       "Worked in a team of 5 engineers to develop SmartCart v3, an augmented meal cart for in-hospital use.",
       "SmartCart v3 aims to help prevent malnutrition in hospital patients by monitoring their nutrient intake.",
       "Implemented an ML pipeline for automated food detection and segmentation using SOTA vision models in Python.",
-      "Built a full-stack web app that generates patient nutrient intake reports using React, FastAPI, Python and SQLite.",
+      "Built a web app that generates patient nutrient intake reports using React, Redux, FastAPI, Python and SQLite.",
       "Achieved a nutrient estimation MAPE of 29%, currently being trialled for potential nationwide NHS rollout.",
     ],
     skills: ["Git", "React", "TypeScript", "FastAPI", "Python", "SQLite", "Object Detection", "Object Segmentation"],
