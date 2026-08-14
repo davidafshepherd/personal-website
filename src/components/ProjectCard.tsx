@@ -1,4 +1,7 @@
 import Image from "next/image";
+import SkillPill from "@/components/SkillPill";
+import LengthChip from "@/components/LengthChip";
+import { CARD_CLASSNAME, CARD_ACCENT_BAR_CLASSNAME } from "@/components/cardStyles";
 
 type Project = {
   slug: string;
@@ -27,20 +30,20 @@ function getGithubOpenGraphImage(link?: string): string | undefined {
 
 export default function ProjectCard({ project }: { project: Project }) {
   const isHttpLink = !!project.link && /^https?:\/\//.test(project.link);
-  const providedImage = project.image && project.image.trim() !== "" ? project.image : undefined;
+  const providedImage = project.image && project.image.trim() !== "" ? `/projects${project.image}` : undefined;
   const githubOgImage = providedImage ? undefined : getGithubOpenGraphImage(project.link);
   const imageSrc = providedImage ?? githubOgImage;
   const hasImage = Boolean(imageSrc);
 
   return (
-    <article className="group relative h-full rounded-2xl border-2 border-gray-200 bg-white hover:border-[var(--accent)] hover:shadow-lg transition-colors duration-300 overflow-hidden dark:border-[#282828] dark:bg-[#181818] dark:hover:border-[#1DB954]">
-      <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent)]"></div>
+    <article className={`${CARD_CLASSNAME} h-full`}>
+      <div className={CARD_ACCENT_BAR_CLASSNAME}></div>
       <div className="p-4 sm:p-5 md:p-6 h-full">
         <div className="flex flex-col h-full">
           {/* Content */}
           <div className="flex flex-col min-w-0 space-y-2 sm:space-y-3">
             <div className="flex justify-end">
-              <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap px-3 py-1 rounded-full border bg-[var(--length-chip-bg)] border-[var(--length-chip-border)] dark:text-gray-400">{project.length}</span>
+              <LengthChip>{project.length}</LengthChip>
             </div>
             <div>
               <h3 className="font-bold text-base sm:text-lg leading-tight text-gray-900 min-w-0 dark:text-[#EAEAEA]">
@@ -83,14 +86,14 @@ export default function ProjectCard({ project }: { project: Project }) {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block relative w-3/4 aspect-[16/9] overflow-hidden rounded-xl group/img"
+                  className="block relative w-3/4 aspect-[16/9] overflow-hidden rounded-xl"
                 >
                   <Image
                     src={imageSrc as string}
                     alt={`${project.name} project`}
                     fill
                     sizes="(max-width: 640px) 75vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover hover:brightness-50 hover:scale-102 transition-all duration-300"
+                    className="object-cover hover:brightness-50 hover:scale-105 transition-all duration-300"
                   />
                 </a>
               ) : (
@@ -111,12 +114,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.stack.length > 0 && (
             <div className={`flex flex-wrap justify-center gap-2 ${hasImage ? '' : 'mt-3 sm:mt-4'}`}>
               {project.stack.map((skill, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-xs rounded-full border transition-colors cursor-default bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 hover:border-blue-300 dark:bg-[#1db9541a] dark:text-[#1DB954] dark:border-[#1db95433] dark:hover:bg-[#1db9544d] dark:hover:border-[#1db95480]"
-                >
-                  {skill}
-                </span>
+                <SkillPill key={i} skill={skill} />
               ))}
             </div>
           )}

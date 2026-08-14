@@ -16,8 +16,8 @@ const experience: ExperienceRole[] = [
     org: "Spotify",
     length: "June 2025 - August 2025",
     category: "internship",
-    logo: "/spotify-logo.png",
-    image: "/experience-spotify.jpg",
+    logo: "/spotify.png",
+    image: "/spotify.jpg",
     highlights: [
       "Part of the Learning Mountain Bet, a cross-functional team working on developing courses for Spotify.",
       "Created 3 prototypes using Next.js, REST API integrations and GCS to explore different product use cases.",
@@ -33,8 +33,8 @@ const experience: ExperienceRole[] = [
     org: "JPMorganChase",
     length: "April 2024 - April 2024",
     category: "internship",
-    logo: "/jpmc-logo.png",
-    image: "/experience-jpmc.jpg",
+    logo: "/jpmc.png",
+    image: "/jpmc.jpg",
     highlights: [
       "Worked in a team of 4 interns to increase community involvement for Dorset's disability charity 'Diverse Abilities'.",
       "Developed 'Hero's Leaderboard', a web app that promotes charity fundraising through scoreboards and rewards, using HTML5, CSS and Flask.",
@@ -48,8 +48,8 @@ const experience: ExperienceRole[] = [
     org: "University Hospital Southampton NHS Foundation Trust",
     length: "October 2025 - January 2026",
     category: "university_ventures",
-    logo: "/nhs-logo.png",
-    image: "/experience-nhs.jpeg",
+    logo: "/nhs.png",
+    image: "/nhs.jpeg",
     highlights: [
       "Worked in a team of 5 engineers to develop SmartCart v3, an augmented meal cart for in-hospital use.",
       "SmartCart v3 aims to help prevent malnutrition in hospital patients by monitoring their nutrient intake.",
@@ -65,7 +65,7 @@ const experience: ExperienceRole[] = [
     org: "XPRIZE Foundation",
     length: "October 2024 - April 2025",
     category: "university_ventures",
-    logo: "/xprize-logo.png",
+    logo: "/xprize.png",
     highlights: [
       "Part of FLARE-X, 1 of the 15 semi-finalist autonomous teams in the $11M international XPRIZE Wildfire competition.",
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh.",
@@ -78,8 +78,8 @@ const experience: ExperienceRole[] = [
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2024 - May 2025",
     category: "extracurricular",
-    logo: "/aisoc-logo.png",
-    image: "/experience-aisoc-president.jpg",
+    logo: "/aisoc.png",
+    image: "/aisoc-president.jpg",
     highlights: [
       "Led a committee of 8 and coordinated the society's divisions (Education, Projects, Partnerships, Marketing).",
       "Organised 20+ ML workshops, talks led by industry experts and other events for the society's 350+ members.",
@@ -93,8 +93,8 @@ const experience: ExperienceRole[] = [
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2024 - September 2024",
     category: "extracurricular",
-    logo: "/aisoc-logo.png",
-    image: "/experience-aisoc-education.jpg",
+    logo: "/aisoc.png",
+    image: "/aisoc-education.jpg",
     highlights: [
       "Led the Education Division, which is responsible for organising the society's bi-weekly ML workshops.",
       "Developed a beginner-friendly curriculum by simplifying complex models into hands-on workshops.",
@@ -107,8 +107,8 @@ const experience: ExperienceRole[] = [
     org: "University of Southampton Artificial Intelligence Society",
     length: "May 2023 - May 2024",
     category: "extracurricular",
-    logo: "/aisoc-logo.png",
-    image: "/experience-aisoc-secretary.jpg",
+    logo: "/aisoc.png",
+    image: "/aisoc-secretary.jpg",
     highlights: [
       "Managed communications, ensuring effective coordination between the committee, the faculty and sponsors.",
       "Helped organise the society's workshops, talks and other events, assisting with the logistics and event planning.",
@@ -121,7 +121,7 @@ const experience: ExperienceRole[] = [
     org: "University of Southampton Students' Union",
     length: "October 2024 - June 2025",
     category: "volunteering",
-    logo: "/susu-logo.png",
+    logo: "/susu.png",
     highlights: [
       "Gathered views and concerns from over 250 Computer Science students and presented these issues effectively to the department.",
       "Collected and analysed data on the 2024-25 modules in order to identify areas for enhancement, ensuring continuous improvement of the degree.",
@@ -133,7 +133,7 @@ const experience: ExperienceRole[] = [
     org: "Beaumont School",
     length: "September 2021 - May 2022",
     category: "volunteering",
-    logo: "/beaumont-logo.png",
+    logo: "/beaumont-school.png",
     highlights: [
       "Participated in a mentoring program, providing one-on-one support to a Year 10 student.",
       "Assisted with academic tasks, including homework and exam study, while improving the student's attendance and encouraging an open mindset.",

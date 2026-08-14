@@ -5,17 +5,25 @@ export default function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const updateScrollProgress = () => {
+    const computeProgress = () => {
       const scrollTop = window.scrollY;
       const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
-      setScrollProgress(progress);
+      return Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
     };
 
-    window.addEventListener("scroll", updateScrollProgress);
-    // initialize on mount
-    updateScrollProgress();
-    return () => window.removeEventListener("scroll", updateScrollProgress);
+    let ticking = false;
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrollProgress(computeProgress());
+        ticking = false;
+      });
+    };
+
+    setScrollProgress(computeProgress());
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Theme variables */
+:root {
+  --accent: #2563eb;
+  --accent-50: #eff6ff;
+  --accent-400: #60a5fa;
+  --accent-500: #3b82f6;
+  --accent-600: #2563eb;
+  --length-chip-bg: #f3f4f6;
+  --length-chip-border: #e5e7eb;
+}
+
+.dark:root {
+  --accent: #1DB954;
+  --accent-50: #1db9541a;
+  --accent-400: #1ED760;
+  --accent-500: #1DB954;
+  --accent-600: #1DB954;
+  --length-chip-bg: #232323;
+  --length-chip-border: #2f2f2f;
+}
+
+
+/* Base elements */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #111827;
+}
+
+.dark:root body {
+  background-color: #121212;
+  color: #EAEAEA;
+}
+
+@media (max-width: 640px) {
+  body {
+    line-height: 1.6;
+  }
+}
+
+
+/* Touch targets */
+a, button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reset for inline links that don't need large touch targets */
+p a, li a {
+  min-height: auto;
+  min-width: auto;
+  display: inline;
+}
+
+/* Reset touch-target styles for links inside headings to avoid extra spacing */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  min-height: auto;
+  min-width: auto;
+  display: inline;
+}
+
+
+/* Animations */
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

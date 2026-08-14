@@ -58,12 +58,13 @@ export default function HomePage() {
 
             {/* Right side - Image */}
             <div className="hidden md:flex flex-shrink-0 items-center justify-center w-auto self-center md:self-auto mt-4 md:mt-0">
-              <Image 
-                src="/avatar.jpg" 
-                alt="David Afonso Shepherd" 
-                width={240} 
-                height={240} 
-                className="rounded-2xl w-40 lg:w-[240px] h-auto" 
+              <Image
+                src="/avatar.jpg"
+                alt="David Afonso Shepherd"
+                width={1070}
+                height={1427}
+                priority
+                className="rounded-2xl w-40 lg:w-[240px] h-auto"
               />
             </div>
           </div>
@@ -71,9 +72,9 @@ export default function HomePage() {
           {/* Social Links */}
           <div className="flex items-center gap-2 sm:gap-4">
             <div className="flex gap-2 sm:gap-4 flex-wrap">
-              {SOCIAL_LINKS.map(({ href, label, Icon }) => (
+              {SOCIAL_LINKS.map(({ key, href, label, Icon }) => (
                 <a
-                  key={label}
+                  key={key}
                   href={href}
                   target={href.startsWith('http') ? "_blank" : undefined}
                   rel={href.startsWith('http') ? "noopener noreferrer" : undefined}

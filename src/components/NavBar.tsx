@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
 import { SOCIAL_LINKS } from "@/components/Social";
 
 // icons are imported from shared Social.tsx
@@ -11,40 +12,29 @@ const links = [
 ];
 
 export default function NavBar() {
+  const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const toggleRef = useRef<HTMLButtonElement | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 10);
+        ticking = false;
+      });
     };
 
-    handleScroll();
+    setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
-  // Initialize from DOM after mount and keep in sync with external changes
-  useEffect(() => {
-    const root = document.documentElement;
-    const sync = () => setIsDark(root.classList.contains('dark'));
-    sync();
-    const mo = new MutationObserver(sync);
-    mo.observe(root, { attributes: true, attributeFilter: ['class'] });
-    const onStorage = (e: StorageEvent) => {
-      if (e.key === 'theme') sync();
-    };
-    window.addEventListener('storage', onStorage);
-    return () => {
-      mo.disconnect();
-      window.removeEventListener('storage', onStorage);
-    };
-  }, []);
-  
+
   // Close menu when clicking outside menu or toggle
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -94,27 +84,11 @@ export default function NavBar() {
   };
 
   const toggleTheme = () => {
-    const next = !document.documentElement.classList.contains('dark');
-    try { localStorage.setItem('theme', next ? 'dark' : 'light'); } catch {}
-    const root = document.documentElement;
-    const body = document.body;
-    // Add the guard class BEFORE toggling to avoid any color transition
-    root.classList.add('theme-switching');
-    body.classList.add('theme-switching');
-    root.classList.toggle('dark', next);
-    body.classList.toggle('dark', next);
-    // Remove after next paint (double RAF to be safe across browsers)
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        root.classList.remove('theme-switching');
-        body.classList.remove('theme-switching');
-      });
-    });
-    setIsDark(next);
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   return (
-    <header ref={headerRef} className={`sticky top-0 z-[120] backdrop-blur-md border-b transition-all duration-300 relative ${
+    <header ref={headerRef} className={`sticky top-0 z-[120] backdrop-blur-md border-b transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/90 border-gray-200 shadow-lg shadow-gray-200/50 dark:bg-[#121212]/90 dark:border-[#282828] dark:shadow-black/30' 
         : 'bg-white/80 border-gray-200/50 dark:bg-[#121212]/80 dark:border-[#282828]/60'
@@ -131,9 +105,9 @@ export default function NavBar() {
         
         {/* Middle: Social Icons (md and up) */}
         <div className="hidden md:flex items-center justify-center gap-2 justify-self-center">
-          {SOCIAL_LINKS.map(({ href, label, Icon }) => (
+          {SOCIAL_LINKS.map(({ key, href, label, Icon }) => (
             <a
-              key={label}
+              key={key}
               href={href}
               target={href.startsWith('http') ? "_blank" : undefined}
               rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
@@ -231,9 +205,9 @@ export default function NavBar() {
             <div className="space-y-2">
               <p className="text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-400">Connect</p>
               <div className="grid grid-cols-3 gap-2 place-items-center">
-                {SOCIAL_LINKS.map(({ href, label, Icon }) => (
+                {SOCIAL_LINKS.map(({ key, href, label, Icon }) => (
                   <a
-                    key={label}
+                    key={key}
                     href={href}
                     target={href.startsWith('http') ? "_blank" : undefined}
                     rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
