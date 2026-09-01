@@ -37,7 +37,7 @@ const experience: ExperienceRole[] = [
     image: "/jpmc.jpg",
     highlights: [
       "Worked with 4 interns to boost community involvement for Dorset's disability charity, benefiting 2,000+ people.",
-      "Built a web app using HTML5, CSS and Flask to promote charity fundraising through scoreboards and rewards",
+      "Built a web app using HTML5, CSS and Flask to promote charity fundraising through scoreboards and rewards.",
       "Attended talks and workshops on banking technology, gaining exposure to agile methodologies and TDD in Java.",
     ],
     skills: ["Git", "HTML5", "CSS", "Flask", "Python", "Agile Methodologies", "Test-Driven Development"],
