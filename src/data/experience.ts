@@ -20,9 +20,9 @@ const experience: ExperienceRole[] = [
     image: "/spotify.jpg",
     highlights: [
       "Part of the Learning Mountain Bet, a cross-functional team working on developing courses for Spotify.",
-      "Created 3 prototypes using Next.js, REST API integrations and GCP to explore different product use cases.",
-      "Built, containerized and deployed an MVP using Next.js, Docker and GKE for use in 10+ user research sessions.",
+      "Built 3 prototypes using Next.js, REST API integrations, GCS and BigQuery to explore different product use cases.",
       "Performed prompt engineering and LLM evaluation for another prototype, improving its performance by ~30%.",
+      "Built, containerized and deployed an MVP using Next.js, Docker and GKE for use in 10+ user research sessions.",
       "Reviewed code and approved 20+ PRs for the team, which consists entirely of senior, staff and principal level.",
     ],
     skills: ["CI/CD", "Git", "Docker", "Next.js", "REST APIs", "GCP", "Prompt Engineering"],
