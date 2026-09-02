@@ -13,7 +13,7 @@ const projects = [
     name: "Midas Core",
     category: "recent",
     length: "July 2026 - July 2026",
-    description: "The Midas system is a high-profile initiative responsible for processing financial transactions at scale. This project focuses on Midas Core, the service responsible for receiving, validating and recording financial transactions. Completed as part of the JPMC Advanced Software Engineering Forage program.",
+    description: "The Midas system is a high-profile initiative responsible for processing financial transactions at scale. This project focuses on Midas Core, the service responsible for receiving, validating and recording the financial transactions. Completed as part of the JPMC Advanced Software Engineering Forage program.",
     stack: ["Spring Boot", "Java", "JUnit 5", "Apache Kafka", "Spring Data JPA", "H2 Database", "Apache Maven"],
     link: "https://github.com/davidafshepherd/midas-core",
   },
@@ -118,7 +118,7 @@ const projects = [
     category: "python-ml",
     length: "August 2024 - August 2024",
     description: "An XGBoost model trained to predict whether a patient has heart disease based on lifestyle and health indicators. Built as part of a hands-on workshop I delivered on building your first tree-based model, introducing participants to decision trees, ensemble learning and class imbalance.",
-    stack: ["Python", "NumPy","Pandas", "Scikit-Learn", "Decision Trees", "XGBoost", "Matplotlib", "Seaborn"],
+    stack: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Decision Trees", "XGBoost", "Matplotlib", "Seaborn"],
     link: "https://github.com/davidafshepherd/heart-disease-prediction",
   },
   {
@@ -145,7 +145,7 @@ const projects = [
     category: "python-ml",
     length: "August 2024 - August 2024",
     description: "A neural network trained to predict passenger survival on the Titanic using features such as class, sex and family aboard. Built as part of a hands-on workshop I delivered on building your first neural network, demonstrating the fundamentals of data preprocessing, model training and model evaluation.",
-    stack: ["Python", "NumPy", "Pandas","Scikit-Learn", "Tensorflow", "Keras", "ANNs", "Matplotlib", "Seaborn"],
+    stack: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Tensorflow", "Keras", "ANNs", "Matplotlib", "Seaborn"],
     link: "https://github.com/davidafshepherd/titanic-passenger-survival-prediction",
   },
   {
