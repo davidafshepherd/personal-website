@@ -40,7 +40,7 @@ body {
   color: #111827;
 }
 
-.dark:root body {
+.dark body {
   background-color: #121212;
   color: #EAEAEA;
 }

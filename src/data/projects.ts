@@ -1,12 +1,23 @@
-const projects = [
+export type Project = {
+  slug: string;
+  name: string;
+  category: string;
+  length: string;
+  description: string;
+  image?: string;
+  stack: string[];
+  link: string;
+};
+
+const projects: Project[] = [
   {
-    slug: "news-mesh",
-    name: "NewsMesh",
+    slug: "newsdesk",
+    name: "Newsdesk",
     category: "recent",
     length: "July 2026 - Present",
     description: "A news discovery platform that recommends news articles based on user interests and visualises related stories through an interactive article network. ##Note that the repo is private as the project is still ongoing.##",
     stack: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "Java", "Spock", "jOOQ", "PostgreSQL", "Redis", "Docker", "AWS"],
-    link: "https://github.com/davidafshepherd/news-mesh",
+    link: "https://github.com/davidafshepherd/newsdesk",
   },
   {
     slug: "midas-core",
@@ -197,4 +208,5 @@ const projects = [
     link: "https://github.com/davidafshepherd/race-against-time",
   },
 ];
+
 export default projects;

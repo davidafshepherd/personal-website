@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
-import ScrollProgress from "@/components/ScrollProgress";
-import ThemeProvider from "@/components/ThemeProvider";
+import Footer from "@/components/layout/Footer";
+import NavBar from "@/components/layout/NavBar";
+import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
+import ThemeProvider from "@/components/layout/ThemeProvider";
 
 import "./globals.css";
 
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <ScrollProgress />
+          <ScrollProgressBar />
           <NavBar />
           <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</main>
           <Footer />

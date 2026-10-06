@@ -1,4 +1,4 @@
-export type ExperienceRole = {
+export type Experience = {
   title: string;
   org: string;
   length: string;
@@ -10,7 +10,7 @@ export type ExperienceRole = {
   link?: string;
 };
 
-const experience: ExperienceRole[] = [
+const experiences: Experience[] = [
   {
     title: "Engineering Intern",
     org: "Spotify",
@@ -142,4 +142,5 @@ const experience: ExperienceRole[] = [
     link: "https://www.beaumontschool.com",
   }
 ];
-export default experience;
+
+export default experiences;
