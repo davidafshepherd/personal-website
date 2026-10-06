@@ -29,7 +29,7 @@ export default function NavMenu({ socialLinks, navLinks, onNavigate }: Props) {
                 target={l.href.startsWith('http') ? "_blank" : undefined}
                 rel={l.href.startsWith('http') ? "noopener noreferrer" : undefined}
                 aria-label={l.label}
-                className="p-2 rounded-lg transition-colors duration-200 text-gray-600 hover:text-(--accent) hover:bg-(--accent-50) dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]"
+                className="p-2 rounded-lg transition-colors duration-200 text-gray-600 hover:text-(--accent) hover:bg-(--accent-50) dark:text-gray-300"
               >
                 <l.Icon />
               </a>
@@ -49,7 +49,7 @@ export default function NavMenu({ socialLinks, navLinks, onNavigate }: Props) {
                   aria-label={l.label}
                   className="absolute inset-0"
                 />
-                <span className="block w-full px-6 py-2.5 text-sm font-medium leading-5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]">
+                <span className="block w-full px-6 py-2.5 text-sm font-medium leading-5 text-gray-700 hover:text-(--accent) hover:bg-(--accent-50) transition-colors duration-200 dark:text-gray-300">
                   {l.label}
                 </span>
               </li>

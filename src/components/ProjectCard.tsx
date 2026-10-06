@@ -110,7 +110,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             {project.stack.map((skill, i) => (
               <span
                 key={i}
-                className="px-3 py-1 text-xs rounded-full border cursor-default bg-blue-50 text-blue-700 border-blue-200 dark:bg-[#1db9541a] dark:text-[#1DB954] dark:border-[#1db95433]"
+                className="px-3 py-1 text-xs rounded-full border cursor-default bg-(--skills-chip-bg) text-(--skills-chip-text) border-(--skills-chip-border)"
               >
                 {skill}
               </span>

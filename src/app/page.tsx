@@ -44,7 +44,7 @@ export default function HomePage() {
             <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300">Hi! My name is</p>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">David Afonso Shepherd</h1>
           </div>
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-600 leading-tight dark:text-green-500">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-(--accent) leading-tight">
             Software Engineer · Machine Learning Engineer
           </h2>
           <SkillsList />
@@ -105,10 +105,10 @@ export default function HomePage() {
                   href={l.href}
                   target={l.href.startsWith("http") ? "_blank" : undefined}
                   rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 transition-colors group dark:border-[#282828] dark:bg-[#181818] dark:hover:bg-[#202020] hover:border-blue-600 dark:hover:border-[#1DB954]"
+                  className="flex items-center gap-2 sm:gap-3 border border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-white hover:bg-gray-50 transition-colors group dark:border-[#282828] dark:bg-[#181818] dark:hover:bg-[#202020] hover:border-(--accent)"
                 >
-                  <l.Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-(--accent) dark:group-hover:text-[#1DB954]" />
-                  <span className="text-xs sm:text-sm font-medium transition-colors group-hover:text-blue-600 dark:group-hover:text-[#1DB954]">
+                  <l.Icon className="w-4 h-4 sm:w-5 sm:h-5 text-(--accent)" />
+                  <span className="text-xs sm:text-sm font-medium transition-colors group-hover:text-(--accent)">
                     {l.label}
                   </span>
                 </a>

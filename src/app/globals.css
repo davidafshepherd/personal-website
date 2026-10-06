@@ -12,6 +12,9 @@
   --accent-600: #2563eb;
   --length-chip-bg: #f3f4f6;
   --length-chip-border: #e5e7eb;
+  --skills-chip-bg: #eff6ff;
+  --skills-chip-text: #1447e6;
+  --skills-chip-border: #bedbff;
 }
 
 .dark:root {
@@ -22,6 +25,9 @@
   --accent-600: #1DB954;
   --length-chip-bg: #232323;
   --length-chip-border: #2f2f2f;
+  --skills-chip-bg: #1db9541a;
+  --skills-chip-text: #1DB954;
+  --skills-chip-border: #1db95433;
 }
 
 

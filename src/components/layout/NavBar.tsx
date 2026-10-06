@@ -101,7 +101,7 @@ export default function NavBar() {
               target={l.href.startsWith('http') ? "_blank" : undefined}
               rel={l.href.startsWith('http') ? "noopener noreferrer" : undefined}
               aria-label={l.label}
-              className="p-2 rounded-lg transition-colors duration-200 text-gray-600 hover:text-(--accent) hover:bg-(--accent-50) dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]"
+              className="p-2 rounded-lg transition-colors duration-200 text-gray-600 hover:text-(--accent) hover:bg-(--accent-50) dark:text-gray-300"
             >
               <l.Icon />
             </a>
@@ -118,7 +118,7 @@ export default function NavBar() {
                   href={l.href}
                   onClick={(e) => scrollToLink(e, l.href)}
                   aria-label={l.label}
-                  className="px-3 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a]"
+                  className="px-3 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:text-(--accent) hover:bg-(--accent-50) rounded-lg transition-colors duration-200 dark:text-gray-300"
                 >
                   {l.label}
                 </a>
@@ -130,7 +130,7 @@ export default function NavBar() {
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             aria-label="Toggle theme"
-            className="p-2 rounded-lg transition-colors text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-[#1DB954] dark:hover:bg-[#1db9541a] cursor-pointer"
+            className="p-2 rounded-lg transition-colors text-gray-700 hover:text-(--accent) hover:bg-(--accent-50) dark:text-gray-300 cursor-pointer"
           >
             <MoonIcon className="w-5 h-5 dark:hidden" />
             <SunIcon className="w-5 h-5 hidden dark:block" />
@@ -141,7 +141,7 @@ export default function NavBar() {
             onClick={() => setIsMenuOpen((open) => !open)}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
-            className="sm:hidden! p-2 rounded-lg transition-colors text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-300 dark:hover:text-green-500 dark:hover:bg-green-950/50 cursor-pointer"
+            className="sm:hidden! p-2 rounded-lg transition-colors text-gray-700 hover:text-(--accent) hover:bg-(--accent-50) dark:text-gray-300 cursor-pointer"
           >
             <HamburgerIcon isOpen={isMenuOpen} />
           </button>
