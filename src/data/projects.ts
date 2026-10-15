@@ -16,7 +16,7 @@ const projects: Project[] = [
     category: "recent",
     length: "July 2026 - Present",
     description: "A news discovery platform that recommends news articles based on user interests and visualises related stories through an interactive article network. ##Note that the repo is private as the project is still ongoing.##",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "Java", "Spock", "jOOQ", "PostgreSQL", "Redis", "Docker", "AWS"],
+    stack: ["TypeScript", "React", "Tailwind CSS", "Java", "Spring Boot", "jOOQ", "PostgreSQL", "Redis", "JUnit 5", "Docker", "AWS"],
     link: "https://github.com/davidafshepherd/newsdesk",
   },
   {
@@ -25,7 +25,7 @@ const projects: Project[] = [
     category: "recent",
     length: "July 2026 - July 2026",
     description: "The Midas system is a high-profile initiative responsible for processing financial transactions at scale. This project focuses on Midas Core, the service responsible for receiving, validating and recording the financial transactions. Completed as part of the JPMC Advanced Software Engineering Forage program.",
-    stack: ["Spring Boot", "Java", "JUnit 5", "Apache Kafka", "Spring Data JPA", "H2 Database", "Apache Maven"],
+    stack: ["Java","Spring Boot", "Apache Kafka", "Spring Data JPA", "H2 Database", "Apache Maven"],
     link: "https://github.com/davidafshepherd/midas-core",
   },
   {
@@ -34,7 +34,7 @@ const projects: Project[] = [
     category: "web-mobile",
     length: "March 2026 - May 2026",
     description: "A mobile personal training prototype that enables trainers to create workouts, manage trainees and track progress, while allowing trainees to schedule sessions, complete exercises and monitor fitness goals. Features include role-based accounts, multimedia guidance, workout analytics, notifications and cloud database integration.",
-    stack: ["Android Studio", "Jetpack Compose", "Kotlin", "Material Design 3", "JUnit", "MockK", "Firebase", "Gradle"],
+    stack: ["Android Studio", "Kotlin", "Jetpack Compose", "Material Design 3", "Firebase", "JUnit", "MockK", "Gradle"],
     link: "https://github.com/davidafshepherd/personal-trainer-app",
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
     length: "March 2026 - May 2026",
     description: "A full-stack sports centre booking platform with social authentication and cloud deployment that enables members to reserve facilities, manage bookings, find activity partners and report equipment faults. The system also provides staff and administrators with tools for facility management and booking approval.",
     image: "/sports-centre-app.png",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Jest", "Firebase", "GitHub Actions", "Azure"],
+    stack: ["TypeScript", "Next.js", "Tailwind CSS", "Zod", "Firebase", "Jest", "GitHub Actions", "Azure"],
     link: "https://github.com/davidafshepherd/sports-centre-app",
   },
   {
@@ -54,7 +54,7 @@ const projects: Project[] = [
     length: "October 2025 - January 2026",
     description: "An augmented meal cart for in-hospital use that helps prevent malnutrition in hospital patients by monitoring their nutrient intake. The system captures before and after images/weights of hospital meals, detects and segments foods, estimates portions using depth data, and computes consumed calories, macronutrients and micronutrients using a nutrition database.",
     image: "/smartcart-v3.png",
-    stack: ["React", "Redux", "TypeScript", "CSS", "FastAPI", "Python", "SQLAlchemy", "SQLite", "Object Detection", "Object Segmentation"],
+    stack: ["TypeScript", "React", "Redux", "CSS", "Python", "FastAPI", "SQLAlchemy", "SQLite", "Object Detection", "Object Segmentation"],
     link: "https://github.com/davidafshepherd/smartcart-v3",
   },
   {
@@ -82,7 +82,7 @@ const projects: Project[] = [
     category: "python-ml",
     length: "March 2025 - May 2025",
     description: "A fine-tuned ResNet50 model trained to classify brain tumors using axial-view MRI scans. The model achieved an accuracy of 99% on the 4-class tumor classification task. This project explored the impact of data augmentation and transfer learning on model performance.",
-    stack: ["Python", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "Transfer Learning", "ResNet50", "Data Augmentation", "Matplotlib", "Seaborn"],
+    stack: ["Python", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "ResNet50", "Transfer Learning", "Data Augmentation", "Matplotlib", "Seaborn"],
     link: "https://github.com/davidafshepherd/brain-tumor-mri-classification",
   },
   {
@@ -91,7 +91,7 @@ const projects: Project[] = [
     category: "python-ml",
     length: "February 2025 - April 2025",
     description: "A collection of deep learning models trained to classify music genres using Mel Spectrograms. The best-performing model (a CNN with batch normalization) achieved an accuracy of 73% on the 10-class genre classification task. This project explored the impact of regularization on model performance.",
-    stack: ["Python", "NumPy", "PyTorch", "torchvision", "ANNs", "CNNs", "Early Stopping", "Batch Normalization", "Dropout", "Matplotlib", "Seaborn", "Comet ML"],
+    stack: ["Python", "NumPy", "PyTorch", "torchvision", "Neural Networks", "CNNs", "Batch Normalization", "Dropout", "Early Stopping", "Matplotlib", "Seaborn", "Comet ML"],
     link: "https://github.com/davidafshepherd/gtzan-music-genre-classification",
   },
   {
@@ -100,7 +100,7 @@ const projects: Project[] = [
     category: "python-ml",
     length: "November 2024 - January 2025",
     description: "A K-Means clustering model applied to the text8 dataset to group words based on their semantic relationships using a co-occurrence matrix. This project explored unsupervised learning, word representations and semantic structure discovery in text data.",
-    stack: ["Python", "NumPy", "Pandas", "SciPy", "Scikit-Learn", "K-Means Clustering", "NLTK", "Matplotlib", "UMAP"],
+    stack: ["Python", "NumPy", "Pandas", "SciPy", "Scikit-Learn", "NLTK", "K-Means Clustering", "UMAP", "Matplotlib"],
     link: "https://github.com/davidafshepherd/text8-word-clustering",
   },
   {
@@ -110,7 +110,7 @@ const projects: Project[] = [
     length: "November 2024 - January 2025",
     description: "A decision-driven third-person adventure game where a player embarks on a medieval-themed quest, shaping their fate through choices and consequences.",
     image: "/the-thiefs-gamble.png",
-    stack: ["Unity", "C#", "Text-to-Speech Models"],
+    stack: ["C#", "Unity", "Text-to-Speech Models"],
     link: "https://github.com/davidafshepherd/the-thiefs-gamble",
   },
   {
@@ -120,7 +120,7 @@ const projects: Project[] = [
     length: "October 2024 - November 2024",
     description: "A third-person zombie shooter where a player battles waves of relentless zombies. Features multiple rooms, each introducing new challenges and enemy spawns.",
     image: "/the-polygon-dead.png",
-    stack: ["Unity", "C#"],
+    stack: ["C#", "Unity"],
     link: "https://github.com/davidafshepherd/the-polygon-dead",
   },
   {
@@ -156,7 +156,7 @@ const projects: Project[] = [
     category: "python-ml",
     length: "August 2024 - August 2024",
     description: "A neural network trained to predict passenger survival on the Titanic using features such as class, sex and family aboard. Built as part of a hands-on workshop I delivered on building your first neural network, demonstrating the fundamentals of data preprocessing, model training and model evaluation.",
-    stack: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Tensorflow", "Keras", "ANNs", "Matplotlib", "Seaborn"],
+    stack: ["Python", "NumPy", "Pandas", "Scikit-Learn", "Tensorflow", "Keras", "Neural Networks", "Matplotlib", "Seaborn"],
     link: "https://github.com/davidafshepherd/titanic-passenger-survival-prediction",
   },
   {
@@ -165,7 +165,7 @@ const projects: Project[] = [
     category: "java",
     length: "March 2024 - May 2024",
     description: "A distributed storage system that supports concurrent clients and file replication for fault tolerance and scalability.",
-    stack: ["Java", "JUnit 5", "TCP", "Multithreading"],
+    stack: ["Java", "TCP", "Multithreading"],
     link: "https://github.com/davidafshepherd/distributed-file-system",
   },
   {
@@ -175,7 +175,7 @@ const projects: Project[] = [
     length: "February 2024 - May 2024",
     description: "An analytics dashboard designed to evaluate and visualise the performance of advertising campaigns.",
     image: "/ad-auction-dashboard.png",
-    stack: ["Java", "JavaFX", "JUnit 5", "MongoDB", "Apache Maven"],
+    stack: ["Java", "JavaFX", "MongoDB", "JUnit 5", "Apache Maven"],
     link: "https://github.com/davidafshepherd/ad-auction-dashboard",
   },
   {
@@ -185,7 +185,7 @@ const projects: Project[] = [
     length: "March 2023 - April 2023",
     description: "A creative twist on Tetris featuring zero gravity and a multiplayer mode for a fresh strategic experience.",
     image: "/tetrecs.png",
-    stack: ["Java", "JavaFX", "JUnit 5", "Apache Maven"],
+    stack: ["Java", "JavaFX", "Apache Maven"],
     link: "https://github.com/davidafshepherd/tetrecs",
   },
   {
@@ -194,7 +194,7 @@ const projects: Project[] = [
     category: "java",
     length: "October 2022 - December 2022",
     description: "A simulator that recreates the sound of an orchestra performing a given composition, blending musical modelling and procedural audio generation.",
-    stack: ["Java", "JUnit 5"],
+    stack: ["Java"],
     link: "https://github.com/davidafshepherd/orchestra-simulator",
   },
   {
@@ -204,7 +204,7 @@ const projects: Project[] = [
     length: "September 2021 - February 2022",
     description: "A fast-paced racing game where a player strives to beat their own lap record. Features both a single-player mode and a mode with AI-controlled opponents.",
     image: "/race-against-time.png",
-    stack: ["Unity", "C#"],
+    stack: ["C#", "Unity"],
     link: "https://github.com/davidafshepherd/race-against-time",
   },
 ];

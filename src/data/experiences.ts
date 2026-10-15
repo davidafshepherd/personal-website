@@ -40,7 +40,7 @@ const experiences: Experience[] = [
       "Built a prototype using HTML5, CSS and Flask to promote charity fundraising through scoreboards and rewards.",
       "Attended talks and workshops on banking technology, gaining exposure to agile methodologies and TDD in Java.",
     ],
-    skills: ["Git", "HTML5", "CSS", "Flask", "Python", "Agile Methodologies", "Test-Driven Development"],
+    skills: ["Git", "HTML5", "CSS", "Python", "Flask", "Agile Methodologies", "Test-Driven Development"],
     link: "https://www.jpmorganchase.com",
   },
   {
@@ -57,7 +57,7 @@ const experiences: Experience[] = [
       "Built a web dashboard for patient nutrient intake analysis and reporting using React, Redux, FastAPI and SQLite.",
       "Achieved a 29% MAPE for calorie and nutrient estimation, currently being trialled as part of a study at an NHS FT.",
     ],
-    skills: ["Git", "React", "TypeScript", "FastAPI", "Python", "SQLite", "Object Detection", "Object Segmentation"],
+    skills: ["Git", "TypeScript", "React", "Python", "FastAPI", "SQLite", "Object Detection", "Object Segmentation"],
     link: "https://www.uhs.nhs.uk/",
   },
   {
