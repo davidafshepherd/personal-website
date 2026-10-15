@@ -71,6 +71,7 @@ const experiences: Experience[] = [
       "FLARE-X is a joint venture between the University of Southampton, the University of Texas at Austin and the University of Edinburgh.",
       "Trained a fixed-wing drone to deploy balls of fire extinguisher for optimal wildfire suppression using Python and Reinforcement Learning.",
     ],
+    skills: ["Git", "Python", "Reinforcement Learning", "DQN", "PPO", "A2C"],
     link: "https://www.xprize.org/prizes/wildfire",
   },
   {
