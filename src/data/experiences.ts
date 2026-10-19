@@ -40,7 +40,7 @@ const experiences: Experience[] = [
       "Worked with 4 interns to boost engagement for Dorset's Disability Charity, benefitting 2,000+ people annually.",
       "Built a prototype using HTML5, CSS and Flask to promote charity fundraising through scoreboards and rewards.",
     ],
-    skills: ["Git", "HTML5", "CSS", "Python", "Flask", "Agile Methodologies", "Test-Driven Development"],
+    skills: ["Git", "HTML5", "CSS", "Python", "Flask", "Agile Methodology", "Test-Driven Development"],
     link: "https://www.jpmorganchase.com",
   },
   {
