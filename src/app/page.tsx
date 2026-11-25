@@ -27,9 +27,10 @@ const EXPERIENCE_CATEGORIES = [
 const PROJECT_CATEGORIES = [
   { key: "recent", title: "Recent Projects" },
   { key: "university", title: "University Projects" },
-  { key: "web-mobile", title: "Web / Mobile Development" },
+  {key: "networking-protocols", title: "Networking & Protocols"},
   { key: "java", title: "Java" },
   { key: "python-ml", title: "Python / Machine Learning" },
+  { key: "web-mobile", title: "Web / Mobile Development" },
   { key: "unity-csharp", title: "Unity / C#" },
 ];
 

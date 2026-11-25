@@ -20,6 +20,24 @@ const projects: Project[] = [
     link: "https://github.com/davidafshepherd/newsdesk",
   },
   {
+    slug: "web-server",
+    name: "Web Server",
+    category: "networking-protocols",
+    length: "November 2026 - November 2026",
+    description: "A basic HTTP/1.1 web server that handles concurrent TCP connections, serves static files and executes Perl CGI scripts.",
+    stack: ["Go", "HTML", "Perl", "HTTP/1.1", "TCP", "CGI"],
+    link: "https://github.com/davidafshepherd/web-server",
+  },
+  {
+    slug: "dns-resolver",
+    name: "DNS Resolver",
+    category: "networking-protocols",
+    length: "October 2026 - November 2026",
+    description: "An iterative DNS resolver that resolves domain names to IPv4 addresses by following referrals from root servers to authoritative name servers, with support for CNAME records.",
+    stack: ["Go", "DNS", "UDP"],
+    link: "https://github.com/davidafshepherd/dns-resolver",
+  },
+  {
     slug: "midas-core",
     name: "Midas Core",
     category: "recent",
@@ -196,16 +214,6 @@ const projects: Project[] = [
     description: "A simulator that recreates the sound of an orchestra performing a given composition, blending musical modelling and procedural audio generation.",
     stack: ["Java"],
     link: "https://github.com/davidafshepherd/orchestra-simulator",
-  },
-  {
-    slug: "race-against-time",
-    name: "Race Against Time",
-    category: "unity-csharp",
-    length: "September 2021 - February 2022",
-    description: "A fast-paced racing game where a player strives to beat their own lap record. Features both a single-player mode and a mode with AI-controlled opponents.",
-    image: "/race-against-time.png",
-    stack: ["C#", "Unity"],
-    link: "https://github.com/davidafshepherd/race-against-time",
   },
 ];
 
